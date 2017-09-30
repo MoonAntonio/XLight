@@ -21,7 +21,7 @@ namespace XLight
 		{
 			try
 			{
-				progressBar.Width += 1;
+				progressBar.Width += 2;
 				if (progressBar.Width >= 635f)
 				{
 					timer1.Stop();

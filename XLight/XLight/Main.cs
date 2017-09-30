@@ -16,5 +16,15 @@ namespace XLight
 		{
 			InitializeComponent();
 		}
+
+		private void Main_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
 	}
 }
