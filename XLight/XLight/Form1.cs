@@ -10,11 +10,30 @@ using System.Windows.Forms;
 
 namespace XLight
 {
-	public partial class Form1 : Form
+	public partial class Splash : Form
 	{
-		public Form1()
+		public Splash()
 		{
 			InitializeComponent();
+		}
+
+		private void Timer1_Tick(object sender, EventArgs e)
+		{
+			try
+			{
+				progressBar.Width += 1;
+				if (progressBar.Width >= 635f)
+				{
+					timer1.Stop();
+					Main main = new Main();
+					main.Show();
+					this.Hide();
+				}
+			}
+			catch (Exception)
+			{
+				return;
+			}
 		}
 	}
 }
