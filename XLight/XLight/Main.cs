@@ -21,5 +21,10 @@ namespace XLight
 		{
 
 		}
+
+		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
 	}
 }
