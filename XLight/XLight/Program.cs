@@ -16,7 +16,9 @@ namespace XLight
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Splash());
+			//Application.Run(new Splash());
+			// TODO Testeo
+			Application.Run(new Main());
 		}
 	}
 }

@@ -26,5 +26,28 @@ namespace XLight
 		{
 
 		}
+
+		private void BtnMaximizar_Click(object sender, EventArgs e)
+		{
+			if (this.WindowState == FormWindowState.Maximized)
+			{
+				this.WindowState = FormWindowState.Normal;
+			}
+			else
+			{
+				this.WindowState = FormWindowState.Maximized;
+			}
+			
+		}
+
+		private void BtnSalir_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void BtnMinimizar_Click(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
+		}
 	}
 }
