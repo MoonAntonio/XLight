@@ -12,21 +12,23 @@ namespace XLight
 {
 	public partial class Main : Form
 	{
+		#region Constructor
 		public Main()
 		{
 			InitializeComponent();
 		}
+		#endregion
 
+		#region Loader
 		private void Main_Load(object sender, EventArgs e)
 		{
-
+			BoxHistorial.Visible = false;
+			BoxClientes.Visible = false;
+			BoxOpciones.Visible = false;
 		}
+		#endregion
 
-		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
-
+		#region Metodos Click
 		private void BtnMaximizar_Click(object sender, EventArgs e)
 		{
 			if (this.WindowState == FormWindowState.Maximized)
@@ -37,7 +39,7 @@ namespace XLight
 			{
 				this.WindowState = FormWindowState.Maximized;
 			}
-			
+
 		}
 
 		private void BtnSalir_Click(object sender, EventArgs e)
@@ -49,5 +51,34 @@ namespace XLight
 		{
 			this.WindowState = FormWindowState.Minimized;
 		}
+
+		private void BtnHistorial_Click(object sender, EventArgs e)
+		{
+			if (BoxHistorial.Visible == true) return;
+
+			BoxHistorial.Visible = true;
+			BoxClientes.Visible = false;
+			BoxOpciones.Visible = false;
+		}
+
+		private void BtnClientes_Click(object sender, EventArgs e)
+		{
+			if (BoxClientes.Visible == true) return;
+
+			BoxHistorial.Visible = false;
+			BoxClientes.Visible = true;
+			BoxOpciones.Visible = false;
+		}
+
+		private void BtnOpciones_Click(object sender, EventArgs e)
+		{
+			if (BoxOpciones.Visible == true) return;
+
+			BoxHistorial.Visible = false;
+			BoxClientes.Visible = false;
+			BoxOpciones.Visible = true;
+		}
+		#endregion
+
 	}
 }
