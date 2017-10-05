@@ -1,8 +1,23 @@
-﻿using System;
+﻿//                                  ┌∩┐(◣_◢)┌∩┐
+//                                                                              \\
+// Splash.cs (01/10/2017)                                              			\\
+// Autor: Antonio Mateo (Moon Pincho) 									        \\
+// Descripcion:     Formulario de splash										\\
+// Fecha Mod:       01/10/2017                                                  \\
+// Ultima Mod:      Version Inicial												\\
+//******************************************************************************\\
+
+#region Librerias
+using System;
 using System.Windows.Forms;
+#endregion
+
 
 namespace XLight
 {
+	/// <summary>
+	/// <para>Formulario de splash</para>
+	/// </summary>
 	public partial class Splash : Form
 	{
 		#region Constructor

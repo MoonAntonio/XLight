@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//                                  ┌∩┐(◣_◢)┌∩┐
+//                                                                              \\
+// Main.cs (01/10/2017)                                              			\\
+// Autor: Antonio Mateo (Moon Pincho) 									        \\
+// Descripcion:     Formulario central del programa								\\
+// Fecha Mod:       01/10/2017                                                  \\
+// Ultima Mod:      Version Inicial												\\
+//******************************************************************************\\
+
+#region Librerias
+using System;
 using System.Windows.Forms;
+#endregion
 
 namespace XLight
 {
+	/// <summary>
+	/// <para>Formulario central del programa</para>
+	/// </summary>
 	public partial class Main : Form
 	{
 		#region Constructor
@@ -79,6 +86,5 @@ namespace XLight
 			BoxOpciones.Visible = true;
 		}
 		#endregion
-
 	}
 }

@@ -1,8 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//                                  ┌∩┐(◣_◢)┌∩┐
+//                                                                              \\
+// Program.cs (01/10/2017)                                              		\\
+// Autor: Antonio Mateo (Moon Pincho) 									        \\
+// Descripcion:     Clase central del programa									\\
+// Fecha Mod:       01/10/2017                                                  \\
+// Ultima Mod:      Version Inicial												\\
+//******************************************************************************\\
+
+#region Librerias
+using System;
 using System.Windows.Forms;
+#endregion
 
 namespace XLight
 {
