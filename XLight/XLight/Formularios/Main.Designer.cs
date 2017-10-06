@@ -122,11 +122,11 @@
 			this.BoxClientes = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
 			this.TabClientes = new VisualPlus.Toolkit.Controls.Navigation.VisualTabControl();
 			this.tabClienteNuevo = new System.Windows.Forms.TabPage();
+			this.listView1 = new System.Windows.Forms.ListView();
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.BtnBuscar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualTextBox1 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
-			this.visualListView1 = new VisualPlus.Toolkit.Controls.DataManagement.VisualListView();
-			this.columnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.BtnQuitarCliente = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualSeparator3 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
 			this.TextApellidos = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -142,6 +142,7 @@
 			this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tabFichas = new System.Windows.Forms.TabPage();
 			this.BoxHistorial.SuspendLayout();
 			this.BoxOpciones.SuspendLayout();
 			this.BoxClientes.SuspendLayout();
@@ -1340,7 +1341,7 @@
 			this.BoxClientes.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BoxClientes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.BoxClientes.Location = new System.Drawing.Point(244, 50);
-			this.BoxClientes.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BoxClientes.MouseState = VisualPlus.Enumerators.MouseStates.Hover;
 			this.BoxClientes.Name = "BoxClientes";
 			this.BoxClientes.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
 			this.BoxClientes.Size = new System.Drawing.Size(863, 550);
@@ -1380,6 +1381,7 @@
 			this.TabClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
 			this.TabClientes.Controls.Add(this.tabClienteNuevo);
 			this.TabClientes.Controls.Add(this.tabAllClientes);
+			this.TabClientes.Controls.Add(this.tabFichas);
 			this.TabClientes.Font = new System.Drawing.Font("Segoe UI", 8.25F);
 			this.TabClientes.HoverGradient.Angle = 0F;
 			this.TabClientes.HoverGradient.Colors = new System.Drawing.Color[] {
@@ -1439,9 +1441,9 @@
 			// tabClienteNuevo
 			// 
 			this.tabClienteNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.tabClienteNuevo.Controls.Add(this.listView1);
 			this.tabClienteNuevo.Controls.Add(this.BtnBuscar);
 			this.tabClienteNuevo.Controls.Add(this.visualTextBox1);
-			this.tabClienteNuevo.Controls.Add(this.visualListView1);
 			this.tabClienteNuevo.Controls.Add(this.BtnQuitarCliente);
 			this.tabClienteNuevo.Controls.Add(this.visualSeparator3);
 			this.tabClienteNuevo.Controls.Add(this.TextApellidos);
@@ -1455,6 +1457,32 @@
 			this.tabClienteNuevo.Size = new System.Drawing.Size(740, 510);
 			this.tabClienteNuevo.TabIndex = 0;
 			this.tabClienteNuevo.Text = "+ Cliente";
+			// 
+			// listView1
+			// 
+			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+			this.listView1.Location = new System.Drawing.Point(69, 235);
+			this.listView1.Name = "listView1";
+			this.listView1.Size = new System.Drawing.Size(636, 209);
+			this.listView1.TabIndex = 11;
+			this.listView1.UseCompatibleStateImageBehavior = false;
+			this.listView1.View = System.Windows.Forms.View.Details;
+			this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "ID";
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Nombre";
+			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader2.Width = 576;
 			// 
 			// BtnBuscar
 			// 
@@ -1586,59 +1614,6 @@
 			this.visualTextBox1.Watermark.InactiveColor = System.Drawing.Color.LightGray;
 			this.visualTextBox1.Watermark.Text = "Watermark text";
 			this.visualTextBox1.Watermark.Visible = false;
-			this.visualTextBox1.TextChanged += new System.EventHandler(this.visualTextBox1_TextChanged);
-			// 
-			// visualListView1
-			// 
-			this.visualListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.visualListView1.BackColor = System.Drawing.Color.Transparent;
-			this.visualListView1.Background = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.visualListView1.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.visualListView1.BackgroundStateColor = System.Drawing.Color.Empty;
-			this.visualListView1.BackgroundStateGradientBrush = null;
-			this.visualListView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.visualListView1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.visualListView1.Border.HoverVisible = true;
-			this.visualListView1.Border.Rounding = 6;
-			this.visualListView1.Border.Thickness = 1;
-			this.visualListView1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.visualListView1.Border.Visible = true;
-			this.visualListView1.ColumnHeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-			this.visualListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnID,
-            this.columnNombre});
-			this.visualListView1.ControlBrushCollection = null;
-			this.visualListView1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.visualListView1.HeaderFont = new System.Drawing.Font("Segoe UI", 8.25F);
-			this.visualListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-			this.visualListView1.HeaderText = System.Drawing.Color.Black;
-			this.visualListView1.ItemBackground = System.Drawing.Color.White;
-			this.visualListView1.ItemPadding = 12;
-			this.visualListView1.ItemSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.visualListView1.LabelWrap = true;
-			this.visualListView1.Location = new System.Drawing.Point(43, 223);
-			this.visualListView1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.visualListView1.Name = "visualListView1";
-			this.visualListView1.ShowGroups = true;
-			this.visualListView1.Size = new System.Drawing.Size(682, 221);
-			this.visualListView1.Sorting = System.Windows.Forms.SortOrder.None;
-			this.visualListView1.TabIndex = 8;
-			this.visualListView1.Text = "visualListView1";
-			this.visualListView1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			this.visualListView1.TileSize = new System.Drawing.Size(0, 0);
-			this.visualListView1.View = System.Windows.Forms.View.Details;
-			this.visualListView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.visualListView1_MouseClick);
-			// 
-			// columnID
-			// 
-			this.columnID.Text = "ID";
-			// 
-			// columnNombre
-			// 
-			this.columnNombre.Text = "Nombre";
-			this.columnNombre.Width = 612;
 			// 
 			// BtnQuitarCliente
 			// 
@@ -2089,6 +2064,15 @@
 			this.Diagnostico.Name = "Diagnostico";
 			this.Diagnostico.ReadOnly = true;
 			// 
+			// tabFichas
+			// 
+			this.tabFichas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.tabFichas.Location = new System.Drawing.Point(104, 4);
+			this.tabFichas.Name = "tabFichas";
+			this.tabFichas.Size = new System.Drawing.Size(740, 510);
+			this.tabFichas.TabIndex = 2;
+			this.tabFichas.Text = "Fichas";
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2167,9 +2151,6 @@
 		private VisualPlus.Toolkit.Controls.Layout.VisualSeparator visualSeparator3;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnQuitarCliente;
 		private VisualPlus.Toolkit.Controls.Editors.VisualTextBox visualTextBox1;
-		private VisualPlus.Toolkit.Controls.DataManagement.VisualListView visualListView1;
-		private System.Windows.Forms.ColumnHeader columnID;
-		private System.Windows.Forms.ColumnHeader columnNombre;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
@@ -2178,5 +2159,9 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostico;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnBuscar;
+		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.ColumnHeader columnHeader2;
+		private System.Windows.Forms.TabPage tabFichas;
 	}
 }

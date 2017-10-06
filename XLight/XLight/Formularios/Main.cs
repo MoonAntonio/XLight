@@ -60,17 +60,13 @@ namespace XLight
 				pathData = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data");
 				pathClientes = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\clientes.xml");
 				pathAjustes = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Ajustes\ajustes.xml");
+				idActual = "0";
 
 				Directory.CreateDirectory("Data");
 
 				Directory.CreateDirectory("Ajustes");
 
 				xml.CrearXML("Data/historial.xml", "Clientes");
-
-				for (int n = 0; n < 10; n++)
-				{
-					xml.AgregarHistorial(pathHistorial, n.ToString(), "Moon" + n.ToString(), Xml.TiposTratamiento.Reiki, "10/10/2017", "20", "Bueno");
-				}
 
 				xml.CrearXML("Data/clientes.xml", "Clientes");
 
@@ -385,6 +381,9 @@ namespace XLight
 			BoxHistorial.Visible = true;
 			BoxOpciones.Visible = false;
 			BoxClientes.Visible = false;
+
+			listViewHistorial.Items.Clear();
+			CargarHistorial(pathHistorial);
 		}
 
 		private void BtnOpciones_Click(object sender, EventArgs e)
@@ -459,12 +458,12 @@ namespace XLight
 
 				AgregarCliente(pathClientes, id.ToString(), TextNombre.Text + " " + TextApellidos.Text, TiposTratamiento.Ninguno, dia, "0", "Desconocido");
 
-				TextNombre.Text = "";
-				TextApellidos.Text = "";
-
 				idActual = id.ToString();
 
-				CrearEntradaHistoria(pathClientes, id.ToString(), TextNombre.Text + " " + TextApellidos.Text, TiposTratamiento.Ninguno, dia, "0", "Nuevo cliente");
+				CrearEntradaHistoria(pathHistorial, id.ToString(), TextNombre.Text + " " + TextApellidos.Text, TiposTratamiento.Ninguno, dia, "0", "Nuevo cliente");
+
+				TextNombre.Text = "";
+				TextApellidos.Text = "";
 
 				MessageBox.Show("Cliente agregado.");
 			}
@@ -500,7 +499,7 @@ namespace XLight
 
 		private void BtnBuscar_Click(object sender, EventArgs e)
 		{
-			visualListView1.Items.Clear();
+			listView1.Items.Clear();
 
 			XmlDocument doc = new XmlDocument();
 
@@ -518,37 +517,9 @@ namespace XLight
 
 				ListViewItem listaItems = new ListViewItem(id);
 				listaItems.SubItems.Add(nombre);
-				visualListView1.Items.Add(listaItems);
+				listView1.Items.Add(listaItems);
 			}
 		}
-
-		private void visualTextBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void visualListView1_MouseClick(object sender, MouseEventArgs e)
-		{
-			string id = visualListView1.SelectedItems[0].SubItems[0].Text;
-			idRemove = id;
-		}
-		#endregion
-
-		#region Enum
-		/// <summary>
-		/// <para>Tipos de tratamientos</para>
-		/// </summary>
-		public enum TiposTratamiento
-		{
-			Ninguno,
-			Interpretar,
-			Regresion,
-			TetraHealing,
-			Reiki,
-			Hipnosis
-		}
-
-
-		#endregion
 
 		private void BtnQuitarCliente_Click(object sender, EventArgs e)
 		{
@@ -572,18 +543,47 @@ namespace XLight
 
 						cliente.RemoveChild(nodo);
 					}
+					else
+					{
+						MessageBox.Show("Error 0x0120.");
+					}
 				}
 				doc.Save(pathClientes);
 
-				CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
 
 				MessageBox.Show("Cliente eliminado.");
+
+				CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
 			}
 			else
 			{
-				idRemove = "0";
 				MessageBox.Show("Primero selecciona un cliente.");
 			}
 		}
+
+		private void listView1_MouseClick(object sender, MouseEventArgs e)
+		{
+			string id = listView1.SelectedItems[0].SubItems[0].Text;
+			string nombre = listView1.SelectedItems[0].SubItems[1].Text;
+			idRemove = id;
+		}
+		#endregion
+
+		#region Enum
+		/// <summary>
+		/// <para>Tipos de tratamientos</para>
+		/// </summary>
+		public enum TiposTratamiento
+		{
+			Ninguno,
+			Interpretar,
+			Regresion,
+			TetraHealing,
+			Reiki,
+			Hipnosis
+		}
+
+
+		#endregion
 	}
 }
