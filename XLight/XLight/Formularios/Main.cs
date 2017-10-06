@@ -82,7 +82,8 @@ namespace XLight
 			LblRutaHistorial.Text = pathHistorial;
 
 			CargarHistorial(pathHistorial);
-			
+
+			ActualizarBusquedaRegistro();
 		}
 		#endregion
 
@@ -312,6 +313,30 @@ namespace XLight
 			doc.DocumentElement.AppendChild(cliente);
 			doc.Save(pathHistorial);
 		}
+
+		public void ActualizarBusquedaRegistro()
+		{
+			listView1.Items.Clear();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlNodeList listaClientesHistorial = doc.SelectNodes("Clientes/Cliente");
+			XmlNode inCliente;
+
+			for (int n = 0; n < listaClientesHistorial.Count; n++)
+			{
+				inCliente = listaClientesHistorial.Item(n);
+
+				string id = inCliente.SelectSingleNode("id").InnerText;
+				string nombre = inCliente.SelectSingleNode("nombre").InnerText;
+
+				ListViewItem listaItems = new ListViewItem(id);
+				listaItems.SubItems.Add(nombre);
+				listView1.Items.Add(listaItems);
+			}
+		}
 		#endregion
 
 		#region Funcionalidad
@@ -465,6 +490,8 @@ namespace XLight
 				TextNombre.Text = "";
 				TextApellidos.Text = "";
 
+				ActualizarBusquedaRegistro();
+
 				MessageBox.Show("Cliente agregado.");
 			}
 		}
@@ -543,17 +570,16 @@ namespace XLight
 
 						cliente.RemoveChild(nodo);
 					}
-					else
-					{
-						MessageBox.Show("Error 0x0120.");
-					}
 				}
-				doc.Save(pathClientes);
 
+
+				doc.Save(pathClientes);
 
 				MessageBox.Show("Cliente eliminado.");
 
 				CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
+
+				ActualizarBusquedaRegistro();
 			}
 			else
 			{

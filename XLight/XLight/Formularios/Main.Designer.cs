@@ -143,6 +143,7 @@
 			this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tabFichas = new System.Windows.Forms.TabPage();
+			this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.BoxHistorial.SuspendLayout();
 			this.BoxOpciones.SuspendLayout();
 			this.BoxClientes.SuspendLayout();
@@ -285,6 +286,7 @@
         gradient4};
 			this.BtnHistorial.DisabledGradient = gradient4;
 			this.BtnHistorial.EnabledGradient = gradient1;
+			this.BtnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnHistorial.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BtnHistorial.HoverGradient = gradient2;
 			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -299,7 +301,7 @@
 			this.BtnHistorial.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnHistorial.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnHistorial.Image.Visible = false;
-			this.BtnHistorial.Location = new System.Drawing.Point(87, 229);
+			this.BtnHistorial.Location = new System.Drawing.Point(87, 280);
 			this.BtnHistorial.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnHistorial.Name = "BtnHistorial";
 			this.BtnHistorial.PressedGradient = gradient3;
@@ -366,6 +368,7 @@
         gradient8};
 			this.BtnClientes.DisabledGradient = gradient8;
 			this.BtnClientes.EnabledGradient = gradient5;
+			this.BtnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnClientes.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BtnClientes.HoverGradient = gradient6;
 			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -380,7 +383,7 @@
 			this.BtnClientes.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnClientes.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnClientes.Image.Visible = false;
-			this.BtnClientes.Location = new System.Drawing.Point(87, 280);
+			this.BtnClientes.Location = new System.Drawing.Point(87, 229);
 			this.BtnClientes.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnClientes.Name = "BtnClientes";
 			this.BtnClientes.PressedGradient = gradient7;
@@ -447,6 +450,7 @@
         gradient12};
 			this.BtnOpciones.DisabledGradient = gradient12;
 			this.BtnOpciones.EnabledGradient = gradient9;
+			this.BtnOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnOpciones.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BtnOpciones.HoverGradient = gradient10;
 			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -528,6 +532,7 @@
         gradient16};
 			this.BtnSalir.DisabledGradient = gradient16;
 			this.BtnSalir.EnabledGradient = gradient13;
+			this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnSalir.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BtnSalir.HoverGradient = gradient14;
 			border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
@@ -1371,13 +1376,12 @@
 			// 
 			// TabClientes
 			// 
-			this.TabClientes.Alignment = System.Windows.Forms.TabAlignment.Left;
 			this.TabClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.TabClientes.ArrowSelectorVisible = true;
-			this.TabClientes.ArrowSpacing = 3;
-			this.TabClientes.ArrowThickness = 10;
+			this.TabClientes.ArrowSpacing = 10;
+			this.TabClientes.ArrowThickness = 5;
 			this.TabClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
 			this.TabClientes.Controls.Add(this.tabClienteNuevo);
 			this.TabClientes.Controls.Add(this.tabAllClientes);
@@ -1390,7 +1394,7 @@
 			this.TabClientes.HoverGradient.Positions = new float[] {
         0F,
         1F};
-			this.TabClientes.ItemSize = new System.Drawing.Size(25, 100);
+			this.TabClientes.ItemSize = new System.Drawing.Size(100, 25);
 			this.TabClientes.LineAlignment = System.Drawing.StringAlignment.Center;
 			this.TabClientes.Location = new System.Drawing.Point(9, 22);
 			this.TabClientes.MinimumSize = new System.Drawing.Size(144, 85);
@@ -1441,6 +1445,7 @@
 			// tabClienteNuevo
 			// 
 			this.tabClienteNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.tabClienteNuevo.Controls.Add(this.visualLabel3);
 			this.tabClienteNuevo.Controls.Add(this.listView1);
 			this.tabClienteNuevo.Controls.Add(this.BtnBuscar);
 			this.tabClienteNuevo.Controls.Add(this.visualTextBox1);
@@ -1451,12 +1456,13 @@
 			this.tabClienteNuevo.Controls.Add(this.visualLabel1);
 			this.tabClienteNuevo.Controls.Add(this.TextNombre);
 			this.tabClienteNuevo.Controls.Add(this.BtnAgregarNuevoCliente);
-			this.tabClienteNuevo.Location = new System.Drawing.Point(104, 4);
+			this.tabClienteNuevo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabClienteNuevo.Location = new System.Drawing.Point(4, 29);
 			this.tabClienteNuevo.Name = "tabClienteNuevo";
 			this.tabClienteNuevo.Padding = new System.Windows.Forms.Padding(3);
-			this.tabClienteNuevo.Size = new System.Drawing.Size(740, 510);
+			this.tabClienteNuevo.Size = new System.Drawing.Size(840, 485);
 			this.tabClienteNuevo.TabIndex = 0;
-			this.tabClienteNuevo.Text = "+ Cliente";
+			this.tabClienteNuevo.Text = "Registro";
 			// 
 			// listView1
 			// 
@@ -1466,9 +1472,9 @@
 			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-			this.listView1.Location = new System.Drawing.Point(69, 235);
+			this.listView1.Location = new System.Drawing.Point(282, 204);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(636, 209);
+			this.listView1.Size = new System.Drawing.Size(523, 184);
 			this.listView1.TabIndex = 11;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -1553,7 +1559,7 @@
 			this.BtnBuscar.Image.Point = new System.Drawing.Point(58, -1);
 			this.BtnBuscar.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnBuscar.Image.Visible = false;
-			this.BtnBuscar.Location = new System.Drawing.Point(97, 184);
+			this.BtnBuscar.Location = new System.Drawing.Point(97, 463);
 			this.BtnBuscar.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnBuscar.Name = "BtnBuscar";
 			this.BtnBuscar.PressedGradient = gradient39;
@@ -1600,14 +1606,14 @@
 			this.visualTextBox1.Image = null;
 			this.visualTextBox1.ImageVisible = false;
 			this.visualTextBox1.ImageWidth = 35;
-			this.visualTextBox1.Location = new System.Drawing.Point(282, 184);
+			this.visualTextBox1.Location = new System.Drawing.Point(348, 463);
 			this.visualTextBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.visualTextBox1.Name = "visualTextBox1";
 			this.visualTextBox1.PasswordChar = '\0';
 			this.visualTextBox1.ReadOnly = false;
-			this.visualTextBox1.Size = new System.Drawing.Size(377, 23);
+			this.visualTextBox1.Size = new System.Drawing.Size(477, 23);
 			this.visualTextBox1.TabIndex = 9;
-			this.visualTextBox1.TextBoxWidth = 367;
+			this.visualTextBox1.TextBoxWidth = 467;
 			this.visualTextBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.visualTextBox1.Watermark.ActiveColor = System.Drawing.Color.Gray;
 			this.visualTextBox1.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -1683,14 +1689,14 @@
 			border11.Visible = false;
 			this.BtnQuitarCliente.Image.Border = border11;
 			this.BtnQuitarCliente.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
-			this.BtnQuitarCliente.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnQuitarCliente.Image.Point = new System.Drawing.Point(108, 10);
 			this.BtnQuitarCliente.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnQuitarCliente.Image.Visible = false;
-			this.BtnQuitarCliente.Location = new System.Drawing.Point(299, 450);
+			this.BtnQuitarCliente.Location = new System.Drawing.Point(97, 253);
 			this.BtnQuitarCliente.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnQuitarCliente.Name = "BtnQuitarCliente";
 			this.BtnQuitarCliente.PressedGradient = gradient43;
-			this.BtnQuitarCliente.Size = new System.Drawing.Size(140, 45);
+			this.BtnQuitarCliente.Size = new System.Drawing.Size(240, 45);
 			this.BtnQuitarCliente.TabIndex = 7;
 			this.BtnQuitarCliente.Text = "Borrar";
 			this.BtnQuitarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -1772,9 +1778,9 @@
 			this.TextApellidos.Name = "TextApellidos";
 			this.TextApellidos.PasswordChar = '\0';
 			this.TextApellidos.ReadOnly = false;
-			this.TextApellidos.Size = new System.Drawing.Size(362, 23);
-			this.TextApellidos.TabIndex = 4;
-			this.TextApellidos.TextBoxWidth = 352;
+			this.TextApellidos.Size = new System.Drawing.Size(462, 23);
+			this.TextApellidos.TabIndex = 2;
+			this.TextApellidos.TextBoxWidth = 452;
 			this.TextApellidos.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.TextApellidos.Watermark.ActiveColor = System.Drawing.Color.Gray;
 			this.TextApellidos.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -1805,7 +1811,7 @@
 			this.visualLabel2.ForeGradientDisabled.Positions = new float[] {
         0F,
         1F};
-			this.visualLabel2.Location = new System.Drawing.Point(299, 92);
+			this.visualLabel2.Location = new System.Drawing.Point(282, 92);
 			this.visualLabel2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.visualLabel2.Name = "visualLabel2";
 			this.visualLabel2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1818,7 +1824,7 @@
 			this.visualLabel2.ShadowDirection = 315;
 			this.visualLabel2.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.visualLabel2.ShadowOpacity = 100;
-			this.visualLabel2.Size = new System.Drawing.Size(58, 23);
+			this.visualLabel2.Size = new System.Drawing.Size(75, 23);
 			this.visualLabel2.TabIndex = 3;
 			this.visualLabel2.Text = "Apellidos";
 			this.visualLabel2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -1846,7 +1852,7 @@
 			this.visualLabel1.ForeGradientDisabled.Positions = new float[] {
         0F,
         1F};
-			this.visualLabel1.Location = new System.Drawing.Point(299, 51);
+			this.visualLabel1.Location = new System.Drawing.Point(282, 51);
 			this.visualLabel1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.visualLabel1.Name = "visualLabel1";
 			this.visualLabel1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1859,8 +1865,8 @@
 			this.visualLabel1.ShadowDirection = 315;
 			this.visualLabel1.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.visualLabel1.ShadowOpacity = 100;
-			this.visualLabel1.Size = new System.Drawing.Size(58, 23);
-			this.visualLabel1.TabIndex = 2;
+			this.visualLabel1.Size = new System.Drawing.Size(75, 23);
+			this.visualLabel1.TabIndex = 4;
 			this.visualLabel1.Text = "Nombre";
 			this.visualLabel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			// 
@@ -1905,9 +1911,9 @@
 			this.TextNombre.Name = "TextNombre";
 			this.TextNombre.PasswordChar = '\0';
 			this.TextNombre.ReadOnly = false;
-			this.TextNombre.Size = new System.Drawing.Size(362, 23);
+			this.TextNombre.Size = new System.Drawing.Size(462, 23);
 			this.TextNombre.TabIndex = 1;
-			this.TextNombre.TextBoxWidth = 352;
+			this.TextNombre.TextBoxWidth = 452;
 			this.TextNombre.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.TextNombre.Watermark.ActiveColor = System.Drawing.Color.Gray;
 			this.TextNombre.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -1999,10 +2005,11 @@
 			// 
 			this.tabAllClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
 			this.tabAllClientes.Controls.Add(this.dataGridView1);
-			this.tabAllClientes.Location = new System.Drawing.Point(104, 4);
+			this.tabAllClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabAllClientes.Location = new System.Drawing.Point(4, 29);
 			this.tabAllClientes.Name = "tabAllClientes";
 			this.tabAllClientes.Padding = new System.Windows.Forms.Padding(3);
-			this.tabAllClientes.Size = new System.Drawing.Size(740, 510);
+			this.tabAllClientes.Size = new System.Drawing.Size(840, 485);
 			this.tabAllClientes.TabIndex = 1;
 			this.tabAllClientes.Text = "Clientes";
 			// 
@@ -2020,9 +2027,9 @@
             this.Fecha,
             this.Precio,
             this.Diagnostico});
-			this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+			this.dataGridView1.Location = new System.Drawing.Point(6, 70);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(728, 498);
+			this.dataGridView1.Size = new System.Drawing.Size(828, 409);
 			this.dataGridView1.TabIndex = 0;
 			// 
 			// ID
@@ -2067,11 +2074,53 @@
 			// tabFichas
 			// 
 			this.tabFichas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.tabFichas.Location = new System.Drawing.Point(104, 4);
+			this.tabFichas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tabFichas.Location = new System.Drawing.Point(4, 29);
 			this.tabFichas.Name = "tabFichas";
-			this.tabFichas.Size = new System.Drawing.Size(740, 510);
+			this.tabFichas.Size = new System.Drawing.Size(840, 485);
 			this.tabFichas.TabIndex = 2;
 			this.tabFichas.Text = "Fichas";
+			// 
+			// visualLabel3
+			// 
+			this.visualLabel3.BackColor = System.Drawing.Color.Transparent;
+			this.visualLabel3.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualLabel3.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualLabel3.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.visualLabel3.BackgroundStateGradientBrush = null;
+			this.visualLabel3.ControlBrushCollection = null;
+			this.visualLabel3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualLabel3.ForeGradient.Angle = 0F;
+			this.visualLabel3.ForeGradient.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black};
+			this.visualLabel3.ForeGradient.Positions = new float[] {
+        0F,
+        1F};
+			this.visualLabel3.ForeGradientDisabled.Angle = 0F;
+			this.visualLabel3.ForeGradientDisabled.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(159)))), ((int)(((byte)(159))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))))};
+			this.visualLabel3.ForeGradientDisabled.Positions = new float[] {
+        0F,
+        1F};
+			this.visualLabel3.Location = new System.Drawing.Point(293, 172);
+			this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualLabel3.Name = "visualLabel3";
+			this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.visualLabel3.Outline = false;
+			this.visualLabel3.OutlineColor = System.Drawing.Color.Red;
+			this.visualLabel3.OutlineLocation = new System.Drawing.Point(0, 0);
+			this.visualLabel3.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.visualLabel3.ReflectionSpacing = 0;
+			this.visualLabel3.ShadowColor = System.Drawing.Color.Black;
+			this.visualLabel3.ShadowDirection = 315;
+			this.visualLabel3.ShadowLocation = new System.Drawing.Point(0, 0);
+			this.visualLabel3.ShadowOpacity = 100;
+			this.visualLabel3.Size = new System.Drawing.Size(400, 23);
+			this.visualLabel3.TabIndex = 12;
+			this.visualLabel3.Text = "Buscador";
+			this.visualLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			// 
 			// Main
 			// 
@@ -2163,5 +2212,6 @@
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.TabPage tabFichas;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel3;
 	}
 }
