@@ -42,6 +42,7 @@ namespace XLight
 		{
 			// Hacer invisible los box
 			BoxHistorial.Visible = false;
+			BoxOpciones.Visible = false;
 
 			// Instanciar String y XML
 			Xml xml = new Xml();
@@ -75,6 +76,10 @@ namespace XLight
 			{
 				CargarAjustes(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Ajustes\ajustes.xml"));
 			}
+
+			LblData.Text = pathData;
+			LblRutaClientes.Text = pathClientes;
+			LblRutaHistorial.Text = pathHistorial;
 
 			CargarHistorial(pathHistorial);
 		}
@@ -142,6 +147,40 @@ namespace XLight
 		}
 
 		/// <summary>
+		/// <para>Guarda los ajustes</para>
+		/// </summary>
+		/// <param name="path"></param>
+		public void GuardarAjustes(string path)// Guarda los ajustes
+		{
+			XmlDocument doc = new XmlDocument();
+
+			XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+			XmlNode root = doc.DocumentElement;
+			doc.InsertBefore(xmlDeclaration, root);
+
+			XmlNode elemento = doc.CreateElement("Ajustes");
+			doc.AppendChild(elemento);
+
+			XmlElement rutaData = doc.CreateElement("rutadata");
+			rutaData.AppendChild(doc.CreateTextNode(pathData));
+			elemento.AppendChild(rutaData);
+
+			XmlElement rutaHistorial = doc.CreateElement("rutahistorial");
+			rutaHistorial.AppendChild(doc.CreateTextNode(pathHistorial));
+			elemento.AppendChild(rutaHistorial);
+
+			XmlElement rutaClientes = doc.CreateElement("rutaclientes");
+			rutaClientes.AppendChild(doc.CreateTextNode(pathClientes));
+			elemento.AppendChild(rutaClientes);
+
+			XmlElement rutaAjustes = doc.CreateElement("rutaajustes");
+			rutaAjustes.AppendChild(doc.CreateTextNode(pathAjustes));
+			elemento.AppendChild(rutaAjustes);
+
+			doc.Save(path);
+		}
+
+		/// <summary>
 		/// <para>Carga el historial</para>
 		/// </summary>
 		/// <param name="path"></param>
@@ -192,6 +231,8 @@ namespace XLight
 
 		private void BtnSalir_Click(object sender, EventArgs e)
 		{
+			GuardarAjustes(pathAjustes);
+
 			Application.Exit();
 		}
 
@@ -205,6 +246,55 @@ namespace XLight
 			if (BoxHistorial.Visible == true) return;
 
 			BoxHistorial.Visible = true;
+			BoxOpciones.Visible = false;
+		}
+
+		private void BtnOpciones_Click(object sender, EventArgs e)
+		{
+			if (BoxOpciones.Visible == true) return;
+
+			BoxOpciones.Visible = true;
+			BoxHistorial.Visible = false;
+		}
+
+		private void BtnRutaData_Click(object sender, EventArgs e)
+		{
+			FolderBrowserDialog busqueda = new FolderBrowserDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.SelectedPath;
+				LblData.Text = path;
+				pathData = path;
+				GuardarAjustes(pathAjustes);
+			}
+
+		}
+
+		private void BtnRutaHistorial_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog busqueda = new OpenFileDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.FileName;
+				LblRutaHistorial.Text = path;
+				pathHistorial = path;
+				GuardarAjustes(pathAjustes);
+			}
+		}
+
+		private void BtnRutaCllientes_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog busqueda = new OpenFileDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.FileName;
+				LblRutaClientes.Text = path;
+				pathClientes = path;
+				GuardarAjustes(pathAjustes);
+			}
 		}
 		#endregion
 	}
