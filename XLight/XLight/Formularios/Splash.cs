@@ -9,7 +9,9 @@
 
 #region Librerias
 using System;
+using System.IO;
 using System.Windows.Forms;
+using XLight.Clases;
 #endregion
 
 
@@ -25,6 +27,33 @@ namespace XLight
 		{
 			InitializeComponent();
 
+		}
+		#endregion
+
+		#region Loader
+		private void Splash_Load(object sender, EventArgs e)
+		{
+			StringMaestro master = new StringMaestro();
+
+			if (master.pathHistorial == string.Empty)
+			{
+				if (!File.Exists("Data"))
+				{
+					Directory.CreateDirectory("Data");
+				}
+
+				if (!File.Exists("Data/historial.xml"))
+				{
+					Xml xml = new Xml();
+					xml.CrearXML("Data/historial.xml", "Clientes");
+				}
+
+				if (!File.Exists("Data/clientes.xml"))
+				{
+					Xml xml = new Xml();
+					xml.CrearXML("Data/clientes.xml", "Clientes");
+				}
+			}
 		}
 		#endregion
 

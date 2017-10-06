@@ -29,6 +29,14 @@ namespace XLight
 		private XmlDocument doc;                                        // Documento
 		#endregion
 
+		#region Propiedades
+		public string RutaXML
+		{
+			get { return rutaXML; }
+			set { rutaXML = value; }
+		}
+		#endregion
+
 		#region Metodos
 		/// <summary>
 		/// <para>Crear un archivo xml en la ruta dada.</para>
@@ -40,7 +48,7 @@ namespace XLight
 			this.rutaXML = ruta;
 			doc = new XmlDocument();
 
-			XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0.0", "UTF-8", null);
+			XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
 			XmlNode root = doc.DocumentElement;
 			doc.InsertBefore(xmlDeclaration, root);
 
@@ -58,9 +66,9 @@ namespace XLight
 		/// <param name="fecha"></param>
 		/// <param name="precio"></param>
 		/// <param name="resultado"></param>
-		public void AgregarHistorial(string id, string nom, TiposTratamiento tipo, string fecha, string precio, string resultado)// Agrega un elemento al historial
+		public void AgregarHistorial(string ruta,string id, string nom, TiposTratamiento tipo, string fecha, string precio, string resultado)// Agrega un elemento al historial
 		{
-			doc.Load(rutaXML);
+			doc.Load(ruta);
 
 			XmlNode cliente = CrearClienteHistorial(id, nom, tipo, fecha, precio, resultado);
 
@@ -144,6 +152,8 @@ namespace XLight
 					clientes.ReplaceChild(nuevoCliente, nodo);
 				}
 			}
+
+			doc.Save(rutaXML);
 		}
 		#endregion
 
