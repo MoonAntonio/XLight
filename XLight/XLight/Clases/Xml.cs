@@ -235,6 +235,7 @@ namespace XLight
 		/// </summary>
 		public enum TiposTratamiento
 		{
+			Ninguno,
 			Interpretar,
 			Regresion,
 			TetraHealing,
