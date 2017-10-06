@@ -43,6 +43,7 @@ namespace XLight
 			// Hacer invisible los box
 			BoxHistorial.Visible = false;
 			BoxOpciones.Visible = false;
+			BoxClientes.Visible = false;
 
 			// Instanciar String y XML
 			Xml xml = new Xml();
@@ -247,6 +248,7 @@ namespace XLight
 
 			BoxHistorial.Visible = true;
 			BoxOpciones.Visible = false;
+			BoxClientes.Visible = false;
 		}
 
 		private void BtnOpciones_Click(object sender, EventArgs e)
@@ -255,6 +257,16 @@ namespace XLight
 
 			BoxOpciones.Visible = true;
 			BoxHistorial.Visible = false;
+			BoxClientes.Visible = false;
+		}
+
+		private void BtnClientes_Click(object sender, EventArgs e)
+		{
+			if (BoxClientes.Visible == true) return;
+
+			BoxClientes.Visible = true;
+			BoxHistorial.Visible = false;
+			BoxOpciones.Visible = false;
 		}
 
 		private void BtnRutaData_Click(object sender, EventArgs e)
@@ -296,6 +308,12 @@ namespace XLight
 				GuardarAjustes(pathAjustes);
 			}
 		}
+
 		#endregion
+
+		private void BtnAgregarNuevoCliente_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
