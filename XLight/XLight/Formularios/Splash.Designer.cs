@@ -125,6 +125,7 @@
 			this.Name = "Splash";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Splash";
+			this.Load += new System.EventHandler(this.Splash_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
