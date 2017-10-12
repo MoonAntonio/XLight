@@ -249,9 +249,72 @@ namespace XLight.Formularios
 
 		private void BtnGuardarHipnosis_Click(object sender, EventArgs e)
 		{
-			
+			Xml xml = new Xml();
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			if (!File.Exists("Data/" + nombreCliente + "/Hipnosis/Template.xml"))
+			{
+				xml.CrearXML("Data/" + nombreCliente + "/Hipnosis/Template.xml", "General");
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load("Data/" + nombreCliente + "/Hipnosis/" + dia + ".xml");
+
+				XmlNode cliente = doc.CreateElement("Entrada");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = "0";
+				cliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("contenido");
+				xnom.InnerText = TextBoxHipnosis.Text;
+				cliente.AppendChild(xnom);
+
+				XmlElement xtipo = doc.CreateElement("fecha");
+				xtipo.InnerText = dia;
+				cliente.AppendChild(xtipo);
+
+				doc.DocumentElement.AppendChild(cliente);
+				doc.Save("Data/" + nombreCliente + "/Hipnosis/" + dia + ".xml");
+			}
+			else
+			{
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load("Data/" + nombreCliente + "/Hipnosis/Template.xml");
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("General/Entrada");
+
+				XmlNode nuevoCliente = doc.CreateElement("Entrada");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = listaClientes.Count + 1.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("contenido");
+				xnom.InnerText = TextBoxHipnosis.Text;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xtipo = doc.CreateElement("fecha");
+				xtipo.InnerText = dia;
+				nuevoCliente.AppendChild(xtipo);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == id)
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\clientes.xml"));
+
+				MessageBox.Show("Guardado");
+			}	
 		}
-
-
 	}
 }

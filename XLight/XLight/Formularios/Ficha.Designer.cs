@@ -29,17 +29,17 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			VisualPlus.Structure.Gradient gradient21 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Gradient gradient22 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Gradient gradient23 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Gradient gradient24 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
 			VisualPlus.Structure.Gradient gradient1 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient2 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient3 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient4 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
+			VisualPlus.Structure.Gradient gradient21 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient22 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient23 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient24 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Gradient gradient17 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient18 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient19 = new VisualPlus.Structure.Gradient();
@@ -55,6 +55,11 @@
 			VisualPlus.Structure.Gradient gradient11 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient12 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Gradient gradient5 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient6 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient7 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient8 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
 			this.BtnGuardar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualTabControl1 = new VisualPlus.Toolkit.Controls.Navigation.VisualTabControl();
 			this.Hipnosis = new System.Windows.Forms.TabPage();
@@ -82,6 +87,8 @@
 			this.BtnAbrirHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualLabel6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.visualTextBox1 = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+			this.BtnCerrar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.lblRuta = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.visualTabControl1.SuspendLayout();
 			this.Hipnosis.SuspendLayout();
 			this.SuspendLayout();
@@ -98,60 +105,60 @@
 			this.BtnGuardar.Border.Thickness = 1;
 			this.BtnGuardar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			this.BtnGuardar.Border.Visible = true;
-			gradient21.Angle = 0F;
-			gradient21.Colors = new System.Drawing.Color[] {
+			gradient1.Angle = 0F;
+			gradient1.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))))};
-			gradient21.Positions = new float[] {
+			gradient1.Positions = new float[] {
         0F,
         0.5F,
         1F};
-			gradient22.Angle = 0F;
-			gradient22.Colors = new System.Drawing.Color[] {
+			gradient2.Angle = 0F;
+			gradient2.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))))};
-			gradient22.Positions = new float[] {
+			gradient2.Positions = new float[] {
         0F,
         0.5F,
         1F};
-			gradient23.Angle = 0F;
-			gradient23.Colors = new System.Drawing.Color[] {
+			gradient3.Angle = 0F;
+			gradient3.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))))};
-			gradient23.Positions = new float[] {
+			gradient3.Positions = new float[] {
         0F,
         0.5F,
         1F};
-			gradient24.Angle = 0F;
-			gradient24.Colors = new System.Drawing.Color[] {
+			gradient4.Angle = 0F;
+			gradient4.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))))};
-			gradient24.Positions = new float[] {
+			gradient4.Positions = new float[] {
         0F,
         0.5F,
         1F};
 			this.BtnGuardar.ControlBrushCollection = new VisualPlus.Structure.Gradient[] {
-        gradient21,
-        gradient22,
-        gradient23,
-        gradient24};
-			this.BtnGuardar.DisabledGradient = gradient24;
-			this.BtnGuardar.EnabledGradient = gradient21;
+        gradient1,
+        gradient2,
+        gradient3,
+        gradient4};
+			this.BtnGuardar.DisabledGradient = gradient4;
+			this.BtnGuardar.EnabledGradient = gradient1;
 			this.BtnGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.BtnGuardar.HoverGradient = gradient22;
-			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border6.HoverVisible = false;
-			border6.Rounding = 6;
-			border6.Thickness = 1;
-			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border6.Visible = false;
-			this.BtnGuardar.Image.Border = border6;
+			this.BtnGuardar.HoverGradient = gradient2;
+			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border1.HoverVisible = false;
+			border1.Rounding = 6;
+			border1.Thickness = 1;
+			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border1.Visible = false;
+			this.BtnGuardar.Image.Border = border1;
 			this.BtnGuardar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
 			this.BtnGuardar.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardar.Image.Size = new System.Drawing.Size(24, 24);
@@ -159,7 +166,7 @@
 			this.BtnGuardar.Location = new System.Drawing.Point(488, 12);
 			this.BtnGuardar.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnGuardar.Name = "BtnGuardar";
-			this.BtnGuardar.PressedGradient = gradient23;
+			this.BtnGuardar.PressedGradient = gradient3;
 			this.BtnGuardar.Size = new System.Drawing.Size(140, 45);
 			this.BtnGuardar.TabIndex = 0;
 			this.BtnGuardar.Text = "Guardar";
@@ -236,6 +243,8 @@
 			// Hipnosis
 			// 
 			this.Hipnosis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Hipnosis.Controls.Add(this.lblRuta);
+			this.Hipnosis.Controls.Add(this.BtnCerrar);
 			this.Hipnosis.Controls.Add(this.BtnAbrirHipnosis);
 			this.Hipnosis.Controls.Add(this.BtnImprimirHipnosis);
 			this.Hipnosis.Controls.Add(this.TextBoxHipnosis);
@@ -785,68 +794,68 @@
 			this.BtnSource.Border.Thickness = 1;
 			this.BtnSource.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			this.BtnSource.Border.Visible = true;
-			gradient1.Angle = 0F;
-			gradient1.Colors = new System.Drawing.Color[] {
+			gradient21.Angle = 0F;
+			gradient21.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))))};
-			gradient1.Positions = new float[] {
+			gradient21.Positions = new float[] {
         0F,
         0.5F,
         1F};
-			gradient2.Angle = 0F;
-			gradient2.Colors = new System.Drawing.Color[] {
+			gradient22.Angle = 0F;
+			gradient22.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))))};
-			gradient2.Positions = new float[] {
+			gradient22.Positions = new float[] {
         0F,
         0.5F,
         1F};
-			gradient3.Angle = 0F;
-			gradient3.Colors = new System.Drawing.Color[] {
+			gradient23.Angle = 0F;
+			gradient23.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))))};
-			gradient3.Positions = new float[] {
+			gradient23.Positions = new float[] {
         0F,
         0.5F,
         1F};
-			gradient4.Angle = 0F;
-			gradient4.Colors = new System.Drawing.Color[] {
+			gradient24.Angle = 0F;
+			gradient24.Colors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))))};
-			gradient4.Positions = new float[] {
+			gradient24.Positions = new float[] {
         0F,
         0.5F,
         1F};
 			this.BtnSource.ControlBrushCollection = new VisualPlus.Structure.Gradient[] {
-        gradient1,
-        gradient2,
-        gradient3,
-        gradient4};
-			this.BtnSource.DisabledGradient = gradient4;
-			this.BtnSource.EnabledGradient = gradient1;
+        gradient21,
+        gradient22,
+        gradient23,
+        gradient24};
+			this.BtnSource.DisabledGradient = gradient24;
+			this.BtnSource.EnabledGradient = gradient21;
 			this.BtnSource.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnSource.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.BtnSource.HoverGradient = gradient2;
-			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border1.HoverVisible = false;
-			border1.Rounding = 6;
-			border1.Thickness = 1;
-			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border1.Visible = false;
-			this.BtnSource.Image.Border = border1;
-			this.BtnSource.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
+			this.BtnSource.HoverGradient = gradient22;
+			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border6.HoverVisible = false;
+			border6.Rounding = 6;
+			border6.Thickness = 1;
+			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border6.Visible = false;
+			this.BtnSource.Image.Border = border6;
+			this.BtnSource.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
 			this.BtnSource.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnSource.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnSource.Image.Visible = false;
 			this.BtnSource.Location = new System.Drawing.Point(488, 119);
 			this.BtnSource.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnSource.Name = "BtnSource";
-			this.BtnSource.PressedGradient = gradient3;
+			this.BtnSource.PressedGradient = gradient23;
 			this.BtnSource.Size = new System.Drawing.Size(140, 45);
 			this.BtnSource.TabIndex = 16;
 			this.BtnSource.Text = "Abrir Source";
@@ -920,11 +929,11 @@
 			border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			border5.Visible = false;
 			this.BtnGuardarHipnosis.Image.Border = border5;
-			this.BtnGuardarHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
+			this.BtnGuardarHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
 			this.BtnGuardarHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarHipnosis.Image.Visible = false;
-			this.BtnGuardarHipnosis.Location = new System.Drawing.Point(373, 6);
+			this.BtnGuardarHipnosis.Location = new System.Drawing.Point(307, 6);
 			this.BtnGuardarHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnGuardarHipnosis.Name = "BtnGuardarHipnosis";
 			this.BtnGuardarHipnosis.PressedGradient = gradient19;
@@ -951,10 +960,10 @@
 			this.TextBoxHipnosis.Border.Visible = true;
 			this.TextBoxHipnosis.ControlBrushCollection = null;
 			this.TextBoxHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.TextBoxHipnosis.Location = new System.Drawing.Point(8, 57);
+			this.TextBoxHipnosis.Location = new System.Drawing.Point(8, 79);
 			this.TextBoxHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.TextBoxHipnosis.Name = "TextBoxHipnosis";
-			this.TextBoxHipnosis.Size = new System.Drawing.Size(594, 372);
+			this.TextBoxHipnosis.Size = new System.Drawing.Size(594, 350);
 			this.TextBoxHipnosis.TabIndex = 18;
 			this.TextBoxHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			// 
@@ -1028,7 +1037,7 @@
 			this.BtnImprimirHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnImprimirHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnImprimirHipnosis.Image.Visible = false;
-			this.BtnImprimirHipnosis.Location = new System.Drawing.Point(227, 6);
+			this.BtnImprimirHipnosis.Location = new System.Drawing.Point(161, 6);
 			this.BtnImprimirHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnImprimirHipnosis.Name = "BtnImprimirHipnosis";
 			this.BtnImprimirHipnosis.PressedGradient = gradient15;
@@ -1104,11 +1113,11 @@
 			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			border3.Visible = false;
 			this.BtnAbrirHipnosis.Image.Border = border3;
-			this.BtnAbrirHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
+			this.BtnAbrirHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
 			this.BtnAbrirHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnAbrirHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnAbrirHipnosis.Image.Visible = false;
-			this.BtnAbrirHipnosis.Location = new System.Drawing.Point(81, 6);
+			this.BtnAbrirHipnosis.Location = new System.Drawing.Point(15, 6);
 			this.BtnAbrirHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnAbrirHipnosis.Name = "BtnAbrirHipnosis";
 			this.BtnAbrirHipnosis.PressedGradient = gradient11;
@@ -1211,6 +1220,127 @@
 			this.visualTextBox1.Watermark.Visible = false;
 			this.visualTextBox1.TextChanged += new System.EventHandler(this.visualTextBox1_TextChanged);
 			// 
+			// BtnCerrar
+			// 
+			this.BtnCerrar.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCerrar.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCerrar.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.BtnCerrar.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCerrar.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCerrar.Border.HoverVisible = true;
+			this.BtnCerrar.Border.Rounding = 6;
+			this.BtnCerrar.Border.Thickness = 1;
+			this.BtnCerrar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCerrar.Border.Visible = true;
+			gradient5.Angle = 0F;
+			gradient5.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))))};
+			gradient5.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			gradient6.Angle = 0F;
+			gradient6.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))))};
+			gradient6.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			gradient7.Angle = 0F;
+			gradient7.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))))};
+			gradient7.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			gradient8.Angle = 0F;
+			gradient8.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))))};
+			gradient8.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			this.BtnCerrar.ControlBrushCollection = new VisualPlus.Structure.Gradient[] {
+        gradient5,
+        gradient6,
+        gradient7,
+        gradient8};
+			this.BtnCerrar.DisabledGradient = gradient8;
+			this.BtnCerrar.EnabledGradient = gradient5;
+			this.BtnCerrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCerrar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.BtnCerrar.HoverGradient = gradient6;
+			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border2.HoverVisible = false;
+			border2.Rounding = 6;
+			border2.Thickness = 1;
+			border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border2.Visible = false;
+			this.BtnCerrar.Image.Border = border2;
+			this.BtnCerrar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
+			this.BtnCerrar.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCerrar.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCerrar.Image.Visible = false;
+			this.BtnCerrar.Location = new System.Drawing.Point(453, 6);
+			this.BtnCerrar.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCerrar.Name = "BtnCerrar";
+			this.BtnCerrar.PressedGradient = gradient7;
+			this.BtnCerrar.Size = new System.Drawing.Size(140, 45);
+			this.BtnCerrar.TabIndex = 21;
+			this.BtnCerrar.Text = "Cerrar";
+			this.BtnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCerrar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// lblRuta
+			// 
+			this.lblRuta.BackColor = System.Drawing.Color.Transparent;
+			this.lblRuta.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.lblRuta.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.lblRuta.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.lblRuta.BackgroundStateGradientBrush = null;
+			this.lblRuta.ControlBrushCollection = null;
+			this.lblRuta.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.lblRuta.ForeGradient.Angle = 0F;
+			this.lblRuta.ForeGradient.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black};
+			this.lblRuta.ForeGradient.Positions = new float[] {
+        0F,
+        1F};
+			this.lblRuta.ForeGradientDisabled.Angle = 0F;
+			this.lblRuta.ForeGradientDisabled.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(159)))), ((int)(((byte)(159))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))))};
+			this.lblRuta.ForeGradientDisabled.Positions = new float[] {
+        0F,
+        1F};
+			this.lblRuta.Location = new System.Drawing.Point(15, 58);
+			this.lblRuta.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.lblRuta.Name = "lblRuta";
+			this.lblRuta.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.lblRuta.Outline = false;
+			this.lblRuta.OutlineColor = System.Drawing.Color.Red;
+			this.lblRuta.OutlineLocation = new System.Drawing.Point(0, 0);
+			this.lblRuta.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.lblRuta.ReflectionSpacing = 0;
+			this.lblRuta.ShadowColor = System.Drawing.Color.Black;
+			this.lblRuta.ShadowDirection = 315;
+			this.lblRuta.ShadowLocation = new System.Drawing.Point(0, 0);
+			this.lblRuta.ShadowOpacity = 100;
+			this.lblRuta.Size = new System.Drawing.Size(578, 23);
+			this.lblRuta.TabIndex = 22;
+			this.lblRuta.Text = "Ruta";
+			this.lblRuta.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
 			// Ficha
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1273,5 +1403,7 @@
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarHipnosis;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel6;
 		private VisualPlus.Toolkit.Controls.Editors.VisualTextBox visualTextBox1;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel lblRuta;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCerrar;
 	}
 }
