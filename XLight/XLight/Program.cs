@@ -10,6 +10,7 @@
 #region Librerias
 using System;
 using System.Windows.Forms;
+using XLight.Formularios;
 #endregion
 
 namespace XLight
@@ -26,7 +27,7 @@ namespace XLight
 			Application.SetCompatibleTextRenderingDefault(false);
 			//Application.Run(new Splash());
 			// TODO Testeo
-			Application.Run(new Main());
+			Application.Run(new Ficha());
 		}
 	}
 }

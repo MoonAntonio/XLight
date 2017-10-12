@@ -16,6 +16,7 @@ using System.Xml;
 using System.Reflection;
 using System.Diagnostics;
 using System.Data;
+using XLight.Formularios;
 #endregion
 
 namespace XLight
@@ -26,18 +27,22 @@ namespace XLight
 	public partial class Main : Form
 	{
 		#region Variables
+		public static string nombreFicha = "";
 		private string pathHistorial;
-		private string pathData;
-		private string pathClientes;
+		public static string pathData;
+		public static string pathClientes;
 		private string pathAjustes;
 		private string idActual;
 		private string idRemove;
+		public List<string> nombresClientes = new List<string>();
 		#endregion
 
 		#region Constructor
 		public Main()
 		{
 			InitializeComponent();
+
+			
 		}
 		#endregion
 
@@ -84,6 +89,10 @@ namespace XLight
 			CargarHistorial(pathHistorial);
 
 			ActualizarBusquedaRegistro();
+
+			AutoCompletar();
+
+			AutoCompletarFicha();
 		}
 		#endregion
 
@@ -314,7 +323,10 @@ namespace XLight
 			doc.Save(pathHistorial);
 		}
 
-		public void ActualizarBusquedaRegistro()
+		/// <summary>
+		/// <para>Actualiza la busqueda de registro</para>
+		/// </summary>
+		public void ActualizarBusquedaRegistro()// Actualiza la busqueda de registro
 		{
 			listView1.Items.Clear();
 
@@ -336,6 +348,145 @@ namespace XLight
 				listaItems.SubItems.Add(nombre);
 				listView1.Items.Add(listaItems);
 			}
+		}
+
+		/// <summary>
+		/// <para>Borra el historial</para>
+		/// </summary>
+		/// <param name="id"></param>
+		public void BorrarHistorial()// Borra el historial
+		{
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathHistorial);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				XmlNode nodo = item;
+
+				cliente.RemoveChild(nodo);
+			}
+
+			doc.Save(pathHistorial);
+		}
+
+		/// <summary>
+		/// <para>Autocompleta la busqueda</para>
+		/// </summary>
+		public void AutoCompletar()// Autocompleta la busqueda
+		{
+			nombresClientes.Clear();
+
+			txtBoxBuscadorRegistro.AutoCompleteSource = AutoCompleteSource.CustomSource;
+			txtBoxBuscadorRegistro.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+			AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				string nodo = item["nombre"].InnerText;
+
+				nombresClientes.Add(nodo);
+			}
+
+			doc.Save(pathClientes);
+
+			DataTable dt = new DataTable();
+			dt.Columns.Add("nombre", typeof(string));
+
+			for (int i = 0; i < nombresClientes.Count; i++)
+			{
+				dt.Rows.Add(nombresClientes[i]);
+			}
+
+			for (int n = 0; n < dt.Rows.Count; n++)
+			{
+				string name = dt.Rows[n]["nombre"].ToString();
+				coll.Add(name);
+			}
+
+			txtBoxBuscadorRegistro.AutoCompleteCustomSource = coll;
+		}
+
+		/// <summary>
+		/// <para>Autocompleta la busqueda</para>
+		/// </summary>
+		public void AutoCompletarFicha()// Autocompleta la busqueda
+		{
+			nombresClientes.Clear();
+
+			txtBoxBusquedaFicha.AutoCompleteSource = AutoCompleteSource.CustomSource;
+			txtBoxBusquedaFicha.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+			AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				string nodo = item["nombre"].InnerText;
+
+				nombresClientes.Add(nodo);
+			}
+
+			doc.Save(pathClientes);
+
+			DataTable dt = new DataTable();
+			dt.Columns.Add("nombre", typeof(string));
+
+			for (int i = 0; i < nombresClientes.Count; i++)
+			{
+				dt.Rows.Add(nombresClientes[i]);
+			}
+
+			for (int n = 0; n < dt.Rows.Count; n++)
+			{
+				string name = dt.Rows[n]["nombre"].ToString();
+				coll.Add(name);
+			}
+
+			txtBoxBusquedaFicha.AutoCompleteCustomSource = coll;
+		}
+
+		/// <summary>
+		/// <para>Actualiza la lista de nombres de clientes.</para>
+		/// </summary>
+		public void ActualizarListaNombres()// Actualiza la lista de nombres de clientes
+		{
+			nombresClientes.Clear();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				string nodo = item["nombre"].InnerText;
+
+				nombresClientes.Add(nodo);
+			}
+
+			doc.Save(pathClientes);
 		}
 		#endregion
 
@@ -554,7 +705,7 @@ namespace XLight
 			DateTime diahora = DateTime.Now;
 			string dia = diahora.ToString("dddd dd MMMM");
 
-			if (idRemove != string.Empty)
+			if (txtBoxBuscadorRegistro.Text != string.Empty)
 			{
 				doc.Load(pathClientes);
 
@@ -564,7 +715,7 @@ namespace XLight
 
 				foreach (XmlNode item in listaClientes)
 				{
-					if (item.SelectSingleNode("id").InnerText == idRemove)
+					if (item.SelectSingleNode("nombre").InnerText == txtBoxBuscadorRegistro.Text)
 					{
 						XmlNode nodo = item;
 
@@ -580,11 +731,55 @@ namespace XLight
 				CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
 
 				ActualizarBusquedaRegistro();
+
+				txtBoxBuscadorRegistro.Text = "";
+
+				ActualizarListaNombres();
 			}
 			else
 			{
-				MessageBox.Show("Primero selecciona un cliente.");
+				if (idRemove != string.Empty)
+				{
+					doc.Load(pathClientes);
+
+					XmlElement cliente = doc.DocumentElement;
+
+					XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+					foreach (XmlNode item in listaClientes)
+					{
+						if (item.SelectSingleNode("id").InnerText == idRemove)
+						{
+							XmlNode nodo = item;
+
+							cliente.RemoveChild(nodo);
+						}
+					}
+
+
+					doc.Save(pathClientes);
+
+					MessageBox.Show("Cliente eliminado.");
+
+					CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
+
+					ActualizarBusquedaRegistro();
+
+					ActualizarListaNombres();
+				}
+				else
+				{
+					MessageBox.Show("Primero selecciona un cliente.");
+				}
 			}
+		}
+
+		private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			string str;
+
+			str = dataGridView1.SelectedCells[0].Value.ToString();
+			txtBoxBusquedaFicha.Text = str;
 		}
 
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
@@ -592,6 +787,27 @@ namespace XLight
 			string id = listView1.SelectedItems[0].SubItems[0].Text;
 			string nombre = listView1.SelectedItems[0].SubItems[1].Text;
 			idRemove = id;
+		}
+
+		private void BtnLimpiarHistorial_Click(object sender, EventArgs e)
+		{
+			BorrarHistorial();
+		}
+
+		private void BtnAbrirFicha_Click(object sender, EventArgs e)
+		{
+			if (txtBoxBusquedaFicha.Text != string.Empty)
+			{
+				nombreFicha = txtBoxBusquedaFicha.Text;
+
+				Ficha ficha = new Ficha();
+				ficha.Show();
+				txtBoxBusquedaFicha.Text = "";
+			}
+			else
+			{
+				MessageBox.Show("Tienes que buscar algun cliente.");
+			}
 		}
 		#endregion
 
@@ -608,8 +824,8 @@ namespace XLight
 			Reiki,
 			Hipnosis
 		}
-
-
 		#endregion
+
+
 	}
 }
