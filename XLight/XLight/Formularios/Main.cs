@@ -16,6 +16,7 @@ using System.Xml;
 using System.Reflection;
 using System.Diagnostics;
 using System.Data;
+using XLight.Formularios;
 #endregion
 
 namespace XLight
@@ -26,6 +27,7 @@ namespace XLight
 	public partial class Main : Form
 	{
 		#region Variables
+		public static string nombreFicha = "";
 		private string pathHistorial;
 		private string pathData;
 		private string pathClientes;
@@ -89,6 +91,8 @@ namespace XLight
 			ActualizarBusquedaRegistro();
 
 			AutoCompletar();
+
+			AutoCompletarFicha();
 		}
 		#endregion
 
@@ -416,6 +420,51 @@ namespace XLight
 		}
 
 		/// <summary>
+		/// <para>Autocompleta la busqueda</para>
+		/// </summary>
+		public void AutoCompletarFicha()// Autocompleta la busqueda
+		{
+			nombresClientes.Clear();
+
+			txtBoxBusquedaFicha.AutoCompleteSource = AutoCompleteSource.CustomSource;
+			txtBoxBusquedaFicha.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+			AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				string nodo = item["nombre"].InnerText;
+
+				nombresClientes.Add(nodo);
+			}
+
+			doc.Save(pathClientes);
+
+			DataTable dt = new DataTable();
+			dt.Columns.Add("nombre", typeof(string));
+
+			for (int i = 0; i < nombresClientes.Count; i++)
+			{
+				dt.Rows.Add(nombresClientes[i]);
+			}
+
+			for (int n = 0; n < dt.Rows.Count; n++)
+			{
+				string name = dt.Rows[n]["nombre"].ToString();
+				coll.Add(name);
+			}
+
+			txtBoxBusquedaFicha.AutoCompleteCustomSource = coll;
+		}
+
+		/// <summary>
 		/// <para>Actualiza la lista de nombres de clientes.</para>
 		/// </summary>
 		public void ActualizarListaNombres()// Actualiza la lista de nombres de clientes
@@ -735,6 +784,20 @@ namespace XLight
 		private void BtnLimpiarHistorial_Click(object sender, EventArgs e)
 		{
 			BorrarHistorial();
+		}
+
+		private void BtnAbrirFicha_Click(object sender, EventArgs e)
+		{
+			if (txtBoxBusquedaFicha.Text != string.Empty)
+			{
+				Ficha ficha = new Ficha();
+				ficha.Show();
+				txtBoxBusquedaFicha.Text = "";
+			}
+			else
+			{
+				MessageBox.Show("Tienes que buscar algun cliente.");
+			}
 		}
 		#endregion
 
