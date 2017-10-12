@@ -29,8 +29,8 @@ namespace XLight
 		#region Variables
 		public static string nombreFicha = "";
 		private string pathHistorial;
-		private string pathData;
-		private string pathClientes;
+		public static string pathData;
+		public static string pathClientes;
 		private string pathAjustes;
 		private string idActual;
 		private string idRemove;
@@ -774,6 +774,14 @@ namespace XLight
 			}
 		}
 
+		private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			string str;
+
+			str = dataGridView1.SelectedCells[0].Value.ToString();
+			txtBoxBusquedaFicha.Text = str;
+		}
+
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
 		{
 			string id = listView1.SelectedItems[0].SubItems[0].Text;
@@ -790,6 +798,8 @@ namespace XLight
 		{
 			if (txtBoxBusquedaFicha.Text != string.Empty)
 			{
+				nombreFicha = txtBoxBusquedaFicha.Text;
+
 				Ficha ficha = new Ficha();
 				ficha.Show();
 				txtBoxBusquedaFicha.Text = "";
@@ -814,8 +824,8 @@ namespace XLight
 			Reiki,
 			Hipnosis
 		}
-
-
 		#endregion
+
+
 	}
 }

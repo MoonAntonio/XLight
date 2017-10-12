@@ -60,6 +60,11 @@
 			VisualPlus.Structure.Gradient gradient23 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient24 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Gradient gradient25 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient26 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient27 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Gradient gradient28 = new VisualPlus.Structure.Gradient();
+			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Gradient gradient29 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient30 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient31 = new VisualPlus.Structure.Gradient();
@@ -85,11 +90,6 @@
 			VisualPlus.Structure.Gradient gradient47 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient48 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Gradient gradient25 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Gradient gradient26 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Gradient gradient27 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Gradient gradient28 = new VisualPlus.Structure.Gradient();
-			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Gradient gradient49 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient50 = new VisualPlus.Structure.Gradient();
 			VisualPlus.Structure.Gradient gradient51 = new VisualPlus.Structure.Gradient();
@@ -118,6 +118,8 @@
 			this.columnaPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnaResultado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.BoxOpciones = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+			this.visualSeparator4 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
+			this.BtnLimpiarHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.LblRutaClientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.LblRutaHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.BtnRutaCllientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
@@ -127,6 +129,7 @@
 			this.BoxClientes = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
 			this.TabClientes = new VisualPlus.Toolkit.Controls.Navigation.VisualTabControl();
 			this.tabClienteNuevo = new System.Windows.Forms.TabPage();
+			this.txtBoxBuscadorRegistro = new System.Windows.Forms.TextBox();
 			this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.listView1 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -139,18 +142,15 @@
 			this.TextNombre = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
 			this.BtnAgregarNuevoCliente = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.tabAllClientes = new System.Windows.Forms.TabPage();
+			this.txtBoxBusquedaFicha = new System.Windows.Forms.TextBox();
+			this.BtnAbrirFicha = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.BtnLimpiarHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-			this.visualSeparator4 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
-			this.txtBoxBuscadorRegistro = new System.Windows.Forms.TextBox();
 			this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Tratamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.BtnAbrirFicha = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-			this.txtBoxBusquedaFicha = new System.Windows.Forms.TextBox();
 			this.BoxHistorial.SuspendLayout();
 			this.BoxOpciones.SuspendLayout();
 			this.BoxClientes.SuspendLayout();
@@ -958,6 +958,123 @@
         0.5F,
         1F};
 			// 
+			// visualSeparator4
+			// 
+			this.visualSeparator4.Background = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.visualSeparator4.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualSeparator4.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.visualSeparator4.BackgroundStateGradientBrush = null;
+			this.visualSeparator4.ControlBrushCollection = null;
+			this.visualSeparator4.Line.Angle = 90F;
+			this.visualSeparator4.Line.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(231)))), ((int)(((byte)(230))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))))};
+			this.visualSeparator4.Line.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			this.visualSeparator4.Location = new System.Drawing.Point(45, 260);
+			this.visualSeparator4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualSeparator4.Name = "visualSeparator4";
+			this.visualSeparator4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.visualSeparator4.Shadow.Angle = 90F;
+			this.visualSeparator4.Shadow.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))))};
+			this.visualSeparator4.Shadow.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			this.visualSeparator4.ShadowVisible = false;
+			this.visualSeparator4.Size = new System.Drawing.Size(790, 4);
+			this.visualSeparator4.TabIndex = 7;
+			this.visualSeparator4.Text = "visualSeparator4";
+			// 
+			// BtnLimpiarHistorial
+			// 
+			this.BtnLimpiarHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnLimpiarHistorial.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnLimpiarHistorial.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnLimpiarHistorial.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.BtnLimpiarHistorial.BackgroundStateGradientBrush = null;
+			this.BtnLimpiarHistorial.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnLimpiarHistorial.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnLimpiarHistorial.Border.HoverVisible = true;
+			this.BtnLimpiarHistorial.Border.Rounding = 6;
+			this.BtnLimpiarHistorial.Border.Thickness = 1;
+			this.BtnLimpiarHistorial.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnLimpiarHistorial.Border.Visible = true;
+			gradient25.Angle = 0F;
+			gradient25.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))))};
+			gradient25.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			gradient26.Angle = 0F;
+			gradient26.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))))};
+			gradient26.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			gradient27.Angle = 0F;
+			gradient27.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))))};
+			gradient27.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			gradient28.Angle = 0F;
+			gradient28.Colors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))))};
+			gradient28.Positions = new float[] {
+        0F,
+        0.5F,
+        1F};
+			this.BtnLimpiarHistorial.ControlBrushCollection = new VisualPlus.Structure.Gradient[] {
+        gradient25,
+        gradient26,
+        gradient27,
+        gradient28};
+			this.BtnLimpiarHistorial.DisabledGradient = gradient28;
+			this.BtnLimpiarHistorial.EnabledGradient = gradient25;
+			this.BtnLimpiarHistorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnLimpiarHistorial.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.BtnLimpiarHistorial.HoverGradient = gradient26;
+			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border7.HoverVisible = false;
+			border7.Rounding = 6;
+			border7.Thickness = 1;
+			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border7.Visible = false;
+			this.BtnLimpiarHistorial.Image.Border = border7;
+			this.BtnLimpiarHistorial.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
+			this.BtnLimpiarHistorial.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnLimpiarHistorial.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnLimpiarHistorial.Image.Visible = false;
+			this.BtnLimpiarHistorial.Location = new System.Drawing.Point(45, 281);
+			this.BtnLimpiarHistorial.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnLimpiarHistorial.Name = "BtnLimpiarHistorial";
+			this.BtnLimpiarHistorial.PressedGradient = gradient27;
+			this.BtnLimpiarHistorial.Size = new System.Drawing.Size(140, 45);
+			this.BtnLimpiarHistorial.TabIndex = 6;
+			this.BtnLimpiarHistorial.Text = "Borrar Historial";
+			this.BtnLimpiarHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnLimpiarHistorial.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnLimpiarHistorial.Click += new System.EventHandler(this.BtnLimpiarHistorial_Click);
+			// 
 			// LblRutaClientes
 			// 
 			this.LblRutaClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -1046,6 +1163,7 @@
 			this.BtnRutaCllientes.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnRutaCllientes.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnRutaCllientes.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.BtnRutaCllientes.BackgroundStateGradientBrush = null;
 			this.BtnRutaCllientes.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
 			this.BtnRutaCllientes.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
 			this.BtnRutaCllientes.Border.HoverVisible = true;
@@ -1128,6 +1246,7 @@
 			this.BtnRutaHistorial.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnRutaHistorial.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnRutaHistorial.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.BtnRutaHistorial.BackgroundStateGradientBrush = null;
 			this.BtnRutaHistorial.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
 			this.BtnRutaHistorial.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
 			this.BtnRutaHistorial.Border.HoverVisible = true;
@@ -1251,6 +1370,7 @@
 			this.BtnRutaData.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnRutaData.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnRutaData.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.BtnRutaData.BackgroundStateGradientBrush = null;
 			this.BtnRutaData.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
 			this.BtnRutaData.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
 			this.BtnRutaData.Border.HoverVisible = true;
@@ -1467,6 +1587,13 @@
 			this.tabClienteNuevo.Size = new System.Drawing.Size(840, 485);
 			this.tabClienteNuevo.TabIndex = 0;
 			this.tabClienteNuevo.Text = "Registro";
+			// 
+			// txtBoxBuscadorRegistro
+			// 
+			this.txtBoxBuscadorRegistro.Location = new System.Drawing.Point(282, 212);
+			this.txtBoxBuscadorRegistro.Name = "txtBoxBuscadorRegistro";
+			this.txtBoxBuscadorRegistro.Size = new System.Drawing.Size(540, 29);
+			this.txtBoxBuscadorRegistro.TabIndex = 14;
 			// 
 			// visualLabel3
 			// 
@@ -1927,190 +2054,14 @@
 			this.tabAllClientes.TabIndex = 1;
 			this.tabAllClientes.Text = "Clientes";
 			// 
-			// dataGridView1
+			// txtBoxBusquedaFicha
 			// 
-			this.dataGridView1.AllowUserToOrderColumns = true;
-			this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+			this.txtBoxBusquedaFicha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Nombre,
-            this.Tratamiento,
-            this.Fecha,
-            this.Precio,
-            this.Diagnostico});
-			this.dataGridView1.Location = new System.Drawing.Point(6, 70);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(828, 409);
-			this.dataGridView1.TabIndex = 0;
-			// 
-			// BtnLimpiarHistorial
-			// 
-			this.BtnLimpiarHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnLimpiarHistorial.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnLimpiarHistorial.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnLimpiarHistorial.BackgroundStateColor = System.Drawing.Color.Empty;
-			this.BtnLimpiarHistorial.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.BtnLimpiarHistorial.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.BtnLimpiarHistorial.Border.HoverVisible = true;
-			this.BtnLimpiarHistorial.Border.Rounding = 6;
-			this.BtnLimpiarHistorial.Border.Thickness = 1;
-			this.BtnLimpiarHistorial.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.BtnLimpiarHistorial.Border.Visible = true;
-			gradient25.Angle = 0F;
-			gradient25.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))))};
-			gradient25.Positions = new float[] {
-        0F,
-        0.5F,
-        1F};
-			gradient26.Angle = 0F;
-			gradient26.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(181)))), ((int)(((byte)(181)))))};
-			gradient26.Positions = new float[] {
-        0F,
-        0.5F,
-        1F};
-			gradient27.Angle = 0F;
-			gradient27.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))))};
-			gradient27.Positions = new float[] {
-        0F,
-        0.5F,
-        1F};
-			gradient28.Angle = 0F;
-			gradient28.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))))};
-			gradient28.Positions = new float[] {
-        0F,
-        0.5F,
-        1F};
-			this.BtnLimpiarHistorial.ControlBrushCollection = new VisualPlus.Structure.Gradient[] {
-        gradient25,
-        gradient26,
-        gradient27,
-        gradient28};
-			this.BtnLimpiarHistorial.DisabledGradient = gradient28;
-			this.BtnLimpiarHistorial.EnabledGradient = gradient25;
-			this.BtnLimpiarHistorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnLimpiarHistorial.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.BtnLimpiarHistorial.HoverGradient = gradient26;
-			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border7.HoverVisible = false;
-			border7.Rounding = 6;
-			border7.Thickness = 1;
-			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border7.Visible = false;
-			this.BtnLimpiarHistorial.Image.Border = border7;
-			this.BtnLimpiarHistorial.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
-			this.BtnLimpiarHistorial.Image.Point = new System.Drawing.Point(58, 10);
-			this.BtnLimpiarHistorial.Image.Size = new System.Drawing.Size(24, 24);
-			this.BtnLimpiarHistorial.Image.Visible = false;
-			this.BtnLimpiarHistorial.Location = new System.Drawing.Point(45, 281);
-			this.BtnLimpiarHistorial.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.BtnLimpiarHistorial.Name = "BtnLimpiarHistorial";
-			this.BtnLimpiarHistorial.PressedGradient = gradient27;
-			this.BtnLimpiarHistorial.Size = new System.Drawing.Size(140, 45);
-			this.BtnLimpiarHistorial.TabIndex = 6;
-			this.BtnLimpiarHistorial.Text = "Borrar Historial";
-			this.BtnLimpiarHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-			this.BtnLimpiarHistorial.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			this.BtnLimpiarHistorial.Click += new System.EventHandler(this.BtnLimpiarHistorial_Click);
-			// 
-			// visualSeparator4
-			// 
-			this.visualSeparator4.Background = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.visualSeparator4.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.visualSeparator4.BackgroundStateColor = System.Drawing.Color.Empty;
-			this.visualSeparator4.BackgroundStateGradientBrush = null;
-			this.visualSeparator4.ControlBrushCollection = null;
-			this.visualSeparator4.Line.Angle = 90F;
-			this.visualSeparator4.Line.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(231)))), ((int)(((byte)(230))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))))};
-			this.visualSeparator4.Line.Positions = new float[] {
-        0F,
-        0.5F,
-        1F};
-			this.visualSeparator4.Location = new System.Drawing.Point(45, 260);
-			this.visualSeparator4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.visualSeparator4.Name = "visualSeparator4";
-			this.visualSeparator4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-			this.visualSeparator4.Shadow.Angle = 90F;
-			this.visualSeparator4.Shadow.Colors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))))};
-			this.visualSeparator4.Shadow.Positions = new float[] {
-        0F,
-        0.5F,
-        1F};
-			this.visualSeparator4.ShadowVisible = false;
-			this.visualSeparator4.Size = new System.Drawing.Size(790, 4);
-			this.visualSeparator4.TabIndex = 7;
-			this.visualSeparator4.Text = "visualSeparator4";
-			// 
-			// txtBoxBuscadorRegistro
-			// 
-			this.txtBoxBuscadorRegistro.Location = new System.Drawing.Point(282, 212);
-			this.txtBoxBuscadorRegistro.Name = "txtBoxBuscadorRegistro";
-			this.txtBoxBuscadorRegistro.Size = new System.Drawing.Size(540, 29);
-			this.txtBoxBuscadorRegistro.TabIndex = 14;
-			// 
-			// ID
-			// 
-			this.ID.HeaderText = "ID";
-			this.ID.Name = "ID";
-			this.ID.ReadOnly = true;
-			this.ID.Width = 50;
-			// 
-			// Nombre
-			// 
-			this.Nombre.HeaderText = "Nombre";
-			this.Nombre.Name = "Nombre";
-			this.Nombre.ReadOnly = true;
-			this.Nombre.Width = 200;
-			// 
-			// Tratamiento
-			// 
-			this.Tratamiento.HeaderText = "Tratamiento";
-			this.Tratamiento.Name = "Tratamiento";
-			this.Tratamiento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.Tratamiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-			this.Tratamiento.Width = 200;
-			// 
-			// Fecha
-			// 
-			this.Fecha.HeaderText = "Fecha";
-			this.Fecha.Name = "Fecha";
-			this.Fecha.ReadOnly = true;
-			this.Fecha.Width = 200;
-			// 
-			// Precio
-			// 
-			this.Precio.HeaderText = "Precio";
-			this.Precio.Name = "Precio";
-			this.Precio.ReadOnly = true;
-			this.Precio.Width = 80;
-			// 
-			// Diagnostico
-			// 
-			this.Diagnostico.HeaderText = "Diagnostico";
-			this.Diagnostico.Name = "Diagnostico";
-			this.Diagnostico.ReadOnly = true;
-			this.Diagnostico.Width = 200;
+			this.txtBoxBusquedaFicha.Location = new System.Drawing.Point(262, 23);
+			this.txtBoxBusquedaFicha.Name = "txtBoxBusquedaFicha";
+			this.txtBoxBusquedaFicha.Size = new System.Drawing.Size(540, 29);
+			this.txtBoxBusquedaFicha.TabIndex = 15;
 			// 
 			// BtnAbrirFicha
 			// 
@@ -2192,14 +2143,68 @@
 			this.BtnAbrirFicha.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.BtnAbrirFicha.Click += new System.EventHandler(this.BtnAbrirFicha_Click);
 			// 
-			// txtBoxBusquedaFicha
+			// dataGridView1
 			// 
-			this.txtBoxBusquedaFicha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.dataGridView1.AllowUserToOrderColumns = true;
+			this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtBoxBusquedaFicha.Location = new System.Drawing.Point(262, 23);
-			this.txtBoxBusquedaFicha.Name = "txtBoxBusquedaFicha";
-			this.txtBoxBusquedaFicha.Size = new System.Drawing.Size(540, 29);
-			this.txtBoxBusquedaFicha.TabIndex = 15;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Nombre,
+            this.Tratamiento,
+            this.Fecha,
+            this.Precio,
+            this.Diagnostico});
+			this.dataGridView1.Location = new System.Drawing.Point(6, 70);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(828, 409);
+			this.dataGridView1.TabIndex = 0;
+			this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+			// 
+			// ID
+			// 
+			this.ID.HeaderText = "ID";
+			this.ID.Name = "ID";
+			this.ID.ReadOnly = true;
+			this.ID.Width = 50;
+			// 
+			// Nombre
+			// 
+			this.Nombre.HeaderText = "Nombre";
+			this.Nombre.Name = "Nombre";
+			this.Nombre.ReadOnly = true;
+			this.Nombre.Width = 200;
+			// 
+			// Tratamiento
+			// 
+			this.Tratamiento.HeaderText = "Tratamiento";
+			this.Tratamiento.Name = "Tratamiento";
+			this.Tratamiento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.Tratamiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+			this.Tratamiento.Width = 200;
+			// 
+			// Fecha
+			// 
+			this.Fecha.HeaderText = "Fecha";
+			this.Fecha.Name = "Fecha";
+			this.Fecha.ReadOnly = true;
+			this.Fecha.Width = 200;
+			// 
+			// Precio
+			// 
+			this.Precio.HeaderText = "Precio";
+			this.Precio.Name = "Precio";
+			this.Precio.ReadOnly = true;
+			this.Precio.Width = 80;
+			// 
+			// Diagnostico
+			// 
+			this.Diagnostico.HeaderText = "Diagnostico";
+			this.Diagnostico.Name = "Diagnostico";
+			this.Diagnostico.ReadOnly = true;
+			this.Diagnostico.Width = 200;
 			// 
 			// Main
 			// 
