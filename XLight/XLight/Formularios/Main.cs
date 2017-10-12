@@ -337,6 +337,35 @@ namespace XLight
 				listView1.Items.Add(listaItems);
 			}
 		}
+
+		/// <summary>
+		/// <para>Borra el historial</para>
+		/// </summary>
+		/// <param name="id"></param>
+		public void BorrarHistorial()// Borra el historial
+		{
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathHistorial);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				XmlNode nodo = item;
+
+				cliente.RemoveChild(nodo);
+			}
+
+			doc.Save(pathHistorial);
+		}
+
+		public void AutoCompletar()
+		{
+			txtBoxBuscadorRegistro
+		}
 		#endregion
 
 		#region Funcionalidad
@@ -592,6 +621,11 @@ namespace XLight
 			string id = listView1.SelectedItems[0].SubItems[0].Text;
 			string nombre = listView1.SelectedItems[0].SubItems[1].Text;
 			idRemove = id;
+		}
+
+		private void BtnLimpiarHistorial_Click(object sender, EventArgs e)
+		{
+			BorrarHistorial();
 		}
 		#endregion
 
