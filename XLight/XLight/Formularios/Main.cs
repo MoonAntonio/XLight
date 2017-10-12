@@ -32,12 +32,15 @@ namespace XLight
 		private string pathAjustes;
 		private string idActual;
 		private string idRemove;
+		public List<string> nombresClientes = new List<string>();
 		#endregion
 
 		#region Constructor
 		public Main()
 		{
 			InitializeComponent();
+
+			
 		}
 		#endregion
 
@@ -84,6 +87,8 @@ namespace XLight
 			CargarHistorial(pathHistorial);
 
 			ActualizarBusquedaRegistro();
+
+			AutoCompletar();
 		}
 		#endregion
 
@@ -314,7 +319,10 @@ namespace XLight
 			doc.Save(pathHistorial);
 		}
 
-		public void ActualizarBusquedaRegistro()
+		/// <summary>
+		/// <para>Actualiza la busqueda de registro</para>
+		/// </summary>
+		public void ActualizarBusquedaRegistro()// Actualiza la busqueda de registro
 		{
 			listView1.Items.Clear();
 
@@ -362,9 +370,74 @@ namespace XLight
 			doc.Save(pathHistorial);
 		}
 
-		public void AutoCompletar()
+		/// <summary>
+		/// <para>Autocompleta la busqueda</para>
+		/// </summary>
+		public void AutoCompletar()// Autocompleta la busqueda
 		{
-			txtBoxBuscadorRegistro
+			nombresClientes.Clear();
+
+			txtBoxBuscadorRegistro.AutoCompleteSource = AutoCompleteSource.CustomSource;
+			txtBoxBuscadorRegistro.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+			AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				string nodo = item["nombre"].InnerText;
+
+				nombresClientes.Add(nodo);
+			}
+
+			doc.Save(pathClientes);
+
+			DataTable dt = new DataTable();
+			dt.Columns.Add("nombre", typeof(string));
+
+			for (int i = 0; i < nombresClientes.Count; i++)
+			{
+				dt.Rows.Add(nombresClientes[i]);
+			}
+
+			for (int n = 0; n < dt.Rows.Count; n++)
+			{
+				string name = dt.Rows[n]["nombre"].ToString();
+				coll.Add(name);
+			}
+
+			txtBoxBuscadorRegistro.AutoCompleteCustomSource = coll;
+		}
+
+		/// <summary>
+		/// <para>Actualiza la lista de nombres de clientes.</para>
+		/// </summary>
+		public void ActualizarListaNombres()// Actualiza la lista de nombres de clientes
+		{
+			nombresClientes.Clear();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(pathClientes);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				string nodo = item["nombre"].InnerText;
+
+				nombresClientes.Add(nodo);
+			}
+
+			doc.Save(pathClientes);
 		}
 		#endregion
 
@@ -583,7 +656,7 @@ namespace XLight
 			DateTime diahora = DateTime.Now;
 			string dia = diahora.ToString("dddd dd MMMM");
 
-			if (idRemove != string.Empty)
+			if (txtBoxBuscadorRegistro.Text != string.Empty)
 			{
 				doc.Load(pathClientes);
 
@@ -593,7 +666,7 @@ namespace XLight
 
 				foreach (XmlNode item in listaClientes)
 				{
-					if (item.SelectSingleNode("id").InnerText == idRemove)
+					if (item.SelectSingleNode("nombre").InnerText == txtBoxBuscadorRegistro.Text)
 					{
 						XmlNode nodo = item;
 
@@ -609,10 +682,46 @@ namespace XLight
 				CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
 
 				ActualizarBusquedaRegistro();
+
+				txtBoxBuscadorRegistro.Text = "";
+
+				ActualizarListaNombres();
 			}
 			else
 			{
-				MessageBox.Show("Primero selecciona un cliente.");
+				if (idRemove != string.Empty)
+				{
+					doc.Load(pathClientes);
+
+					XmlElement cliente = doc.DocumentElement;
+
+					XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+					foreach (XmlNode item in listaClientes)
+					{
+						if (item.SelectSingleNode("id").InnerText == idRemove)
+						{
+							XmlNode nodo = item;
+
+							cliente.RemoveChild(nodo);
+						}
+					}
+
+
+					doc.Save(pathClientes);
+
+					MessageBox.Show("Cliente eliminado.");
+
+					CrearEntradaHistoria(pathHistorial, idRemove, "--", TiposTratamiento.Ninguno, dia, "0", "Eliminado del sistema");
+
+					ActualizarBusquedaRegistro();
+
+					ActualizarListaNombres();
+				}
+				else
+				{
+					MessageBox.Show("Primero selecciona un cliente.");
+				}
 			}
 		}
 

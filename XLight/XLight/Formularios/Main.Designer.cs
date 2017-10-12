@@ -144,7 +144,7 @@
 			this.tabFichas = new System.Windows.Forms.TabPage();
 			this.BtnLimpiarHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualSeparator4 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
-			this.txtBoxBuscadorRegistro = new VisualPlus.Toolkit.Controls.Editors.VisualRichTextBox();
+			this.txtBoxBuscadorRegistro = new System.Windows.Forms.TextBox();
 			this.BoxHistorial.SuspendLayout();
 			this.BoxOpciones.SuspendLayout();
 			this.BoxClientes.SuspendLayout();
@@ -2106,27 +2106,10 @@
 			// 
 			// txtBoxBuscadorRegistro
 			// 
-			this.txtBoxBuscadorRegistro.BackColor = System.Drawing.Color.Transparent;
-			this.txtBoxBuscadorRegistro.Background = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.txtBoxBuscadorRegistro.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.txtBoxBuscadorRegistro.BackgroundStateColor = System.Drawing.Color.Empty;
-			this.txtBoxBuscadorRegistro.BackgroundStateGradientBrush = null;
-			this.txtBoxBuscadorRegistro.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.txtBoxBuscadorRegistro.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.txtBoxBuscadorRegistro.Border.HoverVisible = true;
-			this.txtBoxBuscadorRegistro.Border.Rounding = 6;
-			this.txtBoxBuscadorRegistro.Border.Thickness = 1;
-			this.txtBoxBuscadorRegistro.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.txtBoxBuscadorRegistro.Border.Visible = true;
-			this.txtBoxBuscadorRegistro.ControlBrushCollection = null;
-			this.txtBoxBuscadorRegistro.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.txtBoxBuscadorRegistro.Location = new System.Drawing.Point(282, 212);
-			this.txtBoxBuscadorRegistro.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.txtBoxBuscadorRegistro.Name = "txtBoxBuscadorRegistro";
-			this.txtBoxBuscadorRegistro.Size = new System.Drawing.Size(540, 32);
-			this.txtBoxBuscadorRegistro.TabIndex = 13;
-			this.txtBoxBuscadorRegistro.Text = "Nombre a buscar";
-			this.txtBoxBuscadorRegistro.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.txtBoxBuscadorRegistro.Size = new System.Drawing.Size(540, 29);
+			this.txtBoxBuscadorRegistro.TabIndex = 14;
 			// 
 			// Main
 			// 
@@ -2157,6 +2140,7 @@
 			this.BoxClientes.ResumeLayout(false);
 			this.TabClientes.ResumeLayout(false);
 			this.tabClienteNuevo.ResumeLayout(false);
+			this.tabClienteNuevo.PerformLayout();
 			this.tabAllClientes.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
@@ -2219,6 +2203,6 @@
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel3;
 		private VisualPlus.Toolkit.Controls.Layout.VisualSeparator visualSeparator4;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnLimpiarHistorial;
-		private VisualPlus.Toolkit.Controls.Editors.VisualRichTextBox txtBoxBuscadorRegistro;
+		private System.Windows.Forms.TextBox txtBoxBuscadorRegistro;
 	}
 }
