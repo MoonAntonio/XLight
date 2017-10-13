@@ -27,7 +27,7 @@ namespace XLight
 			Application.SetCompatibleTextRenderingDefault(false);
 			//Application.Run(new Splash());
 			// TODO Testeo
-			Application.Run(new Ficha());
+			Application.Run(new Main());
 		}
 	}
 }
