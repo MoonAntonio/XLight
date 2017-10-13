@@ -212,6 +212,10 @@ namespace XLight.Formularios
 			xprecio.InnerText = balance;
 			nuevoCliente.AppendChild(xprecio);
 
+			XmlElement xresultado = doc.CreateElement("resultado");
+			xresultado.InnerText = "Desconocido";
+			nuevoCliente.AppendChild(xresultado);
+
 			foreach (XmlNode item in listaClientes)
 			{
 				if (item.FirstChild.InnerText == id)
@@ -230,22 +234,6 @@ namespace XLight.Formularios
 		{
 			Process.Start(pathCliente);
 		}
-		#endregion
-
-		#region Enum
-		/// <summary>
-		/// <para>Tipos de tratamientos</para>
-		/// </summary>
-		public enum TiposTratamiento
-		{
-			Ninguno,
-			Interpretar,
-			Regresion,
-			TetraHealing,
-			Reiki,
-			Hipnosis
-		}
-		#endregion
 
 		private void BtnGuardarHipnosis_Click(object sender, EventArgs e)
 		{
@@ -314,7 +302,25 @@ namespace XLight.Formularios
 				doc.Save(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\clientes.xml"));
 
 				MessageBox.Show("Guardado");
-			}	
+			}
 		}
+		#endregion
+
+		#region Enum
+		/// <summary>
+		/// <para>Tipos de tratamientos</para>
+		/// </summary>
+		public enum TiposTratamiento
+		{
+			Ninguno,
+			Interpretar,
+			Regresion,
+			TetraHealing,
+			Reiki,
+			Hipnosis
+		}
+		#endregion
+
+
 	}
 }
