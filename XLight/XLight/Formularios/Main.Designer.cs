@@ -97,7 +97,6 @@
 			VisualPlus.Structure.Border border13 = new VisualPlus.Structure.Border();
 			this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
 			this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-			this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
 			this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
 			this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
 			this.Header = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -167,7 +166,6 @@
 			this.shapeContainer1.Name = "shapeContainer1";
 			this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape5,
-            this.rectangleShape4,
             this.rectangleShape3,
             this.rectangleShape2,
             this.Header});
@@ -184,22 +182,9 @@
 			this.rectangleShape5.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
 			this.rectangleShape5.BorderColor = System.Drawing.Color.Transparent;
 			this.rectangleShape5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-			this.rectangleShape5.Location = new System.Drawing.Point(75, 43);
+			this.rectangleShape5.Location = new System.Drawing.Point(3, 43);
 			this.rectangleShape5.Name = "rectangleShape5";
-			this.rectangleShape5.Size = new System.Drawing.Size(164, 572);
-			// 
-			// rectangleShape4
-			// 
-			this.rectangleShape4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-			this.rectangleShape4.BackColor = System.Drawing.Color.SlateGray;
-			this.rectangleShape4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-			this.rectangleShape4.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-			this.rectangleShape4.BorderColor = System.Drawing.Color.Transparent;
-			this.rectangleShape4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-			this.rectangleShape4.Location = new System.Drawing.Point(0, 42);
-			this.rectangleShape4.Name = "rectangleShape4";
-			this.rectangleShape4.Size = new System.Drawing.Size(75, 573);
+			this.rectangleShape5.Size = new System.Drawing.Size(236, 572);
 			// 
 			// rectangleShape3
 			// 
@@ -308,7 +293,7 @@
 			this.BtnHistorial.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnHistorial.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnHistorial.Image.Visible = false;
-			this.BtnHistorial.Location = new System.Drawing.Point(87, 280);
+			this.BtnHistorial.Location = new System.Drawing.Point(12, 280);
 			this.BtnHistorial.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnHistorial.Name = "BtnHistorial";
 			this.BtnHistorial.PressedGradient = gradient3;
@@ -390,7 +375,7 @@
 			this.BtnClientes.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnClientes.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnClientes.Image.Visible = false;
-			this.BtnClientes.Location = new System.Drawing.Point(87, 229);
+			this.BtnClientes.Location = new System.Drawing.Point(12, 229);
 			this.BtnClientes.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnClientes.Name = "BtnClientes";
 			this.BtnClientes.PressedGradient = gradient7;
@@ -472,7 +457,7 @@
 			this.BtnOpciones.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnOpciones.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnOpciones.Image.Visible = false;
-			this.BtnOpciones.Location = new System.Drawing.Point(87, 331);
+			this.BtnOpciones.Location = new System.Drawing.Point(12, 331);
 			this.BtnOpciones.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnOpciones.Name = "BtnOpciones";
 			this.BtnOpciones.PressedGradient = gradient11;
@@ -554,7 +539,7 @@
 			this.BtnSalir.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnSalir.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnSalir.Image.Visible = false;
-			this.BtnSalir.Location = new System.Drawing.Point(87, 382);
+			this.BtnSalir.Location = new System.Drawing.Point(12, 382);
 			this.BtnSalir.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnSalir.Name = "BtnSalir";
 			this.BtnSalir.PressedGradient = gradient15;
@@ -744,7 +729,7 @@
         0F,
         0.5F,
         1F};
-			this.visualSeparator1.Location = new System.Drawing.Point(87, 209);
+			this.visualSeparator1.Location = new System.Drawing.Point(12, 209);
 			this.visualSeparator1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.visualSeparator1.Name = "visualSeparator1";
 			this.visualSeparator1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -779,7 +764,7 @@
         0F,
         0.5F,
         1F};
-			this.visualSeparator2.Location = new System.Drawing.Point(87, 445);
+			this.visualSeparator2.Location = new System.Drawing.Point(12, 443);
 			this.visualSeparator2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.visualSeparator2.Name = "visualSeparator2";
 			this.visualSeparator2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1471,11 +1456,11 @@
 			this.BoxClientes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BoxClientes.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BoxClientes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.BoxClientes.Location = new System.Drawing.Point(247, 47);
+			this.BoxClientes.Location = new System.Drawing.Point(172, 47);
 			this.BoxClientes.MouseState = VisualPlus.Enumerators.MouseStates.Hover;
 			this.BoxClientes.Name = "BoxClientes";
 			this.BoxClientes.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-			this.BoxClientes.Size = new System.Drawing.Size(863, 550);
+			this.BoxClientes.Size = new System.Drawing.Size(938, 550);
 			this.BoxClientes.TabIndex = 13;
 			this.BoxClientes.Text = "Clientes";
 			this.BoxClientes.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -1548,7 +1533,7 @@
 			this.TabClientes.Separator = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))));
 			this.TabClientes.SeparatorSpacing = 2;
 			this.TabClientes.SeparatorThickness = 2F;
-			this.TabClientes.Size = new System.Drawing.Size(848, 518);
+			this.TabClientes.Size = new System.Drawing.Size(923, 518);
 			this.TabClientes.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
 			this.TabClientes.State = VisualPlus.Enumerators.MouseStates.Normal;
 			this.TabClientes.TabIndex = 0;
@@ -1584,7 +1569,7 @@
 			this.tabClienteNuevo.Location = new System.Drawing.Point(4, 29);
 			this.tabClienteNuevo.Name = "tabClienteNuevo";
 			this.tabClienteNuevo.Padding = new System.Windows.Forms.Padding(3);
-			this.tabClienteNuevo.Size = new System.Drawing.Size(840, 485);
+			this.tabClienteNuevo.Size = new System.Drawing.Size(915, 485);
 			this.tabClienteNuevo.TabIndex = 0;
 			this.tabClienteNuevo.Text = "Registro";
 			// 
@@ -1646,7 +1631,7 @@
             this.columnHeader2});
 			this.listView1.Location = new System.Drawing.Point(282, 253);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(543, 226);
+			this.listView1.Size = new System.Drawing.Size(618, 226);
 			this.listView1.TabIndex = 11;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -1817,9 +1802,9 @@
 			this.TextApellidos.Name = "TextApellidos";
 			this.TextApellidos.PasswordChar = '\0';
 			this.TextApellidos.ReadOnly = false;
-			this.TextApellidos.Size = new System.Drawing.Size(462, 23);
+			this.TextApellidos.Size = new System.Drawing.Size(537, 23);
 			this.TextApellidos.TabIndex = 2;
-			this.TextApellidos.TextBoxWidth = 452;
+			this.TextApellidos.TextBoxWidth = 527;
 			this.TextApellidos.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.TextApellidos.Watermark.ActiveColor = System.Drawing.Color.Gray;
 			this.TextApellidos.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -1950,9 +1935,9 @@
 			this.TextNombre.Name = "TextNombre";
 			this.TextNombre.PasswordChar = '\0';
 			this.TextNombre.ReadOnly = false;
-			this.TextNombre.Size = new System.Drawing.Size(462, 23);
+			this.TextNombre.Size = new System.Drawing.Size(537, 23);
 			this.TextNombre.TabIndex = 1;
-			this.TextNombre.TextBoxWidth = 452;
+			this.TextNombre.TextBoxWidth = 527;
 			this.TextNombre.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.TextNombre.Watermark.ActiveColor = System.Drawing.Color.Gray;
 			this.TextNombre.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -2068,6 +2053,7 @@
 			this.BtnAbrirFicha.Background = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnAbrirFicha.BackgroundDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.BtnAbrirFicha.BackgroundStateColor = System.Drawing.Color.Empty;
+			this.BtnAbrirFicha.BackgroundStateGradientBrush = null;
 			this.BtnAbrirFicha.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
 			this.BtnAbrirFicha.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
 			this.BtnAbrirFicha.Border.HoverVisible = true;
@@ -2247,7 +2233,6 @@
 
 		private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
 		private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
-		private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
 		private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
 		private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
 		public VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnHistorial;
