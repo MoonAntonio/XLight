@@ -55,15 +55,14 @@ namespace XLight_Project
 			{
 				// Generar las paths
 				string pD = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data");
-				string pU = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Usuarios");
-				string pH = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Admin\historial.xml");
-				string pC = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Admin\clientes.xml");
+				string pU = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), pD + @"\Usuarios");
+				//string pH = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), pD + @"\Admin\historial.xml");
+				//string pC = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), pD + @"\Admin\clientes.xml");
 				string pA = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Ajustes\ajustes.xml");
-				int id = 0;
 				string uU = "Admin";
 
 				// Crear ajustes
-				configuracionActual = new Ajustes(pD, pU, pH, pC, pA, id, uU, 0);
+				configuracionActual = new Ajustes(pD, pU, pA, uU);
 
 				// Crear directorios
 				Directory.CreateDirectory("Data");
@@ -160,29 +159,13 @@ namespace XLight_Project
 			rutaUsuarios.AppendChild(doc.CreateTextNode(configuracionActual.PathUsuarios));
 			elemento.AppendChild(rutaUsuarios);
 
-			XmlElement rutaHistorial = doc.CreateElement("rutahistorial");
-			rutaHistorial.AppendChild(doc.CreateTextNode(configuracionActual.PathHistorial));
-			elemento.AppendChild(rutaHistorial);
-
-			XmlElement rutaClientes = doc.CreateElement("rutaclientes");
-			rutaClientes.AppendChild(doc.CreateTextNode(configuracionActual.PathClientes));
-			elemento.AppendChild(rutaClientes);
-
 			XmlElement rutaAjustes = doc.CreateElement("rutaajustes");
 			rutaAjustes.AppendChild(doc.CreateTextNode(configuracionActual.PathAjustes));
 			elemento.AppendChild(rutaAjustes);
 
-			XmlElement idInicial = doc.CreateElement("idactual");
-			idInicial.AppendChild(doc.CreateTextNode("0"));
-			elemento.AppendChild(idInicial);
-
 			XmlElement ultimoUser = doc.CreateElement("ultimouser");
 			ultimoUser.AppendChild(doc.CreateTextNode(configuracionActual.UltimoUser));
 			elemento.AppendChild(ultimoUser);
-
-			XmlElement inicioAut = doc.CreateElement("inicioautomatico");
-			inicioAut.AppendChild(doc.CreateTextNode("0"));
-			elemento.AppendChild(inicioAut);
 
 			doc.Save(ruta);
 		}
@@ -268,6 +251,22 @@ namespace XLight_Project
 			nvl.InnerText = "0";
 			cliente.AppendChild(nvl);
 
+			XmlElement rutaHistorial = doc.CreateElement("rutahistorial");
+			rutaHistorial.AppendChild(doc.CreateTextNode(configuracionActual.PathUsuarios + @"\Admin\historial.xml"));
+			cliente.AppendChild(rutaHistorial);
+
+			XmlElement rutaClientes = doc.CreateElement("rutaclientes");
+			rutaClientes.AppendChild(doc.CreateTextNode(configuracionActual.PathUsuarios + @"\Admin\clientes.xml"));
+			cliente.AppendChild(rutaClientes);
+
+			XmlElement idInicial = doc.CreateElement("idactual");
+			idInicial.AppendChild(doc.CreateTextNode("0"));
+			cliente.AppendChild(idInicial);
+
+			XmlElement inicioAut = doc.CreateElement("inicioautomatico");
+			inicioAut.AppendChild(doc.CreateTextNode("0"));
+			cliente.AppendChild(inicioAut);
+
 			doc.DocumentElement.AppendChild(cliente);
 			doc.Save(configuracionActual.PathUsuarios + "/usuarios.xml");
 		}
@@ -286,14 +285,10 @@ namespace XLight_Project
 
 			string pathData = lista.Item(0).SelectSingleNode("rutadata").InnerText;
 			string pathUsuario = lista.Item(0).SelectSingleNode("rutausuarios").InnerText;
-			string pathHistorial = lista.Item(0).SelectSingleNode("rutahistorial").InnerText;
-			string pathClientes = lista.Item(0).SelectSingleNode("rutaclientes").InnerText;
 			string pathAjustes = lista.Item(0).SelectSingleNode("rutaajustes").InnerText;
-			string idActual = lista.Item(0).SelectSingleNode("idactual").InnerText;
 			string ultiUser = lista.Item(0).SelectSingleNode("ultimouser").InnerText;
-			string inicioAu = lista.Item(0).SelectSingleNode("inicioautomatico").InnerText;
 
-			configuracionActual = new Ajustes(pathData, pathUsuario, pathHistorial, pathClientes, pathAjustes, Int32.Parse(idActual), ultiUser, Int32.Parse(inicioAu));
+			configuracionActual = new Ajustes(pathData, pathUsuario, pathAjustes, ultiUser);
 		}
 		#endregion
 	}

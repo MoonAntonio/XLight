@@ -22,16 +22,12 @@ namespace XLight_Project.Clases
 		/// <param name="pAjustes">Ruta de ajustes.</param>
 		/// <param name="idAc">Id actual.</param>
 		/// <param name="uUser">Ultimo usuario logeado.</param>
-		public Ajustes(string pData,string pUser, string pHisto, string pClien, string pAjustes, int idAc, string uUser, int iAuto)// Constructor de Ajustes
+		public Ajustes(string pData,string pUser, string pAjustes, string uUser)// Constructor de Ajustes
 		{
 			pathData = pData;
 			pathUsuarios = pUser;
-			pathHistorial = pHisto;
-			pathClientes = pClien;
 			pathAjustes = pAjustes;
-			idActual = idAc;
 			ultimoUser = uUser;
-			inicioAutomatico = iAuto;
 		}
 		#endregion
 
@@ -45,29 +41,13 @@ namespace XLight_Project.Clases
 		/// </summary>
 		private string pathUsuarios;				// Ruta de usuarios
 		/// <summary>
-		/// <para>Ruta de historial.</para>
-		/// </summary>
-		private string pathHistorial;				// Ruta de historial
-		/// <summary>
-		/// <para>Ruta de clientes.</para>
-		/// </summary>
-		private string pathClientes;				// Ruta de clientes
-		/// <summary>
 		/// <para>Ruta de ajustes.</para>
 		/// </summary>
 		private string pathAjustes;					// Ruta de ajustes
 		/// <summary>
-		/// <para>ID actual.</para>
-		/// </summary>
-		private int idActual;                       // ID actual
-		/// <summary>
 		/// <para>Ultimo usuario logeado.</para>
 		/// </summary>
 		private string ultimoUser;                  // Ultimo usuario logeado
-		/// <summary>
-		/// <para>Inicio automatico de sesion.</para>
-		/// </summary>
-		private int inicioAutomatico;				// Inicio automatico de sesion
 		#endregion
 
 		#region Propiedades
@@ -90,24 +70,6 @@ namespace XLight_Project.Clases
 		}
 
 		/// <summary>
-		/// <para>Ruta de historial</para>
-		/// </summary>
-		public string PathHistorial
-		{
-			get { return pathHistorial; }
-			set { pathHistorial = value; }
-		}
-
-		/// <summary>
-		/// <para>Ruta de clientes</para>
-		/// </summary>
-		public string PathClientes
-		{
-			get { return pathClientes; }
-			set { pathClientes = value; }
-		}
-
-		/// <summary>
 		/// <para>Ruta de ajustes</para>
 		/// </summary>
 		public string PathAjustes
@@ -117,30 +79,12 @@ namespace XLight_Project.Clases
 		}
 
 		/// <summary>
-		/// <para>ID actual</para>
-		/// </summary>
-		public int IdActual
-		{
-			get { return idActual; }
-			set { idActual = value; }
-		}
-
-		/// <summary>
 		/// <para>Ultimo usuario logeado.</para>
 		/// </summary>
 		public string UltimoUser
 		{
 			get { return ultimoUser; }
 			set { ultimoUser = value; }
-		}
-
-		/// <summary>
-		/// <para>Inicio automatico</para>
-		/// </summary>
-		public int InicioAutomatico
-		{
-			get { return inicioAutomatico; }
-			set { inicioAutomatico = value; }
 		}
 		#endregion
 	}

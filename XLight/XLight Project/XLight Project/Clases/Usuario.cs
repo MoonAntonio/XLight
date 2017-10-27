@@ -19,11 +19,15 @@ namespace XLight_Project.Clases
 		/// <summary>
 		/// <para>Constructor de <see cref="Usuario"/>.</para>
 		/// </summary>
-		public Usuario(string nom,string pass, int nvl)// Constructor de Usuario
+		public Usuario(string nom,string pass, int nvl, string pH,string pC, int idAc, int iA)// Constructor de Usuario
 		{
 			nombre = nom;
 			password = pass;
 			nvlPrivilegios = nvl;
+			pathHistorial = pH;
+			pathClientes = pC;
+			idActual = idAc;
+			inicioAutomatico = iA;
 		}
 		#endregion
 
@@ -31,15 +35,31 @@ namespace XLight_Project.Clases
 		/// <summary>
 		/// <para>Nombre del usuario</para>
 		/// </summary>
-		private string nombre;					// Nombre del usuario
+		private string nombre;						// Nombre del usuario
 		/// <summary>
 		/// <para>Password del usuario.</para>
 		/// </summary>
-		private string password;				// Password del usuario
+		private string password;					// Password del usuario
 		/// <summary>
 		/// <para>Nivel de seguridad</para>
 		/// </summary>
-		private int nvlPrivilegios;				// Nivel de seguridad
+		private int nvlPrivilegios;					// Nivel de seguridad
+		/// <summary>
+		/// <para>Ruta de historial.</para>
+		/// </summary>
+		private string pathHistorial;				// Ruta de historial
+		/// <summary>
+		/// <para>Ruta de clientes.</para>
+		/// </summary>
+		private string pathClientes;				// Ruta de clientes
+		/// <summary>
+		/// <para>ID actual.</para>
+		/// </summary>
+		private int idActual;                       // ID actual
+		/// <summary>
+		/// <para>Inicio automatico de sesion.</para>
+		/// </summary>
+		private int inicioAutomatico;				// Inicio automatico de sesion
 		#endregion
 
 		#region Propiedades
@@ -68,6 +88,42 @@ namespace XLight_Project.Clases
 		{
 			get { return nvlPrivilegios; }
 			set { nvlPrivilegios = value; }
+		}
+
+		/// <summary>
+		/// <para>Ruta de historial</para>
+		/// </summary>
+		public string PathHistorial
+		{
+			get { return pathHistorial; }
+			set { pathHistorial = value; }
+		}
+
+		/// <summary>
+		/// <para>Ruta de clientes</para>
+		/// </summary>
+		public string PathClientes
+		{
+			get { return pathClientes; }
+			set { pathClientes = value; }
+		}
+
+		/// <summary>
+		/// <para>ID actual</para>
+		/// </summary>
+		public int IdActual
+		{
+			get { return idActual; }
+			set { idActual = value; }
+		}
+
+		/// <summary>
+		/// <para>Inicio automatico</para>
+		/// </summary>
+		public int InicioAutomatico
+		{
+			get { return inicioAutomatico; }
+			set { inicioAutomatico = value; }
 		}
 		#endregion
 	}

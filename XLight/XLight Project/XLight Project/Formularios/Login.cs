@@ -166,9 +166,7 @@ namespace XLight_Project.Formularios
 				{
 					usuarioActual = new Usuario(nom, pass, Int32.Parse(nvl));
 
-					Main main = new Main(configuracionActual, usuarioActual);
-					main.Show();
-					this.Close();
+					IniciarAuto();
 				}
 				else
 				{
@@ -177,6 +175,15 @@ namespace XLight_Project.Formularios
 					InputPassword.text = "";
 				}
 			}
+		}
+
+		private void IniciarAuto()
+		{
+
+
+			Main main = new Main(configuracionActual, usuarioActual);
+			main.Show();
+			this.Close();
 		}
 
 		/// <summary>
