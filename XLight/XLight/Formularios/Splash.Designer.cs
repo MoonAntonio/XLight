@@ -57,7 +57,7 @@
 			this.progressCuadro.BorderWidth = 3;
 			this.progressCuadro.CornerRadius = 8;
 			this.progressCuadro.Cursor = System.Windows.Forms.Cursors.Default;
-			this.progressCuadro.Location = new System.Drawing.Point(51, 149);
+			this.progressCuadro.Location = new System.Drawing.Point(51, 124);
 			this.progressCuadro.Name = "progressCuadro";
 			this.progressCuadro.Size = new System.Drawing.Size(651, 20);
 			// 
