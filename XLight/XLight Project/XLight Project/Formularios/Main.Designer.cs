@@ -29,18 +29,18 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border5 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
 			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border9 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border8 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border8 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border5 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border11 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border9 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
 			this.Header = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -58,9 +58,6 @@
 			this.PanelClientes = new VisualPlus.Toolkit.Controls.Layout.VisualPanel();
 			this.visualProgressBar1 = new VisualPlus.Toolkit.Controls.DataVisualization.VisualProgressBar();
 			this.txtBoxBuscadorRegistro = new System.Windows.Forms.TextBox();
-			this.listView1 = new System.Windows.Forms.ListView();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.BtnAbrirFicha = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualSeparator3 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
 			this.TextApellidos = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -78,10 +75,19 @@
 			this.DataFecha = new System.Windows.Forms.DateTimePicker();
 			this.BtnEditar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnBorrar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Header.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.PanelClientes.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// Header
@@ -153,14 +159,14 @@
 			this.BtnClientes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnClientes.ForeColor = System.Drawing.Color.Black;
 			this.BtnClientes.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border12.HoverVisible = false;
-			border12.Rounding = 6;
-			border12.Thickness = 1;
-			border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border12.Visible = false;
-			this.BtnClientes.Image.Border = border12;
+			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border3.HoverVisible = false;
+			border3.Rounding = 6;
+			border3.Thickness = 1;
+			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border3.Visible = false;
+			this.BtnClientes.Image.Border = border3;
 			this.BtnClientes.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
 			this.BtnClientes.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnClientes.Image.Size = new System.Drawing.Size(24, 24);
@@ -195,14 +201,14 @@
 			this.BtnBalance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnBalance.ForeColor = System.Drawing.Color.Black;
 			this.BtnBalance.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border7.HoverVisible = false;
-			border7.Rounding = 6;
-			border7.Thickness = 1;
-			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border7.Visible = false;
-			this.BtnBalance.Image.Border = border7;
+			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border2.HoverVisible = false;
+			border2.Rounding = 6;
+			border2.Thickness = 1;
+			border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border2.Visible = false;
+			this.BtnBalance.Image.Border = border2;
 			this.BtnBalance.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
 			this.BtnBalance.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnBalance.Image.Size = new System.Drawing.Size(24, 24);
@@ -237,14 +243,14 @@
 			this.BtnHistorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnHistorial.ForeColor = System.Drawing.Color.Black;
 			this.BtnHistorial.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border6.HoverVisible = false;
-			border6.Rounding = 6;
-			border6.Thickness = 1;
-			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border6.Visible = false;
-			this.BtnHistorial.Image.Border = border6;
+			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border1.HoverVisible = false;
+			border1.Rounding = 6;
+			border1.Thickness = 1;
+			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border1.Visible = false;
+			this.BtnHistorial.Image.Border = border1;
 			this.BtnHistorial.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
 			this.BtnHistorial.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnHistorial.Image.Size = new System.Drawing.Size(24, 24);
@@ -279,14 +285,14 @@
 			this.BtnOpciones.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnOpciones.ForeColor = System.Drawing.Color.Black;
 			this.BtnOpciones.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border5.HoverVisible = false;
-			border5.Rounding = 6;
-			border5.Thickness = 1;
-			border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border5.Visible = false;
-			this.BtnOpciones.Image.Border = border5;
+			border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border8.HoverVisible = false;
+			border8.Rounding = 6;
+			border8.Thickness = 1;
+			border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border8.Visible = false;
+			this.BtnOpciones.Image.Border = border8;
 			this.BtnOpciones.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
 			this.BtnOpciones.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnOpciones.Image.Size = new System.Drawing.Size(24, 24);
@@ -321,14 +327,14 @@
 			this.BtnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnSalir.ForeColor = System.Drawing.Color.Black;
 			this.BtnSalir.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border4.HoverVisible = false;
-			border4.Rounding = 6;
-			border4.Thickness = 1;
-			border4.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border4.Visible = false;
-			this.BtnSalir.Image.Border = border4;
+			border5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border5.HoverVisible = false;
+			border5.Rounding = 6;
+			border5.Thickness = 1;
+			border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border5.Visible = false;
+			this.BtnSalir.Image.Border = border5;
 			this.BtnSalir.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
 			this.BtnSalir.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnSalir.Image.Size = new System.Drawing.Size(24, 24);
@@ -392,14 +398,14 @@
 			this.BtnMinimizar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			this.BtnMinimizar.Border.Visible = true;
 			this.BtnMinimizar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border3.HoverVisible = false;
-			border3.Rounding = 6;
-			border3.Thickness = 1;
-			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border3.Visible = false;
-			this.BtnMinimizar.Image.Border = border3;
+			border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border10.HoverVisible = false;
+			border10.Rounding = 6;
+			border10.Thickness = 1;
+			border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border10.Visible = false;
+			this.BtnMinimizar.Image.Border = border10;
 			this.BtnMinimizar.Image.Image = null;
 			this.BtnMinimizar.Image.Point = new System.Drawing.Point(0, -1);
 			this.BtnMinimizar.Image.Size = new System.Drawing.Size(24, 24);
@@ -431,14 +437,14 @@
 			this.BtnMaximizar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			this.BtnMaximizar.Border.Visible = true;
 			this.BtnMaximizar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border2.HoverVisible = false;
-			border2.Rounding = 6;
-			border2.Thickness = 1;
-			border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border2.Visible = false;
-			this.BtnMaximizar.Image.Border = border2;
+			border11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border11.HoverVisible = false;
+			border11.Rounding = 6;
+			border11.Thickness = 1;
+			border11.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border11.Visible = false;
+			this.BtnMaximizar.Image.Border = border11;
 			this.BtnMaximizar.Image.Image = null;
 			this.BtnMaximizar.Image.Point = new System.Drawing.Point(0, -1);
 			this.BtnMaximizar.Image.Size = new System.Drawing.Size(24, 24);
@@ -473,7 +479,7 @@
 			this.LblUser.ShadowDirection = 315;
 			this.LblUser.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.LblUser.ShadowOpacity = 100;
-			this.LblUser.Size = new System.Drawing.Size(162, 23);
+			this.LblUser.Size = new System.Drawing.Size(324, 23);
 			this.LblUser.TabIndex = 9;
 			this.LblUser.Text = "usuario";
 			this.LblUser.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -495,6 +501,7 @@
 			this.PanelClientes.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			this.PanelClientes.Border.Visible = true;
 			this.PanelClientes.ControlBrushCollection = null;
+			this.PanelClientes.Controls.Add(this.dataGridView1);
 			this.PanelClientes.Controls.Add(this.BtnBorrar);
 			this.PanelClientes.Controls.Add(this.BtnEditar);
 			this.PanelClientes.Controls.Add(this.DataFecha);
@@ -506,7 +513,6 @@
 			this.PanelClientes.Controls.Add(this.TextDNI);
 			this.PanelClientes.Controls.Add(this.visualLabel4);
 			this.PanelClientes.Controls.Add(this.txtBoxBuscadorRegistro);
-			this.PanelClientes.Controls.Add(this.listView1);
 			this.PanelClientes.Controls.Add(this.BtnAbrirFicha);
 			this.PanelClientes.Controls.Add(this.visualSeparator3);
 			this.PanelClientes.Controls.Add(this.TextApellidos);
@@ -568,39 +574,14 @@
 			// 
 			// txtBoxBuscadorRegistro
 			// 
+			this.txtBoxBuscadorRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtBoxBuscadorRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.txtBoxBuscadorRegistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtBoxBuscadorRegistro.Location = new System.Drawing.Point(253, 167);
 			this.txtBoxBuscadorRegistro.Name = "txtBoxBuscadorRegistro";
 			this.txtBoxBuscadorRegistro.Size = new System.Drawing.Size(618, 29);
 			this.txtBoxBuscadorRegistro.TabIndex = 24;
-			// 
-			// listView1
-			// 
-			this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-			this.listView1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.listView1.Location = new System.Drawing.Point(253, 198);
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(618, 335);
-			this.listView1.TabIndex = 22;
-			this.listView1.UseCompatibleStateImageBehavior = false;
-			this.listView1.View = System.Windows.Forms.View.Details;
-			// 
-			// columnHeader1
-			// 
-			this.columnHeader1.Text = "ID";
-			// 
-			// columnHeader2
-			// 
-			this.columnHeader2.Text = "Nombre";
-			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.columnHeader2.Width = 576;
 			// 
 			// BtnAbrirFicha
 			// 
@@ -620,14 +601,14 @@
 			this.BtnAbrirFicha.Border.Visible = true;
 			this.BtnAbrirFicha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnAbrirFicha.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border9.HoverVisible = false;
-			border9.Rounding = 6;
-			border9.Thickness = 1;
-			border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border9.Visible = false;
-			this.BtnAbrirFicha.Image.Border = border9;
+			border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border4.HoverVisible = false;
+			border4.Rounding = 6;
+			border4.Thickness = 1;
+			border4.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border4.Visible = false;
+			this.BtnAbrirFicha.Image.Border = border4;
 			this.BtnAbrirFicha.Image.Image = null;
 			this.BtnAbrirFicha.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnAbrirFicha.Image.Size = new System.Drawing.Size(24, 24);
@@ -759,8 +740,6 @@
 			// 
 			// TextNombre
 			// 
-			this.TextNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.TextNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.TextNombre.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.TextNombre.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
@@ -825,14 +804,14 @@
 			this.BtnAgregarNuevoCliente.Border.Visible = true;
 			this.BtnAgregarNuevoCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnAgregarNuevoCliente.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border10.HoverVisible = false;
-			border10.Rounding = 6;
-			border10.Thickness = 1;
-			border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border10.Visible = false;
-			this.BtnAgregarNuevoCliente.Image.Border = border10;
+			border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border9.HoverVisible = false;
+			border9.Rounding = 6;
+			border9.Thickness = 1;
+			border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border9.Visible = false;
+			this.BtnAgregarNuevoCliente.Image.Border = border9;
 			this.BtnAgregarNuevoCliente.Image.Image = null;
 			this.BtnAgregarNuevoCliente.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnAgregarNuevoCliente.Image.Size = new System.Drawing.Size(24, 24);
@@ -874,8 +853,6 @@
 			// 
 			// TextDNI
 			// 
-			this.TextDNI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.TextDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.TextDNI.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.TextDNI.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
@@ -1024,8 +1001,6 @@
 			// 
 			// TextTelefono
 			// 
-			this.TextTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.TextTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.TextTelefono.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.TextTelefono.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
@@ -1099,6 +1074,8 @@
 			// 
 			// DataFecha
 			// 
+			this.DataFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.DataFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
 			this.DataFecha.Location = new System.Drawing.Point(712, 65);
 			this.DataFecha.Name = "DataFecha";
@@ -1124,14 +1101,14 @@
 			this.BtnEditar.ControlBrushCollection = null;
 			this.BtnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnEditar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border8.HoverVisible = false;
-			border8.Rounding = 6;
-			border8.Thickness = 1;
-			border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border8.Visible = false;
-			this.BtnEditar.Image.Border = border8;
+			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border7.HoverVisible = false;
+			border7.Rounding = 6;
+			border7.Thickness = 1;
+			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border7.Visible = false;
+			this.BtnEditar.Image.Border = border7;
 			this.BtnEditar.Image.Image = null;
 			this.BtnEditar.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnEditar.Image.Size = new System.Drawing.Size(24, 24);
@@ -1165,14 +1142,14 @@
 			this.BtnBorrar.ControlBrushCollection = null;
 			this.BtnBorrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnBorrar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border1.HoverVisible = false;
-			border1.Rounding = 6;
-			border1.Thickness = 1;
-			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border1.Visible = false;
-			this.BtnBorrar.Image.Border = border1;
+			border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border12.HoverVisible = false;
+			border12.Rounding = 6;
+			border12.Thickness = 1;
+			border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border12.Visible = false;
+			this.BtnBorrar.Image.Border = border12;
 			this.BtnBorrar.Image.Image = null;
 			this.BtnBorrar.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnBorrar.Image.Size = new System.Drawing.Size(24, 24);
@@ -1186,6 +1163,76 @@
 			this.BtnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnBorrar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.AllowUserToOrderColumns = true;
+			this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Nombre,
+            this.Apellidos,
+            this.Dni,
+            this.Telefono,
+            this.Fecha,
+            this.Direccion});
+			this.dataGridView1.Location = new System.Drawing.Point(253, 202);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(618, 347);
+			this.dataGridView1.TabIndex = 6;
+			// 
+			// ID
+			// 
+			this.ID.HeaderText = "ID";
+			this.ID.Name = "ID";
+			this.ID.ReadOnly = true;
+			this.ID.Width = 50;
+			// 
+			// Nombre
+			// 
+			this.Nombre.HeaderText = "Nombre";
+			this.Nombre.Name = "Nombre";
+			this.Nombre.ReadOnly = true;
+			this.Nombre.Width = 200;
+			// 
+			// Apellidos
+			// 
+			this.Apellidos.HeaderText = "Apellidos";
+			this.Apellidos.Name = "Apellidos";
+			this.Apellidos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.Apellidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+			this.Apellidos.Width = 200;
+			// 
+			// Dni
+			// 
+			this.Dni.HeaderText = "DNI";
+			this.Dni.Name = "Dni";
+			this.Dni.ReadOnly = true;
+			this.Dni.Width = 200;
+			// 
+			// Telefono
+			// 
+			this.Telefono.HeaderText = "Telefono";
+			this.Telefono.Name = "Telefono";
+			this.Telefono.ReadOnly = true;
+			this.Telefono.Width = 80;
+			// 
+			// Fecha
+			// 
+			this.Fecha.HeaderText = "Fecha";
+			this.Fecha.Name = "Fecha";
+			this.Fecha.ReadOnly = true;
+			this.Fecha.Width = 200;
+			// 
+			// Direccion
+			// 
+			this.Direccion.HeaderText = "Direccion";
+			this.Direccion.Name = "Direccion";
 			// 
 			// Main
 			// 
@@ -1207,6 +1254,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.PanelClientes.ResumeLayout(false);
 			this.PanelClientes.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1239,9 +1287,6 @@
 		private VisualPlus.Toolkit.Controls.Editors.VisualTextBox TextDNI;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel4;
 		private System.Windows.Forms.TextBox txtBoxBuscadorRegistro;
-		private System.Windows.Forms.ListView listView1;
-		private System.Windows.Forms.ColumnHeader columnHeader1;
-		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnAbrirFicha;
 		private VisualPlus.Toolkit.Controls.Layout.VisualSeparator visualSeparator3;
 		private VisualPlus.Toolkit.Controls.Editors.VisualTextBox TextApellidos;
@@ -1249,5 +1294,13 @@
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel1;
 		private VisualPlus.Toolkit.Controls.Editors.VisualTextBox TextNombre;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnAgregarNuevoCliente;
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Dni;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
 	}
 }
