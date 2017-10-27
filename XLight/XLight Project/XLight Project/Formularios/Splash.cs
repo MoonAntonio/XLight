@@ -67,13 +67,14 @@ namespace XLight_Project
 
 				// Crear directorios
 				Directory.CreateDirectory("Data");
-				Directory.CreateDirectory("Data/Usuarios");
+				Directory.CreateDirectory("Data/Usuarios/Admin");
 				Directory.CreateDirectory("Ajustes");
 
 				// Crear Datas
 				CrearAjustes("Ajustes/ajustes.xml", "Ajustes");
 				CrearClientes("Data/Usuarios/Admin/clientes.xml", "Clientes");
 				CrearHistorial("Data/Usuarios/Admin/historial.xml", "Entradas");
+				CrearUsuario("Data/Usuarios/usuarios.xml", "Usuarios");
 			}
 			else
 			{
@@ -93,12 +94,13 @@ namespace XLight_Project
 		{
 			try
 			{
-				ProgressBarFill.Width += 1;
+				ProgressBarFill.Width += 5;
+				ProgressBarFill.Height = 15;
 				ProcesarTexto();
 				if (ProgressBarFill.Width >= 635f)
 				{
 					Temporizador.Stop();
-					Login login = new Login();
+					Login login = new Login(configuracionActual);
 					login.Show();
 					this.Hide();
 				}
@@ -224,10 +226,57 @@ namespace XLight_Project
 		}
 
 		/// <summary>
+		/// <para>Crea el admin del sistema</para>
+		/// </summary>
+		/// <param name="ruta">Ruta del archivo.</param>
+		/// <param name="nodoRaiz">Nodo principal.</param>
+		private void CrearUsuario(string ruta, string nodoRaiz)// Crear el admin del sistema
+		{
+			XmlDocument doc = new XmlDocument();
+
+			XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+			XmlNode root = doc.DocumentElement;
+			doc.InsertBefore(xmlDeclaration, root);
+
+			XmlNode elemento = doc.CreateElement(nodoRaiz);
+			doc.AppendChild(elemento);
+			doc.Save(ruta);
+
+			AgregarAdmin();
+		}
+
+		/// <summary>
+		/// <para>Agrega el administrador.</para>
+		/// </summary>
+		private void AgregarAdmin()// Agrega el administrador
+		{
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(configuracionActual.PathUsuarios + "/usuarios.xml");
+
+			XmlNode cliente = doc.CreateElement("Usuario");
+
+			XmlElement nombr = doc.CreateElement("nombre");
+			nombr.InnerText = "Admin";
+			cliente.AppendChild(nombr);
+
+			XmlElement pass = doc.CreateElement("password");
+			pass.InnerText = "Admin";
+			cliente.AppendChild(pass);
+
+			XmlElement nvl = doc.CreateElement("nivel");
+			nvl.InnerText = "0";
+			cliente.AppendChild(nvl);
+
+			doc.DocumentElement.AppendChild(cliente);
+			doc.Save(configuracionActual.PathUsuarios + "/usuarios.xml");
+		}
+
+		/// <summary>
 		/// <para>Carga los ajustes</para>
 		/// </summary>
 		/// <param name="path">Ruta de los ajustes.</param>
-		public void CargarAjustes(string path)// Carga los ajustes
+		private void CargarAjustes(string path)// Carga los ajustes
 		{
 			XmlDocument doc = new XmlDocument();
 
