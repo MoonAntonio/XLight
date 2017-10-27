@@ -10,6 +10,8 @@
 #region Librerias
 using System;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 using XLight_Project.Clases;
@@ -69,7 +71,26 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void Main_Load(object sender, EventArgs e)// Loader de Main
 		{
-			//LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios;
+			// TODO Para testear
+			if (configuracionActual == null)
+			{
+				string pD = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data");
+				string pU = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), pD + @"\Usuarios");
+				string pA = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Ajustes\ajustes.xml");
+				string uU = "Admin";
+
+				configuracionActual = new Ajustes(pD, pU, pA, uU);
+			}
+
+			if (usuarioActual == null)
+			{
+				string pH = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), configuracionActual.PathData + @"\Admin\historial.xml");
+				string pC = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), configuracionActual.PathData + @"\Admin\clientes.xml");
+
+				usuarioActual = new Usuario("Admin", "Admin", 0, pH, pC, 0, 0);
+			}
+
+			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios;
 		}
 		#endregion
 

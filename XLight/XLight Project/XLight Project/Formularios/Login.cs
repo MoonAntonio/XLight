@@ -10,6 +10,7 @@
 #region Librerias
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 using XLight_Project.Clases;
@@ -56,7 +57,7 @@ namespace XLight_Project.Formularios
 		public Login(Ajustes config)// Constructor de Login
 		{
 			// Crear ajustes
-			configuracionActual = new Ajustes(config.PathData, config.PathUsuarios, config.PathHistorial, config.PathClientes, config.PathAjustes, config.IdActual, config.UltimoUser, config.InicioAutomatico);
+			configuracionActual = new Ajustes(config.PathData, config.PathUsuarios, config.PathAjustes, config.UltimoUser);
 
 			InitializeComponent();
 		}
@@ -70,8 +71,10 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void Login_Load(object sender, EventArgs e)// Loader de Login
 		{
+			CargarUsuarioAnterior();
+
 			// Si esta activado autologin, logear
-			if (Extensiones.Extensiones.GetValor(configuracionActual.InicioAutomatico) == true)
+			if (Extensiones.Extensiones.GetValor(usuarioActual.InicioAutomatico) == true)
 			{
 				CargarUsuarioActivo();
 			}
@@ -96,7 +99,7 @@ namespace XLight_Project.Formularios
 				{
 					if (password == u.Password)
 					{
-						usuarioActual = new Usuario(usuario, password, u.NivelPrivilegios);
+						usuarioActual = GetUser(u.Nombre);
 
 						Main main = new Main(configuracionActual, usuarioActual);
 						main.Show();
@@ -139,7 +142,35 @@ namespace XLight_Project.Formularios
 			string ultiUser = lista.Item(0).SelectSingleNode("ultimouser").InnerText;
 			string inicioAu = lista.Item(0).SelectSingleNode("inicioautomatico").InnerText;
 
-			configuracionActual = new Ajustes(pathData, pathUsuario, pathHistorial, pathClientes, pathAjustes, Int32.Parse(idActual), ultiUser, Int32.Parse(inicioAu));
+			configuracionActual = new Ajustes(pathData, pathUsuario, pathAjustes, ultiUser);
+		}
+
+		/// <summary>
+		/// <para>Cargar usuario activo.</para>
+		/// </summary>
+		private void CargarUsuarioAnterior()// Cargar usuario activo
+		{
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(configuracionActual.PathUsuarios + "/usuarios.xml");
+
+			XmlNodeList listaUsuarios = doc.SelectNodes("Usuarios/Usuario");
+			XmlNode inUser;
+
+			for (int n = 0; n < listaUsuarios.Count; n++)
+			{
+				inUser = listaUsuarios.Item(n);
+
+				string nom = inUser.SelectSingleNode("nombre").InnerText;
+				string pass = inUser.SelectSingleNode("password").InnerText;
+				string nvl = inUser.SelectSingleNode("nivel").InnerText;
+				string rutaHistorial = inUser.SelectSingleNode("rutahistorial").InnerText;
+				string rutaClientes = inUser.SelectSingleNode("rutaclientes").InnerText;
+				string idActual = inUser.SelectSingleNode("idactual").InnerText;
+				string inicioAuto = inUser.SelectSingleNode("inicioautomatico").InnerText;
+
+				usuarioActual = new Usuario(nom, pass, Int32.Parse(nvl), rutaHistorial, rutaClientes, Int32.Parse(idActual), Int32.Parse(inicioAuto));
+			}
 		}
 
 		/// <summary>
@@ -161,10 +192,14 @@ namespace XLight_Project.Formularios
 				string nom = inUser.SelectSingleNode("nombre").InnerText;
 				string pass = inUser.SelectSingleNode("password").InnerText;
 				string nvl = inUser.SelectSingleNode("nivel").InnerText;
+				string rutaHistorial = inUser.SelectSingleNode("rutahistorial").InnerText;
+				string rutaClientes = inUser.SelectSingleNode("rutaclientes").InnerText;
+				string idActual = inUser.SelectSingleNode("idactual").InnerText;
+				string inicioAuto = inUser.SelectSingleNode("inicioautomatico").InnerText;
 
 				if (nom == configuracionActual.UltimoUser)
 				{
-					usuarioActual = new Usuario(nom, pass, Int32.Parse(nvl));
+					usuarioActual = new Usuario(nom, pass, Int32.Parse(nvl), rutaHistorial, rutaClientes, Int32.Parse(idActual), Int32.Parse(inicioAuto));
 
 					IniciarAuto();
 				}
@@ -177,10 +212,11 @@ namespace XLight_Project.Formularios
 			}
 		}
 
-		private void IniciarAuto()
+		/// <summary>
+		/// <para>Iniciar auto</para>
+		/// </summary>
+		private void IniciarAuto()// Iniciar auto
 		{
-
-
 			Main main = new Main(configuracionActual, usuarioActual);
 			main.Show();
 			this.Close();
@@ -205,8 +241,12 @@ namespace XLight_Project.Formularios
 				string nom = inUser.SelectSingleNode("nombre").InnerText;
 				string pass = inUser.SelectSingleNode("password").InnerText;
 				string nvl = inUser.SelectSingleNode("nivel").InnerText;
+				string rutaHistorial = inUser.SelectSingleNode("rutahistorial").InnerText;
+				string rutaClientes = inUser.SelectSingleNode("rutaclientes").InnerText;
+				string idActual = inUser.SelectSingleNode("idactual").InnerText;
+				string inicioAuto = inUser.SelectSingleNode("inicioautomatico").InnerText;
 
-				usuarios.Add(new Usuario(nom, pass, Int32.Parse(nvl)));
+				usuarios.Add(new Usuario(nom, pass, Int32.Parse(nvl), rutaHistorial, rutaClientes, Int32.Parse(idActual), Int32.Parse(inicioAuto)));
 			}
 		}
 		#endregion
@@ -230,6 +270,40 @@ namespace XLight_Project.Formularios
 		private void BtnLogin_Click(object sender, EventArgs e)// Btn Logear
 		{
 			Logear(InputName.text, InputPassword.text);
+		}
+		#endregion
+
+		#region Funcionalidad
+		public Usuario GetUser(string nombre)
+		{
+			Usuario usuario;
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(configuracionActual.PathUsuarios + "/usuarios.xml");
+
+			XmlNodeList listaUsuarios = doc.SelectNodes("Usuarios/Usuario");
+			XmlNode inUser;
+
+			for (int n = 0; n < listaUsuarios.Count; n++)
+			{
+				inUser = listaUsuarios.Item(n);
+
+				string nom = inUser.SelectSingleNode("nombre").InnerText;
+				string pass = inUser.SelectSingleNode("password").InnerText;
+				string nvl = inUser.SelectSingleNode("nivel").InnerText;
+				string rutaHistorial = inUser.SelectSingleNode("rutahistorial").InnerText;
+				string rutaClientes = inUser.SelectSingleNode("rutaclientes").InnerText;
+				string idActual = inUser.SelectSingleNode("idactual").InnerText;
+				string inicioAuto = inUser.SelectSingleNode("inicioautomatico").InnerText;
+
+				if (nom == nombre)
+				{
+					return usuario = new Usuario(nom, pass, Int32.Parse(nvl), rutaHistorial, rutaClientes, Int32.Parse(idActual), Int32.Parse(inicioAuto));
+				}
+			}
+
+			return null;
 		}
 		#endregion
 	}

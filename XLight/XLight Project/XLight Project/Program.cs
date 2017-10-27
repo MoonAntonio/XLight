@@ -17,9 +17,9 @@ namespace XLight_Project
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new Splash());
+			Application.Run(new Splash());
 
-			Application.Run(new Main());
+			//Application.Run(new Main());
 		}
 	}
 }
