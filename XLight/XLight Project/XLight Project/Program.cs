@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XLight_Project.Formularios;
 
 namespace XLight_Project
 {
@@ -16,7 +17,9 @@ namespace XLight_Project
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Splash());
+			//Application.Run(new Splash());
+
+			Application.Run(new Main());
 		}
 	}
 }
