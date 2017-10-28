@@ -457,23 +457,94 @@ namespace XLight_Project.Formularios
 				MessageBox.Show("Cliente agregado.");
 			}
 		}
-		#endregion
 
-
-
-		private void BtnAbrirFicha_Click(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Abre la ficha del usuario.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnAbrirFicha_Click(object sender, EventArgs e)// Abre la ficha del usuario
 		{
+			if (txtBoxBuscadorRegistro.Text != string.Empty)
+			{
+				string nombreFicha = txtBoxBuscadorRegistro.Text;
 
+				Ficha ficha = new Ficha(configuracionActual, usuarioActual, nombreFicha);
+				ficha.Show();
+
+				txtBoxBuscadorRegistro.Text = "";
+			}
+			else
+			{
+				MessageBox.Show("Tienes que buscar algun cliente.");
+			}
 		}
+
+		/// <summary>
+		/// <para>Borrar un cliente.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnBorrar_Click(object sender, EventArgs e)// Borrar un cliente
+		{
+			XmlDocument doc = new XmlDocument();
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+			string no = "";
+			string ap = "";
+
+			if (txtBoxBuscadorRegistro.Text != string.Empty)
+			{
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement cliente = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				foreach (XmlNode item in listaClientes)
+				{
+					string nombreConjunto = item.SelectSingleNode("nombre").InnerText + " " + item.SelectSingleNode("apellidos").InnerText;
+
+					no = item.SelectSingleNode("nombre").InnerText;
+					ap = item.SelectSingleNode("apellidos").InnerText;
+
+					if (nombreConjunto == txtBoxBuscadorRegistro.Text)
+					{
+						MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+						DialogResult result = MessageBox.Show("¿Quieres eliminar a " + no + " ?", "Seguro", buttons);
+
+						if (result == System.Windows.Forms.DialogResult.Yes)
+						{
+							XmlNode nodo = item;
+
+							cliente.RemoveChild(nodo);
+
+							CrearEntradaHistoria(no, ap, no + " " + ap + " ha sido borrado.", dia);
+						}
+					}
+				}
+
+
+				doc.Save(usuarioActual.PathClientes);
+
+				ActualizarBusquedaRegistro();
+
+				txtBoxBuscadorRegistro.Text = "";
+
+				ActualizarBusquedaRegistro();
+			}
+			else
+			{
+				MessageBox.Show("Primero busca un usuario");
+			}
+		}
+		#endregion
 
 		private void BtnEditar_Click(object sender, EventArgs e)
 		{
-
+	
 		}
 
-		private void BtnBorrar_Click(object sender, EventArgs e)
-		{
 
-		}
 	}
 }
