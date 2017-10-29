@@ -369,6 +369,28 @@ namespace XLight_Project.Formularios
 		{
 			isTemporizador = false;
 		}
+
+		/// <summary>
+		/// <para>Imprimir Lista</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnImprimirClientes_Click(object sender, EventArgs e)// Imprimir Lista
+		{
+			printDocument1.Print();
+		}
+
+		/// <summary>
+		/// <para>Preparar pagina para imprimir.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)// Preparar pagina para imprimir
+		{
+			Bitmap bm = new Bitmap(this.dataGridView1.Width, this.dataGridView1.Height);
+			dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+			e.Graphics.DrawImage(bm, 10, 10);
+		}
 		#endregion
 
 		#region Metodos GUI

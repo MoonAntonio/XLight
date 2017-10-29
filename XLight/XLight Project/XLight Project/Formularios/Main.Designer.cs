@@ -37,11 +37,11 @@
 			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border5 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border8 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border9 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
 			this.Header = new System.Windows.Forms.Panel();
 			this.LblUser = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.BtnMaximizar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
@@ -57,6 +57,7 @@
 			this.BtnBalance = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnClientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.PanelClientes = new VisualPlus.Toolkit.Controls.Layout.VisualPanel();
+			this.BtnImprimirClientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +85,8 @@
 			this.TextNombre = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
 			this.BtnAgregarNuevoCliente = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BarProgress = new VisualPlus.Toolkit.Controls.DataVisualization.VisualProgressBar();
-			this.BtnImprimirClientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.timerProgress = new System.Windows.Forms.Timer(this.components);
+			this.printDocument1 = new System.Drawing.Printing.PrintDocument();
 			this.Header.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -547,6 +548,49 @@
 			this.PanelClientes.TabIndex = 4;
 			this.PanelClientes.Text = "visualPanel1";
 			this.PanelClientes.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnImprimirClientes
+			// 
+			this.BtnImprimirClientes.Animation = true;
+			this.BtnImprimirClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirClientes.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirClientes.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirClientes.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirClientes.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnImprimirClientes.BackgroundStateGradientBrush = null;
+			this.BtnImprimirClientes.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnImprimirClientes.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnImprimirClientes.Border.HoverVisible = true;
+			this.BtnImprimirClientes.Border.Rounding = 6;
+			this.BtnImprimirClientes.Border.Thickness = 1;
+			this.BtnImprimirClientes.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnImprimirClientes.Border.Visible = true;
+			this.BtnImprimirClientes.ControlBrushCollection = null;
+			this.BtnImprimirClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnImprimirClientes.ForeColor = System.Drawing.Color.Black;
+			this.BtnImprimirClientes.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border6.HoverVisible = false;
+			border6.Rounding = 6;
+			border6.Thickness = 1;
+			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border6.Visible = false;
+			this.BtnImprimirClientes.Image.Border = border6;
+			this.BtnImprimirClientes.Image.Image = null;
+			this.BtnImprimirClientes.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnImprimirClientes.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnImprimirClientes.Image.Visible = false;
+			this.BtnImprimirClientes.Location = new System.Drawing.Point(39, 420);
+			this.BtnImprimirClientes.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnImprimirClientes.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnImprimirClientes.Name = "BtnImprimirClientes";
+			this.BtnImprimirClientes.Size = new System.Drawing.Size(140, 45);
+			this.BtnImprimirClientes.TabIndex = 35;
+			this.BtnImprimirClientes.Text = "Imprimir";
+			this.BtnImprimirClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnImprimirClientes.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnImprimirClientes.Click += new System.EventHandler(this.BtnImprimirClientes_Click);
 			// 
 			// dataGridView1
 			// 
@@ -1272,53 +1316,15 @@
 			this.BarProgress.Value = 0;
 			this.BarProgress.ValueAlignment = System.Drawing.StringAlignment.Center;
 			// 
-			// BtnImprimirClientes
-			// 
-			this.BtnImprimirClientes.Animation = true;
-			this.BtnImprimirClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnImprimirClientes.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnImprimirClientes.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnImprimirClientes.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnImprimirClientes.BackColorState.Pressed = System.Drawing.Color.Silver;
-			this.BtnImprimirClientes.BackgroundStateGradientBrush = null;
-			this.BtnImprimirClientes.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.BtnImprimirClientes.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.BtnImprimirClientes.Border.HoverVisible = true;
-			this.BtnImprimirClientes.Border.Rounding = 6;
-			this.BtnImprimirClientes.Border.Thickness = 1;
-			this.BtnImprimirClientes.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.BtnImprimirClientes.Border.Visible = true;
-			this.BtnImprimirClientes.ControlBrushCollection = null;
-			this.BtnImprimirClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnImprimirClientes.ForeColor = System.Drawing.Color.Black;
-			this.BtnImprimirClientes.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border6.HoverVisible = false;
-			border6.Rounding = 6;
-			border6.Thickness = 1;
-			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border6.Visible = false;
-			this.BtnImprimirClientes.Image.Border = border6;
-			this.BtnImprimirClientes.Image.Image = null;
-			this.BtnImprimirClientes.Image.Point = new System.Drawing.Point(58, 10);
-			this.BtnImprimirClientes.Image.Size = new System.Drawing.Size(24, 24);
-			this.BtnImprimirClientes.Image.Visible = false;
-			this.BtnImprimirClientes.Location = new System.Drawing.Point(39, 420);
-			this.BtnImprimirClientes.Margin = new System.Windows.Forms.Padding(0);
-			this.BtnImprimirClientes.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.BtnImprimirClientes.Name = "BtnImprimirClientes";
-			this.BtnImprimirClientes.Size = new System.Drawing.Size(140, 45);
-			this.BtnImprimirClientes.TabIndex = 35;
-			this.BtnImprimirClientes.Text = "Imprimir";
-			this.BtnImprimirClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-			this.BtnImprimirClientes.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			// 
 			// timerProgress
 			// 
 			this.timerProgress.Enabled = true;
 			this.timerProgress.Interval = 1000;
 			this.timerProgress.Tick += new System.EventHandler(this.timerProgress_Tick);
+			// 
+			// printDocument1
+			// 
+			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
 			// 
 			// Main
 			// 
@@ -1390,5 +1396,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnImprimirClientes;
 		private System.Windows.Forms.Timer timerProgress;
+		private System.Drawing.Printing.PrintDocument printDocument1;
 	}
 }
