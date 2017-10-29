@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
 			this.DataFecha = new System.Windows.Forms.DateTimePicker();
 			this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.TextTelefono = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -482,14 +482,14 @@
 			this.BtnGuardarUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardarUsuario.ForeColor = System.Drawing.Color.Black;
 			this.BtnGuardarUsuario.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border1.HoverVisible = false;
-			border1.Rounding = 6;
-			border1.Thickness = 1;
-			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border1.Visible = false;
-			this.BtnGuardarUsuario.Image.Border = border1;
+			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border2.HoverVisible = false;
+			border2.Rounding = 6;
+			border2.Thickness = 1;
+			border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border2.Visible = false;
+			this.BtnGuardarUsuario.Image.Border = border2;
 			this.BtnGuardarUsuario.Image.Image = null;
 			this.BtnGuardarUsuario.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarUsuario.Image.Size = new System.Drawing.Size(24, 24);
@@ -570,6 +570,7 @@
 			this.Name = "EditarUsuario";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "EditarUsuario";
+			this.Load += new System.EventHandler(this.EditarUsuario_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
