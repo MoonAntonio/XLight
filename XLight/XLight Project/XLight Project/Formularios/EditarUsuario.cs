@@ -33,7 +33,15 @@ namespace XLight_Project.Formularios
 		/// <summary>
 		/// <para>Cliente</para>
 		/// </summary>
-		public string cliente;                                                  // Cliente
+		public string nombre;                                                   // Cliente
+		/// <summary>
+		/// <para>Cliente</para>
+		/// </summary>
+		public Cliente cliente;                                                 // Cliente
+		/// <summary>
+		/// <para>Formulario main actual.</para>
+		/// </summary>
+		public Main mainForm;													// Formulario main actual
 		#endregion
 
 		#region Constructores
@@ -51,11 +59,12 @@ namespace XLight_Project.Formularios
 		/// <param name="config">Configuracion actual.</param>
 		/// <param name="user">Usuario actual.</param>
 		/// <param name="nombre">Nombre del cliente.</param>
-		public EditarUsuario(Ajustes config, Usuario user, string nombre)// Constructor de EditarUsuario
+		public EditarUsuario(Ajustes config, Usuario user, string nombreC, Main m)// Constructor de EditarUsuario
 		{
 			configuracionActual = config;
 			usuarioActual = user;
-			cliente = nombre;
+			nombre = nombreC;
+			mainForm = m;
 
 			InitializeComponent();
 		}
@@ -83,7 +92,7 @@ namespace XLight_Project.Formularios
 				string nombr = inCliente.SelectSingleNode("nombre").InnerText;
 				string apelli = inCliente.SelectSingleNode("apellidos").InnerText;
 
-				if (cliente == nombr + " " + apelli)
+				if (nombre == nombr + " " + apelli)
 				{
 					TextNombre.Text = inCliente.SelectSingleNode("nombre").InnerText;
 					TextApellidos.Text = inCliente.SelectSingleNode("apellidos").InnerText;
@@ -91,10 +100,16 @@ namespace XLight_Project.Formularios
 					TextTelefono.Text = inCliente.SelectSingleNode("telefono").InnerText;
 					DataFecha.Text = inCliente.SelectSingleNode("fecha").InnerText;
 					TextDireccion.Text = inCliente.SelectSingleNode("direccion").InnerText;
+
+					cliente = new Cliente(Int32.Parse(inCliente.SelectSingleNode("id").InnerText), inCliente.SelectSingleNode("nombre").InnerText,
+											inCliente.SelectSingleNode("apellidos").InnerText, inCliente.SelectSingleNode("dni").InnerText,
+											inCliente.SelectSingleNode("telefono").InnerText, inCliente.SelectSingleNode("fecha").InnerText,
+											inCliente.SelectSingleNode("direccion").InnerText);
 				}
 			}
-		}
 
+			LblTitulo.Text = "Editando al usuario " + nombre;
+		}
 		#endregion
 
 		#region Metodos GUI
@@ -105,7 +120,65 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnGuardarUsuario_Click(object sender, EventArgs e)// Guardar y salir
 		{
+			string subID = cliente.ID.ToString();
+			string subNom = TextNombre.Text;
+			string subApell = TextApellidos.Text;
+			string subDni = TextDNI.Text;
+			string subTele = TextTelefono.Text;
+			string subFech = DataFecha.Text;
+			string subDire = TextDireccion.Text;
 
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(usuarioActual.PathClientes);
+
+			XmlElement clientes = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+			XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+			XmlElement xid = doc.CreateElement("id");
+			xid.InnerText = subID;
+			nuevoCliente.AppendChild(xid);
+
+			XmlElement xnom = doc.CreateElement("nombre");
+			xnom.InnerText = subNom;
+			nuevoCliente.AppendChild(xnom);
+
+			XmlElement xape = doc.CreateElement("apellidos");
+			xape.InnerText = subApell;
+			nuevoCliente.AppendChild(xape);
+
+			XmlElement xdni = doc.CreateElement("dni");
+			xdni.InnerText = subDni;
+			nuevoCliente.AppendChild(xdni);
+
+			XmlElement xtele = doc.CreateElement("telefono");
+			xtele.InnerText = subTele;
+			nuevoCliente.AppendChild(xtele);
+
+			XmlElement xfech = doc.CreateElement("fecha");
+			xfech.InnerText = subFech;
+			nuevoCliente.AppendChild(xfech);
+
+			XmlElement xdir = doc.CreateElement("direccion");
+			xdir.InnerText = subDire;
+			nuevoCliente.AppendChild(xdir);
+
+			foreach (XmlNode item in listaClientes)
+			{
+				if (item.FirstChild.InnerText == subID)
+				{
+					XmlNode nodo = item;
+					clientes.ReplaceChild(nuevoCliente, nodo);
+				}
+			}
+
+			doc.Save(usuarioActual.PathClientes);
+
+			mainForm.ActualizarLista();
 
 			this.Close();
 		}

@@ -593,7 +593,7 @@ namespace XLight_Project.Formularios
 			{
 				string nombreFicha = txtBoxBuscadorRegistro.Text;
 
-				EditarUsuario ficha = new EditarUsuario(configuracionActual, usuarioActual, nombreFicha);
+				EditarUsuario ficha = new EditarUsuario(configuracionActual, usuarioActual, nombreFicha, this);
 				ficha.Show();
 
 				txtBoxBuscadorRegistro.Text = "";
@@ -635,6 +635,17 @@ namespace XLight_Project.Formularios
 				BarProgress.Value = 0;
 			}
 			
+		}
+		#endregion
+
+		#region Metodos Estaticos
+		/// <summary>
+		/// <para>Actualizar la lista.</para>
+		/// </summary>
+		public void ActualizarLista()// Actualizar la lista
+		{
+			ActualizarBusquedaRegistro();
+			ActualizarBusquedaRegistro();
 		}
 		#endregion
 	}
