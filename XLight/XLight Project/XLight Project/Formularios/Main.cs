@@ -112,6 +112,8 @@ namespace XLight_Project.Formularios
 			PanelHistorial.Visible = false;
 			PanelOpciones.Visible = false;
 
+			BtnUsuarioSetup.Visible = false;
+
 			GuardarAjustes();
 		}
 		#endregion
@@ -621,6 +623,8 @@ namespace XLight_Project.Formularios
 			PanelOpciones.Visible = false;
 
 			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Clientes";
+
+			BtnUsuarioSetup.Visible = false;
 		}
 
 		/// <summary>
@@ -645,6 +649,8 @@ namespace XLight_Project.Formularios
 			{
 				MessageBox.Show("No tienes privilegios suficientes. Contacta con tu admin.");
 			}
+
+			BtnUsuarioSetup.Visible = false;
 		}
 
 		/// <summary>
@@ -664,6 +670,8 @@ namespace XLight_Project.Formularios
 			PanelOpciones.Visible = false;
 
 			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Historial";
+
+			BtnUsuarioSetup.Visible = false;
 		}
 
 		/// <summary>
@@ -695,6 +703,8 @@ namespace XLight_Project.Formularios
 			{
 				checkBoxAuto.CheckState = CheckState.Checked;
 			}
+
+			BtnUsuarioSetup.Visible = true;
 		}
 
 		/// <summary>
@@ -1007,6 +1017,17 @@ namespace XLight_Project.Formularios
 		{
 			CambiarContrase us = new CambiarContrase(usuarioActual, this);
 			us.Show();
+		}
+
+		/// <summary>
+		/// <para>Crear nuevo usuario</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCrearUsuario_Click(object sender, EventArgs e)// Crear nuevo usuario
+		{
+			NuevoUsuario nUser = new NuevoUsuario();
+			nUser.Show();
 		}
 		#endregion
 	}
