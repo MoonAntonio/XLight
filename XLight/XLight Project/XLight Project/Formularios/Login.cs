@@ -32,6 +32,10 @@ namespace XLight_Project.Formularios
 		/// <para>Usuario actual del sistema.</para>
 		/// </summary>
 		public Usuario usuarioActual;                                           // Usuario actual del sistema
+		/// <summary>
+		/// <para>Main</para>
+		/// </summary>
+		public Main formCentral;												// Main
 		#endregion
 
 		#region Variables Privadas
@@ -58,6 +62,20 @@ namespace XLight_Project.Formularios
 		{
 			// Crear ajustes
 			configuracionActual = new Ajustes(config.PathData, config.PathUsuarios, config.PathAjustes, config.UltimoUser);
+
+			InitializeComponent();
+		}
+
+		/// <summary>
+		/// <para>Constructor de <see cref="Login"/>.</para>
+		/// </summary>
+		/// <param name="config">Configuracion actual del sistema.</param>
+		public Login(Ajustes config, Main mainForm)// Constructor de Login
+		{
+			// Crear ajustes
+			configuracionActual = new Ajustes(config.PathData, config.PathUsuarios, config.PathAjustes, config.UltimoUser);
+
+			formCentral = mainForm;
 
 			InitializeComponent();
 		}
@@ -93,32 +111,27 @@ namespace XLight_Project.Formularios
 		/// <param name="password">Password del usuario.</param>
 		private void Logear(string usuario, string password)// Logeo manual del usuario
 		{
-			foreach (Usuario u in usuarios)
+			for (int n = 0; n < usuarios.Count; n++)
 			{
-				if (usuario == u.Nombre)
+				if (usuario == usuarios[n].Nombre)
 				{
-					if (password == u.Password)
+					if (password == usuarios[n].Password)
 					{
-						usuarioActual = GetUser(u.Nombre);
+						usuarioActual = GetUser(usuarios[n].Nombre);
+						configuracionActual.UltimoUser = usuarioActual.Nombre;
 
 						Main main = new Main(configuracionActual, usuarioActual);
 						main.Show();
 						this.Close();
+
+						return;
 					}
-					else
-					{
-						MessageBox.Show("Nombre o contraseña incorrecta.");
-						InputName.text = "";
-						InputPassword.text = "";
-					}
-				}
-				else
-				{
-					MessageBox.Show("Nombre o contraseña incorrecta.");
-					InputName.text = "";
-					InputPassword.text = "";
 				}
 			}
+
+			MessageBox.Show("Nombre o contraseña incorrecta.");
+			InputName.text = "";
+			InputPassword.text = "";
 		}
 
 		/// <summary>
