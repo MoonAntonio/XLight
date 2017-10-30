@@ -30,17 +30,28 @@ namespace XLight_Project.Formularios
 		/// <para>Usuario actual del sistema.</para>
 		/// </summary>
 		public Usuario usuarioActual;                                           // Usuario actual del sistema
-
-		public string cliente;
+		/// <summary>
+		/// <para>Nombre y apellidos del cliente.</para>
+		/// </summary>
+		public string cliente;													// Nombre y apellidos del cliente
 		#endregion
 
 		#region Constructores
-		public Ficha()
+		/// <summary>
+		/// <para>Constructor de <see cref="Ficha"/>.</para>
+		/// </summary>
+		public Ficha()// Constructor de Ficha
 		{
 			InitializeComponent();
 		}
 
-		public Ficha(Ajustes config, Usuario user, string nombre)
+		/// <summary>
+		/// <para>Constructor de <see cref="Ficha"/>.</para>
+		/// </summary>
+		/// <param name="config">Configuracion actual de los ajustes</param>
+		/// <param name="user">Usuario actual del sistema</param>
+		/// <param name="nombre">Nombre y apellidos del cliente</param>
+		public Ficha(Ajustes config, Usuario user, string nombre)// Constructor de Ficha
 		{
 			configuracionActual = config;
 			usuarioActual = user;

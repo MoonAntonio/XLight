@@ -112,9 +112,9 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.checkBoxAuto = new System.Windows.Forms.CheckBox();
 			this.LblHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.LblClientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
-			this.checkBoxAuto = new System.Windows.Forms.CheckBox();
 			this.BtnBorrarHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnRutaHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnRutaClientes = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
@@ -1745,6 +1745,18 @@
 			this.pictureBox2.TabIndex = 0;
 			this.pictureBox2.TabStop = false;
 			// 
+			// checkBoxAuto
+			// 
+			this.checkBoxAuto.AutoSize = true;
+			this.checkBoxAuto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.checkBoxAuto.Location = new System.Drawing.Point(198, 287);
+			this.checkBoxAuto.Name = "checkBoxAuto";
+			this.checkBoxAuto.Size = new System.Drawing.Size(92, 20);
+			this.checkBoxAuto.TabIndex = 11;
+			this.checkBoxAuto.Text = "Autologin";
+			this.checkBoxAuto.UseVisualStyleBackColor = false;
+			this.checkBoxAuto.CheckStateChanged += new System.EventHandler(this.checkBoxAuto_CheckStateChanged);
+			// 
 			// LblHistorial
 			// 
 			this.LblHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1800,18 +1812,6 @@
 			this.LblClientes.TabIndex = 12;
 			this.LblClientes.Text = "visualLabel3";
 			this.LblClientes.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-			// 
-			// checkBoxAuto
-			// 
-			this.checkBoxAuto.AutoSize = true;
-			this.checkBoxAuto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.checkBoxAuto.Location = new System.Drawing.Point(198, 287);
-			this.checkBoxAuto.Name = "checkBoxAuto";
-			this.checkBoxAuto.Size = new System.Drawing.Size(92, 20);
-			this.checkBoxAuto.TabIndex = 11;
-			this.checkBoxAuto.Text = "Autologin";
-			this.checkBoxAuto.UseVisualStyleBackColor = false;
-			this.checkBoxAuto.CheckStateChanged += new System.EventHandler(this.checkBoxAuto_CheckStateChanged);
 			// 
 			// BtnBorrarHistorial
 			// 
@@ -2130,13 +2130,13 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1125, 615);
-			this.Controls.Add(this.PanelOpciones);
-			this.Controls.Add(this.PanelHistorial);
-			this.Controls.Add(this.PanelBalance);
 			this.Controls.Add(this.BarProgress);
 			this.Controls.Add(this.PanelClientes);
 			this.Controls.Add(this.Header);
 			this.Controls.Add(this.panel2);
+			this.Controls.Add(this.PanelOpciones);
+			this.Controls.Add(this.PanelHistorial);
+			this.Controls.Add(this.PanelBalance);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Main";

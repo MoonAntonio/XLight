@@ -501,7 +501,7 @@ namespace XLight_Project.Formularios
 		{
 			XmlDocument doc = new XmlDocument();
 
-			doc.Load(usuarioActual.PathClientes);
+			doc.Load(usuarioActual.PathHistorial);
 
 			XmlNodeList listaClientes = doc.SelectNodes("Entradas/Entrada");
 			XmlNode inCliente;
@@ -547,6 +547,11 @@ namespace XLight_Project.Formularios
 			}
 
 			doc.Save(usuarioActual.PathHistorial);
+
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			CrearEntradaHistoria(usuarioActual.Nombre + " (Usuario)", "***", "Borro el historial.", dia);
 		}
 
 		/// <summary>
@@ -555,7 +560,11 @@ namespace XLight_Project.Formularios
 		public void ActualizarLista()// Actualizar la lista
 		{
 			ActualizarBusquedaRegistro();
-			ActualizarBusquedaRegistro();
+
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			CrearEntradaHistoria(usuarioActual.Nombre + " (Usuario)", "***", "Edito su configuracion.", dia);
 		}
 
 		/// <summary>
@@ -564,9 +573,14 @@ namespace XLight_Project.Formularios
 		/// <param name="user"></param>
 		public void CambioContr(Usuario user)// Cmabio de contra
 		{
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
 			usuarioActual = user;
 
 			GuardarUsuario();
+
+			CrearEntradaHistoria(usuarioActual.Nombre + " (Usuario)", "***", "Cambio la contraseña.", dia);
 		}
 		#endregion
 
@@ -1024,8 +1038,15 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnCrearUsuario_Click(object sender, EventArgs e)// Crear nuevo usuario
 		{
-			NuevoUsuario nUser = new NuevoUsuario(configuracionActual);
-			nUser.Show();
+			if (usuarioActual.NivelPrivilegios == 0)
+			{
+				NuevoUsuario nUser = new NuevoUsuario(configuracionActual);
+				nUser.Show();
+			}
+			else
+			{
+				MessageBox.Show("No tienes nivel suficiente para esta opcion.");
+			}
 		}
 		#endregion
 	}
