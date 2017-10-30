@@ -1002,10 +1002,8 @@ namespace XLight_Project.Formularios
 
 			GuardarUsuario();
 
-			Login log = new Login(configuracionActual);
+			Login log = new Login(configuracionActual, this);
 			log.Show();
-
-			this.Close();
 		}
 
 		/// <summary>
@@ -1026,7 +1024,7 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnCrearUsuario_Click(object sender, EventArgs e)// Crear nuevo usuario
 		{
-			NuevoUsuario nUser = new NuevoUsuario();
+			NuevoUsuario nUser = new NuevoUsuario(configuracionActual);
 			nUser.Show();
 		}
 		#endregion

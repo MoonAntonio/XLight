@@ -73,7 +73,7 @@ namespace XLight_Project.Formularios
 			cliente.AppendChild(pass);
 
 			XmlElement nvl = doc.CreateElement("nivel");
-			nvl.InnerText = visualNumericUpDown1.Text;
+			nvl.InnerText = visualNumericUpDown1.Value.ToString();
 			cliente.AppendChild(nvl);
 
 			XmlElement rutaHistorial = doc.CreateElement("rutahistorial");
