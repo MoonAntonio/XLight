@@ -546,6 +546,26 @@ namespace XLight_Project.Formularios
 
 			doc.Save(usuarioActual.PathHistorial);
 		}
+
+		/// <summary>
+		/// <para>Actualizar la lista.</para>
+		/// </summary>
+		public void ActualizarLista()// Actualizar la lista
+		{
+			ActualizarBusquedaRegistro();
+			ActualizarBusquedaRegistro();
+		}
+
+		/// <summary>
+		/// <para>Cmabio de contra</para>
+		/// </summary>
+		/// <param name="user"></param>
+		public void CambioContr(Usuario user)// Cmabio de contra
+		{
+			usuarioActual = user;
+
+			GuardarUsuario();
+		}
 		#endregion
 
 		#region Metodos GUI
@@ -858,7 +878,12 @@ namespace XLight_Project.Formularios
 			
 		}
 
-		private void BtnRutaData_Click(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Ruta data</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnRutaData_Click(object sender, EventArgs e)// Ruta data
 		{
 			FolderBrowserDialog busqueda = new FolderBrowserDialog();
 
@@ -871,7 +896,12 @@ namespace XLight_Project.Formularios
 			}
 		}
 
-		private void BtnRutaUsuarios_Click(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Ruta usuarios</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnRutaUsuarios_Click(object sender, EventArgs e)// Ruta usuarios
 		{
 			FolderBrowserDialog busqueda = new FolderBrowserDialog();
 
@@ -884,7 +914,12 @@ namespace XLight_Project.Formularios
 			}
 		}
 
-		private void BtnRutaClientes_Click(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Ruta clientes</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnRutaClientes_Click(object sender, EventArgs e)// Ruta clientes
 		{
 			OpenFileDialog busqueda = new OpenFileDialog();
 
@@ -897,7 +932,12 @@ namespace XLight_Project.Formularios
 			}
 		}
 
-		private void BtnRutaHistorial_Click(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Ruta Historial</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnRutaHistorial_Click(object sender, EventArgs e)// Ruta Historial
 		{
 			OpenFileDialog busqueda = new OpenFileDialog();
 
@@ -910,12 +950,24 @@ namespace XLight_Project.Formularios
 			}
 		}
 
-		private void BtnBorrarHistorial_Click(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Borrar historial</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnBorrarHistorial_Click(object sender, EventArgs e)// Borrar historial
 		{
 			BorrarHistorial();
+
+			MessageBox.Show("Historial borrado.");
 		}
 
-		private void checkBoxAuto_CheckStateChanged(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Cambiar estado check</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void checkBoxAuto_CheckStateChanged(object sender, EventArgs e)// Cambiar estado check
 		{
 			if (checkBoxAuto.CheckState == CheckState.Checked)
 			{
@@ -929,23 +981,33 @@ namespace XLight_Project.Formularios
 			GuardarUsuario();
 		}
 
-		private void BtnUsuarioSetup_Click(object sender, EventArgs e)
-		{
-
-		}
-		#endregion
-
-		#region Metodos Estaticos
 		/// <summary>
-		/// <para>Actualizar la lista.</para>
+		/// <para>Setup Usuario</para>
 		/// </summary>
-		public void ActualizarLista()// Actualizar la lista
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnUsuarioSetup_Click(object sender, EventArgs e)// Setup Usuario
 		{
-			ActualizarBusquedaRegistro();
-			ActualizarBusquedaRegistro();
+			usuarioActual.InicioAutomatico = 0;
+
+			GuardarUsuario();
+
+			Login log = new Login(configuracionActual);
+			log.Show();
+
+			this.Close();
 		}
 
-
+		/// <summary>
+		/// <para>Cambia la contra</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCambiarContraseña_Click(object sender, EventArgs e)// Cambia la contra
+		{
+			CambiarContrase us = new CambiarContrase(usuarioActual, this);
+			us.Show();
+		}
 		#endregion
 	}
 }

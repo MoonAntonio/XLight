@@ -69,6 +69,12 @@
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Extensiones\Extensiones.cs" />
     <Compile Include="Clases\Xml.cs" />
+    <Compile Include="Formularios\CambiarContrase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CambiarContrase.Designer.cs">
+      <DependentUpon>CambiarContrase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\EditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\CambiarContrase.resx">
+      <DependentUpon>CambiarContrase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarUsuario.resx">
       <DependentUpon>EditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
