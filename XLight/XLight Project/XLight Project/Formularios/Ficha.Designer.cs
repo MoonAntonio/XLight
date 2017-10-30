@@ -41,6 +41,20 @@
 			this.visualLabel2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.visualLabel1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.TextNombre = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
+			this.visualSeparator1 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
+			this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+			this.txtUltimaConsulta = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+			this.visualTabControl1 = new VisualPlus.Toolkit.Controls.Navigation.VisualTabControl();
+			this.Recordatorios = new System.Windows.Forms.TabPage();
+			this.Hipnosis = new System.Windows.Forms.TabPage();
+			this.visualListBoxHipnosis = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.Sueños = new System.Windows.Forms.TabPage();
+			this.Regresion = new System.Windows.Forms.TabPage();
+			this.Reiki = new System.Windows.Forms.TabPage();
+			this.TetraHealing = new System.Windows.Forms.TabPage();
+			this.button1 = new System.Windows.Forms.Button();
+			this.visualTabControl1.SuspendLayout();
+			this.Hipnosis.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// DataFecha
@@ -458,11 +472,241 @@
 			this.TextNombre.Watermark.Text = "Watermark text";
 			this.TextNombre.Watermark.Visible = false;
 			// 
+			// visualSeparator1
+			// 
+			this.visualSeparator1.BackgroundStateGradientBrush = null;
+			this.visualSeparator1.ControlBrushCollection = null;
+			this.visualSeparator1.Line = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))));
+			this.visualSeparator1.Location = new System.Drawing.Point(22, 125);
+			this.visualSeparator1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualSeparator1.Name = "visualSeparator1";
+			this.visualSeparator1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.visualSeparator1.Shadow = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+			this.visualSeparator1.ShadowVisible = false;
+			this.visualSeparator1.Size = new System.Drawing.Size(593, 4);
+			this.visualSeparator1.TabIndex = 45;
+			this.visualSeparator1.Text = "visualSeparator1";
+			// 
+			// visualLabel3
+			// 
+			this.visualLabel3.BackColor = System.Drawing.Color.Transparent;
+			this.visualLabel3.BackgroundStateGradientBrush = null;
+			this.visualLabel3.ControlBrushCollection = null;
+			this.visualLabel3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.visualLabel3.ForeColor = System.Drawing.Color.Black;
+			this.visualLabel3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualLabel3.Location = new System.Drawing.Point(142, 135);
+			this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualLabel3.Name = "visualLabel3";
+			this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.visualLabel3.Outline = false;
+			this.visualLabel3.OutlineColor = System.Drawing.Color.Red;
+			this.visualLabel3.OutlineLocation = new System.Drawing.Point(0, 0);
+			this.visualLabel3.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.visualLabel3.ReflectionSpacing = 0;
+			this.visualLabel3.ShadowColor = System.Drawing.Color.Black;
+			this.visualLabel3.ShadowDirection = 315;
+			this.visualLabel3.ShadowLocation = new System.Drawing.Point(0, 0);
+			this.visualLabel3.ShadowOpacity = 100;
+			this.visualLabel3.Size = new System.Drawing.Size(118, 23);
+			this.visualLabel3.TabIndex = 46;
+			this.visualLabel3.Text = "Ultima Consulta";
+			this.visualLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// txtUltimaConsulta
+			// 
+			this.txtUltimaConsulta.BackColor = System.Drawing.Color.Transparent;
+			this.txtUltimaConsulta.BackgroundStateGradientBrush = null;
+			this.txtUltimaConsulta.ControlBrushCollection = null;
+			this.txtUltimaConsulta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtUltimaConsulta.ForeColor = System.Drawing.Color.Black;
+			this.txtUltimaConsulta.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.txtUltimaConsulta.Location = new System.Drawing.Point(266, 135);
+			this.txtUltimaConsulta.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.txtUltimaConsulta.Name = "txtUltimaConsulta";
+			this.txtUltimaConsulta.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			this.txtUltimaConsulta.Outline = false;
+			this.txtUltimaConsulta.OutlineColor = System.Drawing.Color.Red;
+			this.txtUltimaConsulta.OutlineLocation = new System.Drawing.Point(0, 0);
+			this.txtUltimaConsulta.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.txtUltimaConsulta.ReflectionSpacing = 0;
+			this.txtUltimaConsulta.ShadowColor = System.Drawing.Color.Black;
+			this.txtUltimaConsulta.ShadowDirection = 315;
+			this.txtUltimaConsulta.ShadowLocation = new System.Drawing.Point(0, 0);
+			this.txtUltimaConsulta.ShadowOpacity = 100;
+			this.txtUltimaConsulta.Size = new System.Drawing.Size(234, 23);
+			this.txtUltimaConsulta.TabIndex = 47;
+			this.txtUltimaConsulta.Text = "27-Octubre-2017 (Tetrahealing)";
+			this.txtUltimaConsulta.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// visualTabControl1
+			// 
+			this.visualTabControl1.ArrowSelectorVisible = true;
+			this.visualTabControl1.ArrowSpacing = 10;
+			this.visualTabControl1.ArrowThickness = 5;
+			this.visualTabControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualTabControl1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualTabControl1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualTabControl1.Border.HoverVisible = true;
+			this.visualTabControl1.Border.Rounding = 6;
+			this.visualTabControl1.Border.Thickness = 1;
+			this.visualTabControl1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualTabControl1.Border.Visible = true;
+			this.visualTabControl1.Controls.Add(this.Recordatorios);
+			this.visualTabControl1.Controls.Add(this.Hipnosis);
+			this.visualTabControl1.Controls.Add(this.Sueños);
+			this.visualTabControl1.Controls.Add(this.Regresion);
+			this.visualTabControl1.Controls.Add(this.Reiki);
+			this.visualTabControl1.Controls.Add(this.TetraHealing);
+			this.visualTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.visualTabControl1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			this.visualTabControl1.ItemSize = new System.Drawing.Size(100, 25);
+			this.visualTabControl1.LineAlignment = System.Drawing.StringAlignment.Center;
+			this.visualTabControl1.Location = new System.Drawing.Point(12, 164);
+			this.visualTabControl1.MinimumSize = new System.Drawing.Size(144, 85);
+			this.visualTabControl1.Name = "visualTabControl1";
+			this.visualTabControl1.SelectedIndex = 0;
+			this.visualTabControl1.SelectorAlignment = System.Windows.Forms.TabAlignment.Top;
+			this.visualTabControl1.SelectorAlignment2 = System.Windows.Forms.TabAlignment.Bottom;
+			this.visualTabControl1.SelectorThickness = 4;
+			this.visualTabControl1.SelectorVisible = false;
+			this.visualTabControl1.SelectorVisible2 = false;
+			this.visualTabControl1.Separator = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(222)))), ((int)(((byte)(220)))));
+			this.visualTabControl1.SeparatorSpacing = 2;
+			this.visualTabControl1.SeparatorThickness = 2F;
+			this.visualTabControl1.Size = new System.Drawing.Size(616, 474);
+			this.visualTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+			this.visualTabControl1.State = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualTabControl1.TabHover = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(38)))));
+			this.visualTabControl1.TabIndex = 48;
+			this.visualTabControl1.TabMenu = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
+			this.visualTabControl1.TabNormal = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
+			this.visualTabControl1.TabPageBorder.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualTabControl1.TabPageBorder.Rounding = 6;
+			this.visualTabControl1.TabPageBorder.Thickness = 1;
+			this.visualTabControl1.TabPageBorder.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualTabControl1.TabPageBorder.Visible = true;
+			this.visualTabControl1.TabSelected = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(76)))), ((int)(((byte)(88)))));
+			this.visualTabControl1.TabSelector = System.Drawing.Color.Green;
+			this.visualTabControl1.TextAlignment = System.Drawing.StringAlignment.Center;
+			this.visualTabControl1.TextNormal = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(181)))), ((int)(((byte)(187)))));
+			this.visualTabControl1.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualTabControl1.TextSelected = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(227)))));
+			// 
+			// Recordatorios
+			// 
+			this.Recordatorios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Recordatorios.Location = new System.Drawing.Point(4, 29);
+			this.Recordatorios.Name = "Recordatorios";
+			this.Recordatorios.Padding = new System.Windows.Forms.Padding(3);
+			this.Recordatorios.Size = new System.Drawing.Size(608, 441);
+			this.Recordatorios.TabIndex = 5;
+			this.Recordatorios.Text = "Recordatorios";
+			// 
+			// Hipnosis
+			// 
+			this.Hipnosis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Hipnosis.Controls.Add(this.visualListBoxHipnosis);
+			this.Hipnosis.Location = new System.Drawing.Point(4, 29);
+			this.Hipnosis.Name = "Hipnosis";
+			this.Hipnosis.Padding = new System.Windows.Forms.Padding(3);
+			this.Hipnosis.Size = new System.Drawing.Size(608, 441);
+			this.Hipnosis.TabIndex = 0;
+			this.Hipnosis.Text = "Hipnosis";
+			// 
+			// visualListBoxHipnosis
+			// 
+			this.visualListBoxHipnosis.AlternateColors = false;
+			this.visualListBoxHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualListBoxHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBoxHipnosis.BackgroundStateGradientBrush = null;
+			this.visualListBoxHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBoxHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBoxHipnosis.Border.HoverVisible = true;
+			this.visualListBoxHipnosis.Border.Rounding = 6;
+			this.visualListBoxHipnosis.Border.Thickness = 1;
+			this.visualListBoxHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualListBoxHipnosis.Border.Visible = true;
+			this.visualListBoxHipnosis.ControlBrushCollection = null;
+			this.visualListBoxHipnosis.ForeColor = System.Drawing.Color.Black;
+			this.visualListBoxHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualListBoxHipnosis.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBoxHipnosis.ItemHeight = 18;
+			this.visualListBoxHipnosis.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBoxHipnosis.Items.AddRange(new object[] {
+            "Github",
+            "Ho",
+            "Bueno"});
+			this.visualListBoxHipnosis.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBoxHipnosis.Location = new System.Drawing.Point(6, 6);
+			this.visualListBoxHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualListBoxHipnosis.Name = "visualListBoxHipnosis";
+			this.visualListBoxHipnosis.Size = new System.Drawing.Size(596, 429);
+			this.visualListBoxHipnosis.TabIndex = 0;
+			this.visualListBoxHipnosis.Text = "visualListBox1";
+			this.visualListBoxHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualListBoxHipnosis.SelectedIndexChanged += new System.EventHandler(this.visualListBoxHipnosis_SelectedIndexChanged);
+			// 
+			// Sueños
+			// 
+			this.Sueños.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Sueños.Location = new System.Drawing.Point(4, 29);
+			this.Sueños.Name = "Sueños";
+			this.Sueños.Padding = new System.Windows.Forms.Padding(3);
+			this.Sueños.Size = new System.Drawing.Size(608, 441);
+			this.Sueños.TabIndex = 1;
+			this.Sueños.Text = "Sueños";
+			// 
+			// Regresion
+			// 
+			this.Regresion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Regresion.Location = new System.Drawing.Point(4, 29);
+			this.Regresion.Name = "Regresion";
+			this.Regresion.Padding = new System.Windows.Forms.Padding(3);
+			this.Regresion.Size = new System.Drawing.Size(608, 441);
+			this.Regresion.TabIndex = 2;
+			this.Regresion.Text = "Regresion";
+			// 
+			// Reiki
+			// 
+			this.Reiki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Reiki.Location = new System.Drawing.Point(4, 29);
+			this.Reiki.Name = "Reiki";
+			this.Reiki.Padding = new System.Windows.Forms.Padding(3);
+			this.Reiki.Size = new System.Drawing.Size(608, 441);
+			this.Reiki.TabIndex = 3;
+			this.Reiki.Text = "Reiki";
+			// 
+			// TetraHealing
+			// 
+			this.TetraHealing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.TetraHealing.Location = new System.Drawing.Point(4, 29);
+			this.TetraHealing.Name = "TetraHealing";
+			this.TetraHealing.Padding = new System.Windows.Forms.Padding(3);
+			this.TetraHealing.Size = new System.Drawing.Size(608, 441);
+			this.TetraHealing.TabIndex = 4;
+			this.TetraHealing.Text = "TetraHealing";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(525, 135);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 49;
+			this.button1.Text = "Open Source";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// Ficha
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(640, 650);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.visualTabControl1);
+			this.Controls.Add(this.txtUltimaConsulta);
+			this.Controls.Add(this.visualLabel3);
+			this.Controls.Add(this.visualSeparator1);
 			this.Controls.Add(this.DataFecha);
 			this.Controls.Add(this.visualLabel7);
 			this.Controls.Add(this.TextTelefono);
@@ -481,6 +725,9 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Ficha";
 			this.Load += new System.EventHandler(this.Ficha_Load);
+			this.visualTabControl1.ResumeLayout(false);
+			this.Hipnosis.ResumeLayout(false);
+			this.Hipnosis.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -500,5 +747,17 @@
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel2;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel1;
 		private VisualPlus.Toolkit.Controls.Editors.VisualTextBox TextNombre;
+		private VisualPlus.Toolkit.Controls.Layout.VisualSeparator visualSeparator1;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel3;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel txtUltimaConsulta;
+		private VisualPlus.Toolkit.Controls.Navigation.VisualTabControl visualTabControl1;
+		private System.Windows.Forms.TabPage Recordatorios;
+		private System.Windows.Forms.TabPage Hipnosis;
+		private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBoxHipnosis;
+		private System.Windows.Forms.TabPage Sueños;
+		private System.Windows.Forms.TabPage Regresion;
+		private System.Windows.Forms.TabPage Reiki;
+		private System.Windows.Forms.TabPage TetraHealing;
+		private System.Windows.Forms.Button button1;
 	}
 }
