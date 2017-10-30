@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <None Include="Resources\avatar-circle_259.png" />
     <None Include="Resources\Icon.png" />
     <None Include="Resources\dance_by_layerth_xna-d9ntehg.gif" />
     <None Include="Resources\password.png" />

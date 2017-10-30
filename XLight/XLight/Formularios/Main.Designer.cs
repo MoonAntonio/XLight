@@ -93,13 +93,6 @@
 			this.visualSeparator1 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
 			this.visualSeparator2 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
 			this.BoxHistorial = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
-			this.listViewHistorial = new System.Windows.Forms.ListView();
-			this.columnaID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnaNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnaTratamiento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnaFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnaPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnaResultado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.BoxOpciones = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
 			this.visualSeparator4 = new VisualPlus.Toolkit.Controls.Layout.VisualSeparator();
 			this.BtnLimpiarHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
@@ -109,6 +102,13 @@
 			this.BtnRutaHistorial = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.LblData = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.BtnRutaData = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.listViewHistorial = new System.Windows.Forms.ListView();
+			this.columnaID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnaNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnaTratamiento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnaFecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnaPrecio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnaResultado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.BoxHistorial.SuspendLayout();
 			this.BoxOpciones.SuspendLayout();
 			this.SuspendLayout();
@@ -789,55 +789,6 @@
         0.5F,
         1F};
 			// 
-			// listViewHistorial
-			// 
-			this.listViewHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.listViewHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.listViewHistorial.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnaID,
-            this.columnaNombre,
-            this.columnaTratamiento,
-            this.columnaFecha,
-            this.columnaPrecio,
-            this.columnaResultado});
-			this.listViewHistorial.Location = new System.Drawing.Point(12, 37);
-			this.listViewHistorial.Name = "listViewHistorial";
-			this.listViewHistorial.Size = new System.Drawing.Size(839, 500);
-			this.listViewHistorial.TabIndex = 11;
-			this.listViewHistorial.UseCompatibleStateImageBehavior = false;
-			this.listViewHistorial.View = System.Windows.Forms.View.Details;
-			// 
-			// columnaID
-			// 
-			this.columnaID.Text = "ID";
-			// 
-			// columnaNombre
-			// 
-			this.columnaNombre.Text = "Nombre";
-			this.columnaNombre.Width = 400;
-			// 
-			// columnaTratamiento
-			// 
-			this.columnaTratamiento.Text = "Tratamiento";
-			this.columnaTratamiento.Width = 300;
-			// 
-			// columnaFecha
-			// 
-			this.columnaFecha.Text = "Fecha";
-			this.columnaFecha.Width = 100;
-			// 
-			// columnaPrecio
-			// 
-			this.columnaPrecio.Text = "Precio";
-			this.columnaPrecio.Width = 100;
-			// 
-			// columnaResultado
-			// 
-			this.columnaResultado.Text = "Resultado";
-			this.columnaResultado.Width = 200;
-			// 
 			// BoxOpciones
 			// 
 			this.BoxOpciones.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -869,7 +820,7 @@
 			this.BoxOpciones.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BoxOpciones.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
 			this.BoxOpciones.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.BoxOpciones.Location = new System.Drawing.Point(75, 466);
+			this.BoxOpciones.Location = new System.Drawing.Point(3, 0);
 			this.BoxOpciones.MouseState = VisualPlus.Enumerators.MouseStates.Hover;
 			this.BoxOpciones.Name = "BoxOpciones";
 			this.BoxOpciones.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
@@ -1382,6 +1333,55 @@
 			this.BtnRutaData.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnRutaData.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.BtnRutaData.Click += new System.EventHandler(this.BtnRutaData_Click);
+			// 
+			// listViewHistorial
+			// 
+			this.listViewHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.listViewHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.listViewHistorial.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnaID,
+            this.columnaNombre,
+            this.columnaTratamiento,
+            this.columnaFecha,
+            this.columnaPrecio,
+            this.columnaResultado});
+			this.listViewHistorial.Location = new System.Drawing.Point(12, 37);
+			this.listViewHistorial.Name = "listViewHistorial";
+			this.listViewHistorial.Size = new System.Drawing.Size(839, 500);
+			this.listViewHistorial.TabIndex = 11;
+			this.listViewHistorial.UseCompatibleStateImageBehavior = false;
+			this.listViewHistorial.View = System.Windows.Forms.View.Details;
+			// 
+			// columnaID
+			// 
+			this.columnaID.Text = "ID";
+			// 
+			// columnaNombre
+			// 
+			this.columnaNombre.Text = "Nombre";
+			this.columnaNombre.Width = 400;
+			// 
+			// columnaTratamiento
+			// 
+			this.columnaTratamiento.Text = "Tratamiento";
+			this.columnaTratamiento.Width = 300;
+			// 
+			// columnaFecha
+			// 
+			this.columnaFecha.Text = "Fecha";
+			this.columnaFecha.Width = 100;
+			// 
+			// columnaPrecio
+			// 
+			this.columnaPrecio.Text = "Precio";
+			this.columnaPrecio.Width = 100;
+			// 
+			// columnaResultado
+			// 
+			this.columnaResultado.Text = "Resultado";
+			this.columnaResultado.Width = 200;
 			// 
 			// Main
 			// 

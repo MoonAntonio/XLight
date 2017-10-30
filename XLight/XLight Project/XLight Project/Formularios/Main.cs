@@ -107,11 +107,10 @@ namespace XLight_Project.Formularios
 
 			AutoCompletar();
 
-			CargarHistorial();
-
 			PanelClientes.Visible = false;
 			PanelBalance.Visible = false;
 			PanelHistorial.Visible = false;
+			PanelOpciones.Visible = false;
 		}
 		#endregion
 
@@ -398,19 +397,17 @@ namespace XLight_Project.Formularios
 			e.Graphics.DrawImage(bm, 10, 10);
 		}
 
-		private void CargarHistorial()
+		/// <summary>
+		/// <para>Carga el historial</para>
+		/// </summary>
+		private void CargarHistorial()// Carga el historial
 		{
-			//dataGridView2.Rows.Clear();
-
 			XmlDocument doc = new XmlDocument();
 
 			doc.Load(usuarioActual.PathClientes);
 
 			XmlNodeList listaClientes = doc.SelectNodes("Entradas/Entrada");
 			XmlNode inCliente;
-
-			DataTable tabla = new DataTable();
-
 
 			for (int n = 0; n < listaClientes.Count; n++)
 			{
@@ -421,7 +418,13 @@ namespace XLight_Project.Formularios
 				string suceso = inCliente.SelectSingleNode("suceso").InnerText;
 				string fecha = inCliente.SelectSingleNode("fecha").InnerText;
 
-				dataGridView2.Rows.Add(n.ToString(), nombre, apellidos, suceso, fecha);
+				ListViewItem listaItems = new ListViewItem(n.ToString());
+				listaItems.SubItems.Add(nombre);
+				listaItems.SubItems.Add(apellidos);
+				listaItems.SubItems.Add(suceso);
+				listaItems.SubItems.Add(fecha);
+
+				listViewHistorial.Items.Add(listaItems);
 			}
 		}
 		#endregion
@@ -476,6 +479,7 @@ namespace XLight_Project.Formularios
 			PanelClientes.Visible = true;
 			PanelBalance.Visible = false;
 			PanelHistorial.Visible = false;
+			PanelOpciones.Visible = false;
 
 			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Clientes";
 		}
@@ -494,6 +498,7 @@ namespace XLight_Project.Formularios
 				PanelBalance.Visible = true;
 				PanelClientes.Visible = false;
 				PanelHistorial.Visible = false;
+				PanelOpciones.Visible = false;
 
 				LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Balance";
 			}
@@ -510,15 +515,16 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnHistorial_Click(object sender, EventArgs e)// Abre el historial
 		{
+			CargarHistorial();
+
 			if (PanelHistorial.Visible) return;
 
 			PanelHistorial.Visible = true;
 			PanelClientes.Visible = false;
 			PanelBalance.Visible = false;
+			PanelOpciones.Visible = false;
 
 			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Historial";
-
-			CargarHistorial();
 		}
 
 		/// <summary>
@@ -528,6 +534,13 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnOpciones_Click(object sender, EventArgs e)// Abre las opciones
 		{
+			if (PanelOpciones.Visible) return;
+
+			PanelHistorial.Visible = false;
+			PanelClientes.Visible = false;
+			PanelBalance.Visible = false;
+			PanelOpciones.Visible = true;
+
 			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Opciones";
 		}
 
