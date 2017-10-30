@@ -1583,7 +1583,7 @@
 			this.LblHistorial.ShadowDirection = 315;
 			this.LblHistorial.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.LblHistorial.ShadowOpacity = 100;
-			this.LblHistorial.Size = new System.Drawing.Size(670, 23);
+			this.LblHistorial.Size = new System.Drawing.Size(670, 33);
 			this.LblHistorial.TabIndex = 13;
 			this.LblHistorial.Text = "visualLabel3";
 			this.LblHistorial.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
@@ -1611,7 +1611,7 @@
 			this.LblClientes.ShadowDirection = 315;
 			this.LblClientes.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.LblClientes.ShadowOpacity = 100;
-			this.LblClientes.Size = new System.Drawing.Size(670, 23);
+			this.LblClientes.Size = new System.Drawing.Size(670, 33);
 			this.LblClientes.TabIndex = 12;
 			this.LblClientes.Text = "visualLabel3";
 			this.LblClientes.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
@@ -1626,6 +1626,7 @@
 			this.checkBoxAuto.TabIndex = 11;
 			this.checkBoxAuto.Text = "Autologin";
 			this.checkBoxAuto.UseVisualStyleBackColor = false;
+			this.checkBoxAuto.CheckStateChanged += new System.EventHandler(this.checkBoxAuto_CheckStateChanged);
 			// 
 			// BtnUsuarioSetup
 			// 
@@ -1669,6 +1670,7 @@
 			this.BtnUsuarioSetup.Text = "Usuario";
 			this.BtnUsuarioSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnUsuarioSetup.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnUsuarioSetup.Click += new System.EventHandler(this.BtnUsuarioSetup_Click);
 			// 
 			// BtnBorrarHistorial
 			// 
@@ -1712,6 +1714,7 @@
 			this.BtnBorrarHistorial.Text = "Borrar Historial";
 			this.BtnBorrarHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnBorrarHistorial.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnBorrarHistorial.Click += new System.EventHandler(this.BtnBorrarHistorial_Click);
 			// 
 			// BtnRutaHistorial
 			// 
@@ -1755,6 +1758,7 @@
 			this.BtnRutaHistorial.Text = "Ruta Historial";
 			this.BtnRutaHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnRutaHistorial.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnRutaHistorial.Click += new System.EventHandler(this.BtnRutaHistorial_Click);
 			// 
 			// BtnRutaClientes
 			// 
@@ -1798,6 +1802,7 @@
 			this.BtnRutaClientes.Text = "Ruta Clientes";
 			this.BtnRutaClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnRutaClientes.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnRutaClientes.Click += new System.EventHandler(this.BtnRutaClientes_Click);
 			// 
 			// visualGroupBox1
 			// 
@@ -1861,7 +1866,7 @@
 			this.LblUsuarios.ShadowDirection = 315;
 			this.LblUsuarios.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.LblUsuarios.ShadowOpacity = 100;
-			this.LblUsuarios.Size = new System.Drawing.Size(670, 23);
+			this.LblUsuarios.Size = new System.Drawing.Size(670, 36);
 			this.LblUsuarios.TabIndex = 11;
 			this.LblUsuarios.Text = "visualLabel3";
 			this.LblUsuarios.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
@@ -1889,7 +1894,7 @@
 			this.LblData.ShadowDirection = 315;
 			this.LblData.ShadowLocation = new System.Drawing.Point(0, 0);
 			this.LblData.ShadowOpacity = 100;
-			this.LblData.Size = new System.Drawing.Size(670, 23);
+			this.LblData.Size = new System.Drawing.Size(670, 36);
 			this.LblData.TabIndex = 10;
 			this.LblData.Text = "visualLabel3";
 			this.LblData.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
@@ -1936,6 +1941,7 @@
 			this.BtnRutaUsuarios.Text = "Ruta Usuarios";
 			this.BtnRutaUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnRutaUsuarios.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnRutaUsuarios.Click += new System.EventHandler(this.BtnRutaUsuarios_Click);
 			// 
 			// BtnRutaData
 			// 
@@ -1979,6 +1985,7 @@
 			this.BtnRutaData.Text = "Ruta Data";
 			this.BtnRutaData.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnRutaData.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnRutaData.Click += new System.EventHandler(this.BtnRutaData_Click);
 			// 
 			// visualLabel3
 			// 

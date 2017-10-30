@@ -111,6 +111,8 @@ namespace XLight_Project.Formularios
 			PanelBalance.Visible = false;
 			PanelHistorial.Visible = false;
 			PanelOpciones.Visible = false;
+
+			GuardarAjustes();
 		}
 		#endregion
 
@@ -227,6 +229,99 @@ namespace XLight_Project.Formularios
 			foreach (XmlNode item in listaClientes)
 			{
 				if (item.FirstChild.InnerText == id)
+				{
+					XmlNode nodo = item;
+					clientes.ReplaceChild(nuevoCliente, nodo);
+				}
+			}
+
+			doc.Save(usuarioActual.PathClientes);
+
+			StopProgressBar();
+		}
+
+		/// <summary>
+		/// <para>Guarda los ajustes</para>
+		/// </summary>
+		/// <param name="path"></param>
+		public void GuardarAjustes()// Guarda los ajustes
+		{
+			XmlDocument doc = new XmlDocument();
+
+			XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+			XmlNode root = doc.DocumentElement;
+			doc.InsertBefore(xmlDeclaration, root);
+
+			XmlNode elemento = doc.CreateElement("Ajustes");
+			doc.AppendChild(elemento);
+
+			XmlElement rutaData = doc.CreateElement("rutadata");
+			rutaData.AppendChild(doc.CreateTextNode(configuracionActual.PathData));
+			elemento.AppendChild(rutaData);
+
+			XmlElement rutaUsuarios = doc.CreateElement("rutausuarios");
+			rutaUsuarios.AppendChild(doc.CreateTextNode(configuracionActual.PathUsuarios));
+			elemento.AppendChild(rutaUsuarios);
+
+			XmlElement rutaAjustes = doc.CreateElement("rutaajustes");
+			rutaAjustes.AppendChild(doc.CreateTextNode(configuracionActual.PathAjustes));
+			elemento.AppendChild(rutaAjustes);
+
+			XmlElement ultUser = doc.CreateElement("ultimouser");
+			ultUser.AppendChild(doc.CreateTextNode(configuracionActual.UltimoUser));
+			elemento.AppendChild(ultUser);
+
+			doc.Save(configuracionActual.PathAjustes);
+		}
+
+		/// <summary>
+		/// <para>Guarda el user</para>
+		/// </summary>
+		public void GuardarUsuario()// Guarda el user
+		{
+			InitProgressBar();
+
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(usuarioActual.PathClientes);
+
+			XmlElement clientes = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Usuarios/Usuario");
+
+			XmlNode nuevoCliente = doc.CreateElement("Usuario");
+
+			XmlElement xnom = doc.CreateElement("nombre");
+			xnom.InnerText = usuarioActual.Nombre;
+			nuevoCliente.AppendChild(xnom);
+
+			XmlElement xpass = doc.CreateElement("password");
+			xpass.InnerText = usuarioActual.Password;
+			nuevoCliente.AppendChild(xpass);
+
+			XmlElement xniv = doc.CreateElement("nivel");
+			xniv.InnerText = usuarioActual.NivelPrivilegios.ToString();
+			nuevoCliente.AppendChild(xniv);
+
+			XmlElement xruHi = doc.CreateElement("rutahistorial");
+			xruHi.InnerText = usuarioActual.PathHistorial;
+			nuevoCliente.AppendChild(xruHi);
+
+			XmlElement xruCli = doc.CreateElement("rutaclientes");
+			xruCli.InnerText = usuarioActual.PathClientes;
+			nuevoCliente.AppendChild(xruCli);
+
+			XmlElement xidac = doc.CreateElement("idactual");
+			xidac.InnerText = usuarioActual.IdActual.ToString();
+			nuevoCliente.AppendChild(xidac);
+
+			XmlElement xinia = doc.CreateElement("inicioautomatico");
+			xinia.InnerText = usuarioActual.InicioAutomatico.ToString();
+			nuevoCliente.AppendChild(xinia);
+
+			foreach (XmlNode item in listaClientes)
+			{
+				if (item.FirstChild.InnerText == usuarioActual.Nombre)
 				{
 					XmlNode nodo = item;
 					clientes.ReplaceChild(nuevoCliente, nodo);
@@ -427,6 +522,30 @@ namespace XLight_Project.Formularios
 				listViewHistorial.Items.Add(listaItems);
 			}
 		}
+
+		/// <summary>
+		/// <para>Borra el historial</para>
+		/// </summary>
+		/// <param name="id"></param>
+		public void BorrarHistorial()// Borra el historial
+		{
+			XmlDocument doc = new XmlDocument();
+
+			doc.Load(usuarioActual.PathHistorial);
+
+			XmlElement cliente = doc.DocumentElement;
+
+			XmlNodeList listaClientes = doc.SelectNodes("Entradas/Entrada");
+
+			foreach (XmlNode item in listaClientes)
+			{
+				XmlNode nodo = item;
+
+				cliente.RemoveChild(nodo);
+			}
+
+			doc.Save(usuarioActual.PathHistorial);
+		}
 		#endregion
 
 		#region Metodos GUI
@@ -542,6 +661,20 @@ namespace XLight_Project.Formularios
 			PanelOpciones.Visible = true;
 
 			LblUser.Text = "." + usuarioActual.Nombre + " nvl." + usuarioActual.NivelPrivilegios + " >> " + "Opciones";
+
+			LblData.Text = configuracionActual.PathData;
+			LblUsuarios.Text = configuracionActual.PathUsuarios;
+			LblClientes.Text = usuarioActual.PathClientes;
+			LblHistorial.Text = usuarioActual.PathHistorial;
+
+			if (usuarioActual.InicioAutomatico == 0)
+			{
+				checkBoxAuto.CheckState = CheckState.Unchecked;
+			}
+			else
+			{
+				checkBoxAuto.CheckState = CheckState.Checked;
+			}
 		}
 
 		/// <summary>
@@ -724,6 +857,82 @@ namespace XLight_Project.Formularios
 			}
 			
 		}
+
+		private void BtnRutaData_Click(object sender, EventArgs e)
+		{
+			FolderBrowserDialog busqueda = new FolderBrowserDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.SelectedPath;
+				LblData.Text = path;
+				configuracionActual.PathData = path;
+				GuardarAjustes();
+			}
+		}
+
+		private void BtnRutaUsuarios_Click(object sender, EventArgs e)
+		{
+			FolderBrowserDialog busqueda = new FolderBrowserDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.SelectedPath;
+				LblUser.Text = path;
+				configuracionActual.PathUsuarios = path;
+				GuardarAjustes();
+			}
+		}
+
+		private void BtnRutaClientes_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog busqueda = new OpenFileDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.FileName;
+				LblClientes.Text = path;
+				usuarioActual.PathClientes = path;
+				GuardarUsuario();
+			}
+		}
+
+		private void BtnRutaHistorial_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog busqueda = new OpenFileDialog();
+
+			if (busqueda.ShowDialog() == DialogResult.OK)
+			{
+				string path = busqueda.FileName;
+				LblHistorial.Text = path;
+				usuarioActual.PathHistorial = path;
+				GuardarUsuario();
+			}
+		}
+
+		private void BtnBorrarHistorial_Click(object sender, EventArgs e)
+		{
+			BorrarHistorial();
+		}
+
+		private void checkBoxAuto_CheckStateChanged(object sender, EventArgs e)
+		{
+			if (checkBoxAuto.CheckState == CheckState.Checked)
+			{
+				usuarioActual.InicioAutomatico = 1;
+			}
+			else
+			{
+				usuarioActual.InicioAutomatico = 0;
+			}
+
+			GuardarUsuario();
+		}
+
+		private void BtnUsuarioSetup_Click(object sender, EventArgs e)
+		{
+
+		}
 		#endregion
 
 		#region Metodos Estaticos
@@ -735,6 +944,8 @@ namespace XLight_Project.Formularios
 			ActualizarBusquedaRegistro();
 			ActualizarBusquedaRegistro();
 		}
+
+
 		#endregion
 	}
 }

@@ -100,6 +100,7 @@ namespace XLight_Project.Formularios
 					if (password == u.Password)
 					{
 						usuarioActual = GetUser(u.Nombre);
+						configuracionActual.UltimoUser = usuarioActual.Nombre;
 
 						Main main = new Main(configuracionActual, usuarioActual);
 						main.Show();
