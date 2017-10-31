@@ -1,2 +1,3 @@
 # XLight
-Gestion de Tetra
+
+Programa de gestion local basico.
