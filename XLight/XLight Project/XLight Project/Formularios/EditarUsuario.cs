@@ -9,6 +9,7 @@
 
 #region Librerias
 using System;
+using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 using XLight_Project.Clases;
@@ -41,7 +42,11 @@ namespace XLight_Project.Formularios
 		/// <summary>
 		/// <para>Formulario main actual.</para>
 		/// </summary>
-		public Main mainForm;													// Formulario main actual
+		public Main mainForm;                                                   // Formulario main actual
+		#endregion
+
+		#region Variables Privadas
+		
 		#endregion
 
 		#region Constructores
@@ -177,6 +182,9 @@ namespace XLight_Project.Formularios
 			}
 
 			doc.Save(usuarioActual.PathClientes);
+
+			if (!File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos))
+			{ }
 
 			mainForm.ActualizarLista();
 

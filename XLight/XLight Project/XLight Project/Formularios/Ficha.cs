@@ -40,7 +40,14 @@ namespace XLight_Project.Formularios
 		/// <summary>
 		/// <para>Cliente</para>
 		/// </summary>
-		public Cliente cliente;													// Cliente
+		public Cliente cliente;                                                 // Cliente
+		public string rutaCliente;
+		public string rutaClienteRecordatorio;
+		public string rutaClienteHipnosis;
+		public string rutaClienteSueno;
+		public string rutaClienteRegresion;
+		public string rutaClienteReiki;
+		public string rutaClienteTetra;
 		#endregion
 
 		#region Constructores
@@ -69,7 +76,12 @@ namespace XLight_Project.Formularios
 		#endregion
 
 		#region Loader
-		private void Ficha_Load(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Loader de <see cref="Ficha"/>.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void Ficha_Load(object sender, EventArgs e)// Loader de Ficha
 		{
 			// TODO Para testear
 			if (configuracionActual == null)
@@ -94,11 +106,46 @@ namespace XLight_Project.Formularios
 			{
 				cliente = new Cliente(0, "Antonio", "Mateo", "0000", "0000000", "jueves, 02 de febrero de 2017", "Murcia");
 			}
+
+			if (!File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos))
+			{
+				Directory.CreateDirectory(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos);
+				Directory.CreateDirectory(rutaCliente + "Recordatorio");
+				Directory.CreateDirectory(rutaCliente + "Hipnosis");
+				Directory.CreateDirectory(rutaCliente + "Interpretar");
+				Directory.CreateDirectory(rutaCliente + "Regresion");
+				Directory.CreateDirectory(rutaCliente + "Reiki");
+				Directory.CreateDirectory(rutaCliente + "Tetra");
+
+				rutaCliente = configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos + "/";
+				rutaClienteRecordatorio = rutaCliente + "Recordatorio";
+				rutaClienteHipnosis = rutaCliente + "Hipnosis";
+				rutaClienteSueno = rutaCliente + "Interpretar";
+				rutaClienteRegresion = rutaCliente + "Regresion";
+				rutaClienteReiki = rutaCliente + "Reiki";
+				rutaClienteTetra = rutaCliente + "Tetra";
+			}
+			else
+			{
+				rutaCliente = configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos + "/";
+				rutaClienteRecordatorio = rutaCliente + "Recordatorio";
+				rutaClienteHipnosis = rutaCliente + "Hipnosis";
+				rutaClienteSueno = rutaCliente + "Interpretar";
+				rutaClienteRegresion = rutaCliente + "Regresion";
+				rutaClienteReiki = rutaCliente + "Reiki";
+				rutaClienteTetra = rutaCliente + "Tetra";
+			}
+
+				// Cargar el cliente
 		}
 		#endregion
 
 		#region Metodos Publicos
-		public void AbrirLog(string value)
+		/// <summary>
+		/// <para>Abrir el log.</para>
+		/// </summary>
+		/// <param name="value"></param>
+		public void AbrirLogHipnosis(string value)// Abrir el log
 		{
 			MessageBox.Show(value);
 		}
@@ -107,7 +154,7 @@ namespace XLight_Project.Formularios
 		#region Metodos GUI
 		private void visualListBoxHipnosis_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			AbrirLog(visualListBoxHipnosis.SelectedItem.ToString());
+			AbrirLogHipnosis(visualListBoxHipnosis.SelectedItem.ToString());
 		}
 		#endregion
 
