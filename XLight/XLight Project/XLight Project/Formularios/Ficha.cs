@@ -9,6 +9,7 @@
 
 #region Librerias
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -48,6 +49,8 @@ namespace XLight_Project.Formularios
 		public string rutaClienteRegresion;
 		public string rutaClienteReiki;
 		public string rutaClienteTetra;
+
+		public List<string> archivosHipnosis = new List<string>();
 		#endregion
 
 		#region Constructores
@@ -109,13 +112,6 @@ namespace XLight_Project.Formularios
 
 			if (!File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos))
 			{
-				Directory.CreateDirectory(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos);
-				Directory.CreateDirectory(rutaCliente + "Recordatorio");
-				Directory.CreateDirectory(rutaCliente + "Hipnosis");
-				Directory.CreateDirectory(rutaCliente + "Interpretar");
-				Directory.CreateDirectory(rutaCliente + "Regresion");
-				Directory.CreateDirectory(rutaCliente + "Reiki");
-				Directory.CreateDirectory(rutaCliente + "Tetra");
 
 				rutaCliente = configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos + "/";
 				rutaClienteRecordatorio = rutaCliente + "Recordatorio";
@@ -124,6 +120,14 @@ namespace XLight_Project.Formularios
 				rutaClienteRegresion = rutaCliente + "Regresion";
 				rutaClienteReiki = rutaCliente + "Reiki";
 				rutaClienteTetra = rutaCliente + "Tetra";
+
+				Directory.CreateDirectory(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos);
+				Directory.CreateDirectory(rutaCliente + "Recordatorio");
+				Directory.CreateDirectory(rutaCliente + "Hipnosis");
+				Directory.CreateDirectory(rutaCliente + "Interpretar");
+				Directory.CreateDirectory(rutaCliente + "Regresion");
+				Directory.CreateDirectory(rutaCliente + "Reiki");
+				Directory.CreateDirectory(rutaCliente + "Tetra");
 			}
 			else
 			{
@@ -136,11 +140,28 @@ namespace XLight_Project.Formularios
 				rutaClienteTetra = rutaCliente + "Tetra";
 			}
 
-				// Cargar el cliente
+			// Cargar el cliente
+
+			CargarHipnosis();
+
+
+			richTextBoxHipnosis.Visible = false;
+			BtnGuardarHipnosis.Visible = false;
 		}
 		#endregion
 
 		#region Metodos Publicos
+		public void CargarHipnosis()
+		{
+			DirectoryInfo d = new DirectoryInfo(rutaClienteHipnosis);
+			FileInfo[] Files = d.GetFiles("*.txt");
+			foreach (FileInfo file in Files)
+			{
+				archivosHipnosis.Add(file.Name);
+				visualListBoxHipnosis.Items.Add(file.Name);
+			}
+		}
+
 		/// <summary>
 		/// <para>Abrir el log.</para>
 		/// </summary>
@@ -161,6 +182,21 @@ namespace XLight_Project.Formularios
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Process.Start(usuarioActual.PathClientes);
+		}
+
+		private void BtnGuardarHipnosis_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnCrearHipnosis_Click(object sender, EventArgs e)
+		{
+			richTextBoxHipnosis.Visible = true;
+		}
+
+		private void richTextBoxHipnosis_TextChanged(object sender, EventArgs e)
+		{
+			BtnGuardarHipnosis.Visible = true;
 		}
 	}
 }

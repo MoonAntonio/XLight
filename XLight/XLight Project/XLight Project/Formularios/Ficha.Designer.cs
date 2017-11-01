@@ -30,6 +30,7 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
 			this.DataFecha = new System.Windows.Forms.DateTimePicker();
 			this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
@@ -56,6 +57,8 @@
 			this.TetraHealing = new System.Windows.Forms.TabPage();
 			this.button1 = new System.Windows.Forms.Button();
 			this.BtnCrearHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxHipnosis = new System.Windows.Forms.RichTextBox();
+			this.BtnGuardarHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualTabControl1.SuspendLayout();
 			this.Hipnosis.SuspendLayout();
 			this.SuspendLayout();
@@ -609,6 +612,8 @@
 			// Hipnosis
 			// 
 			this.Hipnosis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Hipnosis.Controls.Add(this.BtnGuardarHipnosis);
+			this.Hipnosis.Controls.Add(this.richTextBoxHipnosis);
 			this.Hipnosis.Controls.Add(this.BtnCrearHipnosis);
 			this.Hipnosis.Controls.Add(this.visualListBoxHipnosis);
 			this.Hipnosis.Location = new System.Drawing.Point(4, 29);
@@ -637,10 +642,6 @@
 			this.visualListBoxHipnosis.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
 			this.visualListBoxHipnosis.ItemHeight = 18;
 			this.visualListBoxHipnosis.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.visualListBoxHipnosis.Items.AddRange(new object[] {
-            "Github",
-            "Ho",
-            "Bueno"});
 			this.visualListBoxHipnosis.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
 			this.visualListBoxHipnosis.Location = new System.Drawing.Point(6, 54);
 			this.visualListBoxHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
@@ -728,11 +729,11 @@
 			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
 			border1.Visible = false;
 			this.BtnCrearHipnosis.Image.Border = border1;
-			this.BtnCrearHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+			this.BtnCrearHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
 			this.BtnCrearHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrearHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrearHipnosis.Image.Visible = false;
-			this.BtnCrearHipnosis.Location = new System.Drawing.Point(208, 3);
+			this.BtnCrearHipnosis.Location = new System.Drawing.Point(126, 3);
 			this.BtnCrearHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnCrearHipnosis.Name = "BtnCrearHipnosis";
 			this.BtnCrearHipnosis.Size = new System.Drawing.Size(140, 45);
@@ -740,6 +741,57 @@
 			this.BtnCrearHipnosis.Text = "Crear";
 			this.BtnCrearHipnosis.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnCrearHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnCrearHipnosis.Click += new System.EventHandler(this.BtnCrearHipnosis_Click);
+			// 
+			// richTextBoxHipnosis
+			// 
+			this.richTextBoxHipnosis.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxHipnosis.Name = "richTextBoxHipnosis";
+			this.richTextBoxHipnosis.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxHipnosis.TabIndex = 2;
+			this.richTextBoxHipnosis.Text = "";
+			this.richTextBoxHipnosis.TextChanged += new System.EventHandler(this.richTextBoxHipnosis_TextChanged);
+			// 
+			// BtnGuardarHipnosis
+			// 
+			this.BtnGuardarHipnosis.Animation = true;
+			this.BtnGuardarHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnGuardarHipnosis.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarHipnosis.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnGuardarHipnosis.BackgroundStateGradientBrush = null;
+			this.BtnGuardarHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnGuardarHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnGuardarHipnosis.Border.HoverVisible = true;
+			this.BtnGuardarHipnosis.Border.Rounding = 6;
+			this.BtnGuardarHipnosis.Border.Thickness = 1;
+			this.BtnGuardarHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnGuardarHipnosis.Border.Visible = true;
+			this.BtnGuardarHipnosis.ControlBrushCollection = null;
+			this.BtnGuardarHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGuardarHipnosis.ForeColor = System.Drawing.Color.Black;
+			this.BtnGuardarHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border3.HoverVisible = false;
+			border3.Rounding = 6;
+			border3.Thickness = 1;
+			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border3.Visible = false;
+			this.BtnGuardarHipnosis.Image.Border = border3;
+			this.BtnGuardarHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+			this.BtnGuardarHipnosis.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnGuardarHipnosis.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnGuardarHipnosis.Image.Visible = false;
+			this.BtnGuardarHipnosis.Location = new System.Drawing.Point(284, 3);
+			this.BtnGuardarHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnGuardarHipnosis.Name = "BtnGuardarHipnosis";
+			this.BtnGuardarHipnosis.Size = new System.Drawing.Size(140, 45);
+			this.BtnGuardarHipnosis.TabIndex = 3;
+			this.BtnGuardarHipnosis.Text = "Guardar";
+			this.BtnGuardarHipnosis.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnGuardarHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnGuardarHipnosis.Click += new System.EventHandler(this.BtnGuardarHipnosis_Click);
 			// 
 			// Ficha
 			// 
@@ -804,5 +856,7 @@
 		private System.Windows.Forms.TabPage TetraHealing;
 		private System.Windows.Forms.Button button1;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearHipnosis;
+		private System.Windows.Forms.RichTextBox richTextBoxHipnosis;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarHipnosis;
 	}
 }
