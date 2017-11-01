@@ -46,7 +46,8 @@ namespace XLight_Project.Formularios
 		#endregion
 
 		#region Variables Privadas
-		
+		private string nombreAntiguo;
+		private string apellidosAntiguo;
 		#endregion
 
 		#region Constructores
@@ -96,6 +97,9 @@ namespace XLight_Project.Formularios
 
 				string nombr = inCliente.SelectSingleNode("nombre").InnerText;
 				string apelli = inCliente.SelectSingleNode("apellidos").InnerText;
+
+				nombreAntiguo = nombr;
+				apellidosAntiguo = apelli;
 
 				if (nombre == nombr + " " + apelli)
 				{
@@ -183,8 +187,19 @@ namespace XLight_Project.Formularios
 
 			doc.Save(usuarioActual.PathClientes);
 
-			if (!File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos))
-			{ }
+			if (nombreAntiguo != subNom)
+			{
+				if (apellidosAntiguo != subApell)
+				{
+					if (File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + nombreAntiguo + " " + apellidosAntiguo))
+					{
+						Directory.Move(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + nombreAntiguo + " " + apellidosAntiguo,
+										configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + subNom + " " + subApell);
+
+						Directory.Delete(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + nombreAntiguo + " " + apellidosAntiguo);
+					}
+				}
+			}
 
 			mainForm.ActualizarLista();
 
