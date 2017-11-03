@@ -177,6 +177,7 @@ namespace XLight_Project.Formularios
 			// Cargar los documentos
 			CargarHipnosis();
 			CargarInterpretar();
+			CargarRegresion();
 
 			// Resetear GUI
 			richTextBoxHipnosis.Visible = false;
@@ -186,6 +187,10 @@ namespace XLight_Project.Formularios
 			richTextBoxInterpretar.Visible = false;
 			BtnGuardarInterpretar.Visible = false;
 			BtnImprimirInterpretar.Visible = false;
+
+			richTextBoxRegresion.Visible = false;
+			BtnGuardarRegresion.Visible = false;
+			BtnImprimirRegresion.Visible = false;
 		}
 		#endregion
 
@@ -243,6 +248,34 @@ namespace XLight_Project.Formularios
 			richTextBoxInterpretar.Visible = true;
 			richTextBoxInterpretar.Text = File.ReadAllText(rutaClienteSueno + "/" + value);
 			rutaLectura = rutaClienteSueno + "/" + value;
+		}
+		#endregion
+
+		#region Regresion
+		/// <summary>
+		/// <para>Cargar los documentos de regresion.</para>
+		/// </summary>
+		public void CargarRegresion()// Cargar los documentos de regresion
+		{
+			visualListBoxRegresion.Items.Clear();
+
+			DirectoryInfo d = new DirectoryInfo(rutaClienteRegresion);
+			FileInfo[] Files = d.GetFiles("*.txt");
+			foreach (FileInfo file in Files)
+			{
+				visualListBoxRegresion.Items.Add(file.Name);
+			}
+		}
+
+		/// <summary>
+		/// <para>Abrir el log.</para>
+		/// </summary>
+		/// <param name="value"></param>
+		public void AbrirLogRegresion(string value)// Abrir el log
+		{
+			richTextBoxRegresion.Visible = true;
+			richTextBoxRegresion.Text = File.ReadAllText(rutaClienteRegresion + "/" + value);
+			rutaLectura = rutaClienteRegresion + "/" + value;
 		}
 		#endregion
 		#endregion
@@ -377,6 +410,68 @@ namespace XLight_Project.Formularios
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void BtnImprimirInterpretar_Click(object sender, EventArgs e)// Imprime el documento de hipnosis
+		{
+
+		}
+		#endregion
+
+		#region Regresion
+		/// <summary>
+		/// <para>Cuando hay texto</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void richTextBoxRegresion_TextChanged(object sender, EventArgs e)// Cuando hay texto
+		{
+			BtnGuardarRegresion.Visible = true;
+			BtnImprimirRegresion.Visible = true;
+		}
+
+		/// <summary>
+		/// <para>Para crear un nuevo log</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCrearRegresion_Click(object sender, EventArgs e)// Para crear un nuevo log
+		{
+			richTextBoxRegresion.Visible = true;
+			isCreando = true;
+		}
+
+		/// <summary>
+		/// <para>Guarda el documento regresion</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnGuardarRegresion_Click(object sender, EventArgs e)// Guarda el documento regresion
+		{
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			if (isCreando)
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteRegresion + "/" + dia + ".txt", richTextBoxRegresion.Text);
+				richTextBoxRegresion.Clear();
+				richTextBoxRegresion.Visible = false;
+				CargarRegresion();
+			}
+			else
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteRegresion + "/" + rutaLectura, richTextBoxRegresion.Text);
+				richTextBoxRegresion.Clear();
+				richTextBoxRegresion.Visible = false;
+				CargarRegresion();
+			}
+		}
+
+		/// <summary>
+		/// <para>Imprime el documento de hipnosis.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnImprimirRegresion_Click(object sender, EventArgs e)// Imprime el documento de hipnosis
 		{
 
 		}
