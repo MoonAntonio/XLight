@@ -29,10 +29,22 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
+			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border5 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border8 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border9 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border11 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border13 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border14 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border15 = new VisualPlus.Structure.Border();
 			this.DataFecha = new System.Windows.Forms.DateTimePicker();
 			this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.TextTelefono = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -51,17 +63,41 @@
 			this.visualTabControl1 = new VisualPlus.Toolkit.Controls.Navigation.VisualTabControl();
 			this.Recordatorios = new System.Windows.Forms.TabPage();
 			this.Hipnosis = new System.Windows.Forms.TabPage();
+			this.BtnImprimirHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.BtnGuardarHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxHipnosis = new System.Windows.Forms.RichTextBox();
+			this.BtnCrearHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualListBoxHipnosis = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
 			this.Sueños = new System.Windows.Forms.TabPage();
 			this.Regresion = new System.Windows.Forms.TabPage();
 			this.Reiki = new System.Windows.Forms.TabPage();
 			this.TetraHealing = new System.Windows.Forms.TabPage();
-			this.BtnCrearHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-			this.richTextBoxHipnosis = new System.Windows.Forms.RichTextBox();
-			this.BtnGuardarHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-			this.BtnImprimirHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.BtnImprimirInterpretar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.BtnGuardarInterpretar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxInterpretar = new System.Windows.Forms.RichTextBox();
+			this.BtnCrearInterpretar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.visualListBox1 = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.BtnImprimirRegresion = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.BtnGuardarRegresion = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxRegresion = new System.Windows.Forms.RichTextBox();
+			this.BtnCrearRegresion = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.visualListBox2 = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.BtnImprimirReiki = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.BtnGuardarReiki = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxReiki = new System.Windows.Forms.RichTextBox();
+			this.BtnCrearReiki = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.visualListBox3 = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.BtnImprimirTetra = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.BtnGuardarTetra = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxTetra = new System.Windows.Forms.RichTextBox();
+			this.BtnCrearTetra = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.visualListBox4 = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
 			this.visualTabControl1.SuspendLayout();
 			this.Hipnosis.SuspendLayout();
+			this.Sueños.SuspendLayout();
+			this.Regresion.SuspendLayout();
+			this.Reiki.SuspendLayout();
+			this.TetraHealing.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// DataFecha
@@ -625,124 +661,47 @@
 			this.Hipnosis.TabIndex = 0;
 			this.Hipnosis.Text = "Hipnosis";
 			// 
-			// visualListBoxHipnosis
+			// BtnImprimirHipnosis
 			// 
-			this.visualListBoxHipnosis.AlternateColors = false;
-			this.visualListBoxHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.visualListBoxHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.visualListBoxHipnosis.BackgroundStateGradientBrush = null;
-			this.visualListBoxHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.visualListBoxHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.visualListBoxHipnosis.Border.HoverVisible = true;
-			this.visualListBoxHipnosis.Border.Rounding = 6;
-			this.visualListBoxHipnosis.Border.Thickness = 1;
-			this.visualListBoxHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.visualListBoxHipnosis.Border.Visible = true;
-			this.visualListBoxHipnosis.ControlBrushCollection = null;
-			this.visualListBoxHipnosis.ForeColor = System.Drawing.Color.Black;
-			this.visualListBoxHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.visualListBoxHipnosis.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.visualListBoxHipnosis.ItemHeight = 18;
-			this.visualListBoxHipnosis.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.visualListBoxHipnosis.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.visualListBoxHipnosis.Location = new System.Drawing.Point(6, 54);
-			this.visualListBoxHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.visualListBoxHipnosis.Name = "visualListBoxHipnosis";
-			this.visualListBoxHipnosis.Size = new System.Drawing.Size(596, 381);
-			this.visualListBoxHipnosis.TabIndex = 0;
-			this.visualListBoxHipnosis.Text = "visualListBox1";
-			this.visualListBoxHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			this.visualListBoxHipnosis.SelectedIndexChanged += new System.EventHandler(this.visualListBoxHipnosis_SelectedIndexChanged);
-			// 
-			// Sueños
-			// 
-			this.Sueños.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.Sueños.Location = new System.Drawing.Point(4, 29);
-			this.Sueños.Name = "Sueños";
-			this.Sueños.Padding = new System.Windows.Forms.Padding(3);
-			this.Sueños.Size = new System.Drawing.Size(608, 441);
-			this.Sueños.TabIndex = 1;
-			this.Sueños.Text = "Sueños";
-			// 
-			// Regresion
-			// 
-			this.Regresion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.Regresion.Location = new System.Drawing.Point(4, 29);
-			this.Regresion.Name = "Regresion";
-			this.Regresion.Padding = new System.Windows.Forms.Padding(3);
-			this.Regresion.Size = new System.Drawing.Size(608, 441);
-			this.Regresion.TabIndex = 2;
-			this.Regresion.Text = "Regresion";
-			// 
-			// Reiki
-			// 
-			this.Reiki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.Reiki.Location = new System.Drawing.Point(4, 29);
-			this.Reiki.Name = "Reiki";
-			this.Reiki.Padding = new System.Windows.Forms.Padding(3);
-			this.Reiki.Size = new System.Drawing.Size(608, 441);
-			this.Reiki.TabIndex = 3;
-			this.Reiki.Text = "Reiki";
-			// 
-			// TetraHealing
-			// 
-			this.TetraHealing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.TetraHealing.Location = new System.Drawing.Point(4, 29);
-			this.TetraHealing.Name = "TetraHealing";
-			this.TetraHealing.Padding = new System.Windows.Forms.Padding(3);
-			this.TetraHealing.Size = new System.Drawing.Size(608, 441);
-			this.TetraHealing.TabIndex = 4;
-			this.TetraHealing.Text = "TetraHealing";
-			// 
-			// BtnCrearHipnosis
-			// 
-			this.BtnCrearHipnosis.Animation = true;
-			this.BtnCrearHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnCrearHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnCrearHipnosis.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnCrearHipnosis.BackColorState.Pressed = System.Drawing.Color.Silver;
-			this.BtnCrearHipnosis.BackgroundStateGradientBrush = null;
-			this.BtnCrearHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.BtnCrearHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.BtnCrearHipnosis.Border.HoverVisible = true;
-			this.BtnCrearHipnosis.Border.Rounding = 6;
-			this.BtnCrearHipnosis.Border.Thickness = 1;
-			this.BtnCrearHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.BtnCrearHipnosis.Border.Visible = true;
-			this.BtnCrearHipnosis.ControlBrushCollection = null;
-			this.BtnCrearHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnCrearHipnosis.ForeColor = System.Drawing.Color.Black;
-			this.BtnCrearHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border3.HoverVisible = false;
-			border3.Rounding = 6;
-			border3.Thickness = 1;
-			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border3.Visible = false;
-			this.BtnCrearHipnosis.Image.Border = border3;
-			this.BtnCrearHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
-			this.BtnCrearHipnosis.Image.Point = new System.Drawing.Point(58, 10);
-			this.BtnCrearHipnosis.Image.Size = new System.Drawing.Size(24, 24);
-			this.BtnCrearHipnosis.Image.Visible = false;
-			this.BtnCrearHipnosis.Location = new System.Drawing.Point(72, 6);
-			this.BtnCrearHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.BtnCrearHipnosis.Name = "BtnCrearHipnosis";
-			this.BtnCrearHipnosis.Size = new System.Drawing.Size(140, 45);
-			this.BtnCrearHipnosis.TabIndex = 1;
-			this.BtnCrearHipnosis.Text = "Crear";
-			this.BtnCrearHipnosis.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-			this.BtnCrearHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			this.BtnCrearHipnosis.Click += new System.EventHandler(this.BtnCrearHipnosis_Click);
-			// 
-			// richTextBoxHipnosis
-			// 
-			this.richTextBoxHipnosis.Location = new System.Drawing.Point(6, 54);
-			this.richTextBoxHipnosis.Name = "richTextBoxHipnosis";
-			this.richTextBoxHipnosis.Size = new System.Drawing.Size(596, 381);
-			this.richTextBoxHipnosis.TabIndex = 2;
-			this.richTextBoxHipnosis.Text = "";
-			this.richTextBoxHipnosis.TextChanged += new System.EventHandler(this.richTextBoxHipnosis_TextChanged);
+			this.BtnImprimirHipnosis.Animation = true;
+			this.BtnImprimirHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirHipnosis.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirHipnosis.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnImprimirHipnosis.BackgroundStateGradientBrush = null;
+			this.BtnImprimirHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnImprimirHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnImprimirHipnosis.Border.HoverVisible = true;
+			this.BtnImprimirHipnosis.Border.Rounding = 6;
+			this.BtnImprimirHipnosis.Border.Thickness = 1;
+			this.BtnImprimirHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnImprimirHipnosis.Border.Visible = true;
+			this.BtnImprimirHipnosis.ControlBrushCollection = null;
+			this.BtnImprimirHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnImprimirHipnosis.ForeColor = System.Drawing.Color.Black;
+			this.BtnImprimirHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border1.HoverVisible = false;
+			border1.Rounding = 6;
+			border1.Thickness = 1;
+			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border1.Visible = false;
+			this.BtnImprimirHipnosis.Image.Border = border1;
+			this.BtnImprimirHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+			this.BtnImprimirHipnosis.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnImprimirHipnosis.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnImprimirHipnosis.Image.Visible = false;
+			this.BtnImprimirHipnosis.Location = new System.Drawing.Point(364, 6);
+			this.BtnImprimirHipnosis.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnImprimirHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnImprimirHipnosis.Name = "BtnImprimirHipnosis";
+			this.BtnImprimirHipnosis.Size = new System.Drawing.Size(140, 45);
+			this.BtnImprimirHipnosis.TabIndex = 4;
+			this.BtnImprimirHipnosis.Text = "Imprimir";
+			this.BtnImprimirHipnosis.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnImprimirHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnImprimirHipnosis.Click += new System.EventHandler(this.BtnImprimirHipnosis_Click);
 			// 
 			// BtnGuardarHipnosis
 			// 
@@ -776,6 +735,7 @@
 			this.BtnGuardarHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarHipnosis.Image.Visible = false;
 			this.BtnGuardarHipnosis.Location = new System.Drawing.Point(218, 6);
+			this.BtnGuardarHipnosis.Margin = new System.Windows.Forms.Padding(0);
 			this.BtnGuardarHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnGuardarHipnosis.Name = "BtnGuardarHipnosis";
 			this.BtnGuardarHipnosis.Size = new System.Drawing.Size(140, 45);
@@ -785,46 +745,781 @@
 			this.BtnGuardarHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.BtnGuardarHipnosis.Click += new System.EventHandler(this.BtnGuardarHipnosis_Click);
 			// 
-			// BtnImprimirHipnosis
+			// richTextBoxHipnosis
 			// 
-			this.BtnImprimirHipnosis.Animation = true;
-			this.BtnImprimirHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnImprimirHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnImprimirHipnosis.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnImprimirHipnosis.BackColorState.Pressed = System.Drawing.Color.Silver;
-			this.BtnImprimirHipnosis.BackgroundStateGradientBrush = null;
-			this.BtnImprimirHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.BtnImprimirHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.BtnImprimirHipnosis.Border.HoverVisible = true;
-			this.BtnImprimirHipnosis.Border.Rounding = 6;
-			this.BtnImprimirHipnosis.Border.Thickness = 1;
-			this.BtnImprimirHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.BtnImprimirHipnosis.Border.Visible = true;
-			this.BtnImprimirHipnosis.ControlBrushCollection = null;
-			this.BtnImprimirHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnImprimirHipnosis.ForeColor = System.Drawing.Color.Black;
-			this.BtnImprimirHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border1.HoverVisible = false;
-			border1.Rounding = 6;
-			border1.Thickness = 1;
-			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border1.Visible = false;
-			this.BtnImprimirHipnosis.Image.Border = border1;
-			this.BtnImprimirHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
-			this.BtnImprimirHipnosis.Image.Point = new System.Drawing.Point(58, 10);
-			this.BtnImprimirHipnosis.Image.Size = new System.Drawing.Size(24, 24);
-			this.BtnImprimirHipnosis.Image.Visible = false;
-			this.BtnImprimirHipnosis.Location = new System.Drawing.Point(364, 6);
-			this.BtnImprimirHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.BtnImprimirHipnosis.Name = "BtnImprimirHipnosis";
-			this.BtnImprimirHipnosis.Size = new System.Drawing.Size(140, 45);
-			this.BtnImprimirHipnosis.TabIndex = 4;
-			this.BtnImprimirHipnosis.Text = "Imprimir";
-			this.BtnImprimirHipnosis.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-			this.BtnImprimirHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			this.BtnImprimirHipnosis.Click += new System.EventHandler(this.BtnImprimirHipnosis_Click);
+			this.richTextBoxHipnosis.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxHipnosis.Name = "richTextBoxHipnosis";
+			this.richTextBoxHipnosis.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxHipnosis.TabIndex = 2;
+			this.richTextBoxHipnosis.Text = "";
+			this.richTextBoxHipnosis.TextChanged += new System.EventHandler(this.richTextBoxHipnosis_TextChanged);
+			// 
+			// BtnCrearHipnosis
+			// 
+			this.BtnCrearHipnosis.Animation = true;
+			this.BtnCrearHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCrearHipnosis.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearHipnosis.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnCrearHipnosis.BackgroundStateGradientBrush = null;
+			this.BtnCrearHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCrearHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCrearHipnosis.Border.HoverVisible = true;
+			this.BtnCrearHipnosis.Border.Rounding = 6;
+			this.BtnCrearHipnosis.Border.Thickness = 1;
+			this.BtnCrearHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCrearHipnosis.Border.Visible = true;
+			this.BtnCrearHipnosis.ControlBrushCollection = null;
+			this.BtnCrearHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCrearHipnosis.ForeColor = System.Drawing.Color.Black;
+			this.BtnCrearHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border3.HoverVisible = false;
+			border3.Rounding = 6;
+			border3.Thickness = 1;
+			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border3.Visible = false;
+			this.BtnCrearHipnosis.Image.Border = border3;
+			this.BtnCrearHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
+			this.BtnCrearHipnosis.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCrearHipnosis.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCrearHipnosis.Image.Visible = false;
+			this.BtnCrearHipnosis.Location = new System.Drawing.Point(72, 6);
+			this.BtnCrearHipnosis.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnCrearHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCrearHipnosis.Name = "BtnCrearHipnosis";
+			this.BtnCrearHipnosis.Size = new System.Drawing.Size(140, 45);
+			this.BtnCrearHipnosis.TabIndex = 1;
+			this.BtnCrearHipnosis.Text = "Crear";
+			this.BtnCrearHipnosis.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCrearHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnCrearHipnosis.Click += new System.EventHandler(this.BtnCrearHipnosis_Click);
+			// 
+			// visualListBoxHipnosis
+			// 
+			this.visualListBoxHipnosis.AlternateColors = false;
+			this.visualListBoxHipnosis.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualListBoxHipnosis.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBoxHipnosis.BackgroundStateGradientBrush = null;
+			this.visualListBoxHipnosis.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBoxHipnosis.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBoxHipnosis.Border.HoverVisible = true;
+			this.visualListBoxHipnosis.Border.Rounding = 6;
+			this.visualListBoxHipnosis.Border.Thickness = 1;
+			this.visualListBoxHipnosis.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualListBoxHipnosis.Border.Visible = true;
+			this.visualListBoxHipnosis.ControlBrushCollection = null;
+			this.visualListBoxHipnosis.ForeColor = System.Drawing.Color.Black;
+			this.visualListBoxHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualListBoxHipnosis.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBoxHipnosis.ItemHeight = 18;
+			this.visualListBoxHipnosis.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBoxHipnosis.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBoxHipnosis.Location = new System.Drawing.Point(6, 54);
+			this.visualListBoxHipnosis.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualListBoxHipnosis.Name = "visualListBoxHipnosis";
+			this.visualListBoxHipnosis.Size = new System.Drawing.Size(596, 381);
+			this.visualListBoxHipnosis.TabIndex = 0;
+			this.visualListBoxHipnosis.Text = "visualListBox1";
+			this.visualListBoxHipnosis.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualListBoxHipnosis.SelectedIndexChanged += new System.EventHandler(this.visualListBoxHipnosis_SelectedIndexChanged);
+			// 
+			// Sueños
+			// 
+			this.Sueños.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Sueños.Controls.Add(this.BtnImprimirInterpretar);
+			this.Sueños.Controls.Add(this.BtnGuardarInterpretar);
+			this.Sueños.Controls.Add(this.richTextBoxInterpretar);
+			this.Sueños.Controls.Add(this.BtnCrearInterpretar);
+			this.Sueños.Controls.Add(this.visualListBox1);
+			this.Sueños.Location = new System.Drawing.Point(4, 29);
+			this.Sueños.Name = "Sueños";
+			this.Sueños.Padding = new System.Windows.Forms.Padding(3);
+			this.Sueños.Size = new System.Drawing.Size(608, 441);
+			this.Sueños.TabIndex = 1;
+			this.Sueños.Text = "Sueños";
+			// 
+			// Regresion
+			// 
+			this.Regresion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Regresion.Controls.Add(this.BtnImprimirRegresion);
+			this.Regresion.Controls.Add(this.BtnGuardarRegresion);
+			this.Regresion.Controls.Add(this.richTextBoxRegresion);
+			this.Regresion.Controls.Add(this.BtnCrearRegresion);
+			this.Regresion.Controls.Add(this.visualListBox2);
+			this.Regresion.Location = new System.Drawing.Point(4, 29);
+			this.Regresion.Name = "Regresion";
+			this.Regresion.Padding = new System.Windows.Forms.Padding(3);
+			this.Regresion.Size = new System.Drawing.Size(608, 441);
+			this.Regresion.TabIndex = 2;
+			this.Regresion.Text = "Regresion";
+			// 
+			// Reiki
+			// 
+			this.Reiki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Reiki.Controls.Add(this.BtnImprimirReiki);
+			this.Reiki.Controls.Add(this.BtnGuardarReiki);
+			this.Reiki.Controls.Add(this.richTextBoxReiki);
+			this.Reiki.Controls.Add(this.BtnCrearReiki);
+			this.Reiki.Controls.Add(this.visualListBox3);
+			this.Reiki.Location = new System.Drawing.Point(4, 29);
+			this.Reiki.Name = "Reiki";
+			this.Reiki.Padding = new System.Windows.Forms.Padding(3);
+			this.Reiki.Size = new System.Drawing.Size(608, 441);
+			this.Reiki.TabIndex = 3;
+			this.Reiki.Text = "Reiki";
+			// 
+			// TetraHealing
+			// 
+			this.TetraHealing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.TetraHealing.Controls.Add(this.BtnImprimirTetra);
+			this.TetraHealing.Controls.Add(this.BtnGuardarTetra);
+			this.TetraHealing.Controls.Add(this.richTextBoxTetra);
+			this.TetraHealing.Controls.Add(this.BtnCrearTetra);
+			this.TetraHealing.Controls.Add(this.visualListBox4);
+			this.TetraHealing.Location = new System.Drawing.Point(4, 29);
+			this.TetraHealing.Name = "TetraHealing";
+			this.TetraHealing.Padding = new System.Windows.Forms.Padding(3);
+			this.TetraHealing.Size = new System.Drawing.Size(608, 441);
+			this.TetraHealing.TabIndex = 4;
+			this.TetraHealing.Text = "TetraHealing";
+			// 
+			// BtnImprimirInterpretar
+			// 
+			this.BtnImprimirInterpretar.Animation = true;
+			this.BtnImprimirInterpretar.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirInterpretar.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirInterpretar.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirInterpretar.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnImprimirInterpretar.BackgroundStateGradientBrush = null;
+			this.BtnImprimirInterpretar.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnImprimirInterpretar.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnImprimirInterpretar.Border.HoverVisible = true;
+			this.BtnImprimirInterpretar.Border.Rounding = 6;
+			this.BtnImprimirInterpretar.Border.Thickness = 1;
+			this.BtnImprimirInterpretar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnImprimirInterpretar.Border.Visible = true;
+			this.BtnImprimirInterpretar.ControlBrushCollection = null;
+			this.BtnImprimirInterpretar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnImprimirInterpretar.ForeColor = System.Drawing.Color.Black;
+			this.BtnImprimirInterpretar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border4.HoverVisible = false;
+			border4.Rounding = 6;
+			border4.Thickness = 1;
+			border4.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border4.Visible = false;
+			this.BtnImprimirInterpretar.Image.Border = border4;
+			this.BtnImprimirInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
+			this.BtnImprimirInterpretar.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnImprimirInterpretar.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnImprimirInterpretar.Image.Visible = false;
+			this.BtnImprimirInterpretar.Location = new System.Drawing.Point(364, 6);
+			this.BtnImprimirInterpretar.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnImprimirInterpretar.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnImprimirInterpretar.Name = "BtnImprimirInterpretar";
+			this.BtnImprimirInterpretar.Size = new System.Drawing.Size(140, 45);
+			this.BtnImprimirInterpretar.TabIndex = 9;
+			this.BtnImprimirInterpretar.Text = "Imprimir";
+			this.BtnImprimirInterpretar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnImprimirInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnGuardarInterpretar
+			// 
+			this.BtnGuardarInterpretar.Animation = true;
+			this.BtnGuardarInterpretar.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarInterpretar.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnGuardarInterpretar.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarInterpretar.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnGuardarInterpretar.BackgroundStateGradientBrush = null;
+			this.BtnGuardarInterpretar.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnGuardarInterpretar.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnGuardarInterpretar.Border.HoverVisible = true;
+			this.BtnGuardarInterpretar.Border.Rounding = 6;
+			this.BtnGuardarInterpretar.Border.Thickness = 1;
+			this.BtnGuardarInterpretar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnGuardarInterpretar.Border.Visible = true;
+			this.BtnGuardarInterpretar.ControlBrushCollection = null;
+			this.BtnGuardarInterpretar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGuardarInterpretar.ForeColor = System.Drawing.Color.Black;
+			this.BtnGuardarInterpretar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border5.HoverVisible = false;
+			border5.Rounding = 6;
+			border5.Thickness = 1;
+			border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border5.Visible = false;
+			this.BtnGuardarInterpretar.Image.Border = border5;
+			this.BtnGuardarInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
+			this.BtnGuardarInterpretar.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnGuardarInterpretar.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnGuardarInterpretar.Image.Visible = false;
+			this.BtnGuardarInterpretar.Location = new System.Drawing.Point(218, 6);
+			this.BtnGuardarInterpretar.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnGuardarInterpretar.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnGuardarInterpretar.Name = "BtnGuardarInterpretar";
+			this.BtnGuardarInterpretar.Size = new System.Drawing.Size(140, 45);
+			this.BtnGuardarInterpretar.TabIndex = 8;
+			this.BtnGuardarInterpretar.Text = "Guardar";
+			this.BtnGuardarInterpretar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnGuardarInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// richTextBoxInterpretar
+			// 
+			this.richTextBoxInterpretar.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxInterpretar.Name = "richTextBoxInterpretar";
+			this.richTextBoxInterpretar.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxInterpretar.TabIndex = 7;
+			this.richTextBoxInterpretar.Text = "";
+			// 
+			// BtnCrearInterpretar
+			// 
+			this.BtnCrearInterpretar.Animation = true;
+			this.BtnCrearInterpretar.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearInterpretar.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCrearInterpretar.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearInterpretar.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnCrearInterpretar.BackgroundStateGradientBrush = null;
+			this.BtnCrearInterpretar.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCrearInterpretar.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCrearInterpretar.Border.HoverVisible = true;
+			this.BtnCrearInterpretar.Border.Rounding = 6;
+			this.BtnCrearInterpretar.Border.Thickness = 1;
+			this.BtnCrearInterpretar.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCrearInterpretar.Border.Visible = true;
+			this.BtnCrearInterpretar.ControlBrushCollection = null;
+			this.BtnCrearInterpretar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCrearInterpretar.ForeColor = System.Drawing.Color.Black;
+			this.BtnCrearInterpretar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border6.HoverVisible = false;
+			border6.Rounding = 6;
+			border6.Thickness = 1;
+			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border6.Visible = false;
+			this.BtnCrearInterpretar.Image.Border = border6;
+			this.BtnCrearInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
+			this.BtnCrearInterpretar.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCrearInterpretar.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCrearInterpretar.Image.Visible = false;
+			this.BtnCrearInterpretar.Location = new System.Drawing.Point(72, 6);
+			this.BtnCrearInterpretar.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnCrearInterpretar.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCrearInterpretar.Name = "BtnCrearInterpretar";
+			this.BtnCrearInterpretar.Size = new System.Drawing.Size(140, 45);
+			this.BtnCrearInterpretar.TabIndex = 6;
+			this.BtnCrearInterpretar.Text = "Crear";
+			this.BtnCrearInterpretar.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCrearInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// visualListBox1
+			// 
+			this.visualListBox1.AlternateColors = false;
+			this.visualListBox1.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualListBox1.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox1.BackgroundStateGradientBrush = null;
+			this.visualListBox1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox1.Border.HoverVisible = true;
+			this.visualListBox1.Border.Rounding = 6;
+			this.visualListBox1.Border.Thickness = 1;
+			this.visualListBox1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualListBox1.Border.Visible = true;
+			this.visualListBox1.ControlBrushCollection = null;
+			this.visualListBox1.ForeColor = System.Drawing.Color.Black;
+			this.visualListBox1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualListBox1.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox1.ItemHeight = 18;
+			this.visualListBox1.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox1.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox1.Location = new System.Drawing.Point(6, 54);
+			this.visualListBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualListBox1.Name = "visualListBox1";
+			this.visualListBox1.Size = new System.Drawing.Size(596, 381);
+			this.visualListBox1.TabIndex = 5;
+			this.visualListBox1.Text = "visualListBox1";
+			this.visualListBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnImprimirRegresion
+			// 
+			this.BtnImprimirRegresion.Animation = true;
+			this.BtnImprimirRegresion.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirRegresion.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirRegresion.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirRegresion.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnImprimirRegresion.BackgroundStateGradientBrush = null;
+			this.BtnImprimirRegresion.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnImprimirRegresion.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnImprimirRegresion.Border.HoverVisible = true;
+			this.BtnImprimirRegresion.Border.Rounding = 6;
+			this.BtnImprimirRegresion.Border.Thickness = 1;
+			this.BtnImprimirRegresion.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnImprimirRegresion.Border.Visible = true;
+			this.BtnImprimirRegresion.ControlBrushCollection = null;
+			this.BtnImprimirRegresion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnImprimirRegresion.ForeColor = System.Drawing.Color.Black;
+			this.BtnImprimirRegresion.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border7.HoverVisible = false;
+			border7.Rounding = 6;
+			border7.Thickness = 1;
+			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border7.Visible = false;
+			this.BtnImprimirRegresion.Image.Border = border7;
+			this.BtnImprimirRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
+			this.BtnImprimirRegresion.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnImprimirRegresion.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnImprimirRegresion.Image.Visible = false;
+			this.BtnImprimirRegresion.Location = new System.Drawing.Point(364, 6);
+			this.BtnImprimirRegresion.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnImprimirRegresion.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnImprimirRegresion.Name = "BtnImprimirRegresion";
+			this.BtnImprimirRegresion.Size = new System.Drawing.Size(140, 45);
+			this.BtnImprimirRegresion.TabIndex = 9;
+			this.BtnImprimirRegresion.Text = "Imprimir";
+			this.BtnImprimirRegresion.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnImprimirRegresion.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnGuardarRegresion
+			// 
+			this.BtnGuardarRegresion.Animation = true;
+			this.BtnGuardarRegresion.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarRegresion.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnGuardarRegresion.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarRegresion.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnGuardarRegresion.BackgroundStateGradientBrush = null;
+			this.BtnGuardarRegresion.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnGuardarRegresion.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnGuardarRegresion.Border.HoverVisible = true;
+			this.BtnGuardarRegresion.Border.Rounding = 6;
+			this.BtnGuardarRegresion.Border.Thickness = 1;
+			this.BtnGuardarRegresion.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnGuardarRegresion.Border.Visible = true;
+			this.BtnGuardarRegresion.ControlBrushCollection = null;
+			this.BtnGuardarRegresion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGuardarRegresion.ForeColor = System.Drawing.Color.Black;
+			this.BtnGuardarRegresion.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border8.HoverVisible = false;
+			border8.Rounding = 6;
+			border8.Thickness = 1;
+			border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border8.Visible = false;
+			this.BtnGuardarRegresion.Image.Border = border8;
+			this.BtnGuardarRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image7")));
+			this.BtnGuardarRegresion.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnGuardarRegresion.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnGuardarRegresion.Image.Visible = false;
+			this.BtnGuardarRegresion.Location = new System.Drawing.Point(218, 6);
+			this.BtnGuardarRegresion.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnGuardarRegresion.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnGuardarRegresion.Name = "BtnGuardarRegresion";
+			this.BtnGuardarRegresion.Size = new System.Drawing.Size(140, 45);
+			this.BtnGuardarRegresion.TabIndex = 8;
+			this.BtnGuardarRegresion.Text = "Guardar";
+			this.BtnGuardarRegresion.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnGuardarRegresion.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// richTextBoxRegresion
+			// 
+			this.richTextBoxRegresion.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxRegresion.Name = "richTextBoxRegresion";
+			this.richTextBoxRegresion.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxRegresion.TabIndex = 7;
+			this.richTextBoxRegresion.Text = "";
+			// 
+			// BtnCrearRegresion
+			// 
+			this.BtnCrearRegresion.Animation = true;
+			this.BtnCrearRegresion.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearRegresion.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCrearRegresion.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearRegresion.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnCrearRegresion.BackgroundStateGradientBrush = null;
+			this.BtnCrearRegresion.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCrearRegresion.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCrearRegresion.Border.HoverVisible = true;
+			this.BtnCrearRegresion.Border.Rounding = 6;
+			this.BtnCrearRegresion.Border.Thickness = 1;
+			this.BtnCrearRegresion.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCrearRegresion.Border.Visible = true;
+			this.BtnCrearRegresion.ControlBrushCollection = null;
+			this.BtnCrearRegresion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCrearRegresion.ForeColor = System.Drawing.Color.Black;
+			this.BtnCrearRegresion.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border9.HoverVisible = false;
+			border9.Rounding = 6;
+			border9.Thickness = 1;
+			border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border9.Visible = false;
+			this.BtnCrearRegresion.Image.Border = border9;
+			this.BtnCrearRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image8")));
+			this.BtnCrearRegresion.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCrearRegresion.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCrearRegresion.Image.Visible = false;
+			this.BtnCrearRegresion.Location = new System.Drawing.Point(72, 6);
+			this.BtnCrearRegresion.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnCrearRegresion.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCrearRegresion.Name = "BtnCrearRegresion";
+			this.BtnCrearRegresion.Size = new System.Drawing.Size(140, 45);
+			this.BtnCrearRegresion.TabIndex = 6;
+			this.BtnCrearRegresion.Text = "Crear";
+			this.BtnCrearRegresion.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCrearRegresion.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// visualListBox2
+			// 
+			this.visualListBox2.AlternateColors = false;
+			this.visualListBox2.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualListBox2.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox2.BackgroundStateGradientBrush = null;
+			this.visualListBox2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox2.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox2.Border.HoverVisible = true;
+			this.visualListBox2.Border.Rounding = 6;
+			this.visualListBox2.Border.Thickness = 1;
+			this.visualListBox2.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualListBox2.Border.Visible = true;
+			this.visualListBox2.ControlBrushCollection = null;
+			this.visualListBox2.ForeColor = System.Drawing.Color.Black;
+			this.visualListBox2.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualListBox2.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox2.ItemHeight = 18;
+			this.visualListBox2.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox2.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox2.Location = new System.Drawing.Point(6, 54);
+			this.visualListBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualListBox2.Name = "visualListBox2";
+			this.visualListBox2.Size = new System.Drawing.Size(596, 381);
+			this.visualListBox2.TabIndex = 5;
+			this.visualListBox2.Text = "visualListBox1";
+			this.visualListBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnImprimirReiki
+			// 
+			this.BtnImprimirReiki.Animation = true;
+			this.BtnImprimirReiki.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirReiki.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirReiki.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirReiki.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnImprimirReiki.BackgroundStateGradientBrush = null;
+			this.BtnImprimirReiki.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnImprimirReiki.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnImprimirReiki.Border.HoverVisible = true;
+			this.BtnImprimirReiki.Border.Rounding = 6;
+			this.BtnImprimirReiki.Border.Thickness = 1;
+			this.BtnImprimirReiki.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnImprimirReiki.Border.Visible = true;
+			this.BtnImprimirReiki.ControlBrushCollection = null;
+			this.BtnImprimirReiki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnImprimirReiki.ForeColor = System.Drawing.Color.Black;
+			this.BtnImprimirReiki.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border10.HoverVisible = false;
+			border10.Rounding = 6;
+			border10.Thickness = 1;
+			border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border10.Visible = false;
+			this.BtnImprimirReiki.Image.Border = border10;
+			this.BtnImprimirReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image9")));
+			this.BtnImprimirReiki.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnImprimirReiki.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnImprimirReiki.Image.Visible = false;
+			this.BtnImprimirReiki.Location = new System.Drawing.Point(364, 6);
+			this.BtnImprimirReiki.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnImprimirReiki.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnImprimirReiki.Name = "BtnImprimirReiki";
+			this.BtnImprimirReiki.Size = new System.Drawing.Size(140, 45);
+			this.BtnImprimirReiki.TabIndex = 9;
+			this.BtnImprimirReiki.Text = "Imprimir";
+			this.BtnImprimirReiki.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnImprimirReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnGuardarReiki
+			// 
+			this.BtnGuardarReiki.Animation = true;
+			this.BtnGuardarReiki.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarReiki.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnGuardarReiki.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarReiki.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnGuardarReiki.BackgroundStateGradientBrush = null;
+			this.BtnGuardarReiki.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnGuardarReiki.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnGuardarReiki.Border.HoverVisible = true;
+			this.BtnGuardarReiki.Border.Rounding = 6;
+			this.BtnGuardarReiki.Border.Thickness = 1;
+			this.BtnGuardarReiki.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnGuardarReiki.Border.Visible = true;
+			this.BtnGuardarReiki.ControlBrushCollection = null;
+			this.BtnGuardarReiki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGuardarReiki.ForeColor = System.Drawing.Color.Black;
+			this.BtnGuardarReiki.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border11.HoverVisible = false;
+			border11.Rounding = 6;
+			border11.Thickness = 1;
+			border11.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border11.Visible = false;
+			this.BtnGuardarReiki.Image.Border = border11;
+			this.BtnGuardarReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
+			this.BtnGuardarReiki.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnGuardarReiki.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnGuardarReiki.Image.Visible = false;
+			this.BtnGuardarReiki.Location = new System.Drawing.Point(218, 6);
+			this.BtnGuardarReiki.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnGuardarReiki.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnGuardarReiki.Name = "BtnGuardarReiki";
+			this.BtnGuardarReiki.Size = new System.Drawing.Size(140, 45);
+			this.BtnGuardarReiki.TabIndex = 8;
+			this.BtnGuardarReiki.Text = "Guardar";
+			this.BtnGuardarReiki.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnGuardarReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// richTextBoxReiki
+			// 
+			this.richTextBoxReiki.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxReiki.Name = "richTextBoxReiki";
+			this.richTextBoxReiki.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxReiki.TabIndex = 7;
+			this.richTextBoxReiki.Text = "";
+			// 
+			// BtnCrearReiki
+			// 
+			this.BtnCrearReiki.Animation = true;
+			this.BtnCrearReiki.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearReiki.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCrearReiki.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearReiki.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnCrearReiki.BackgroundStateGradientBrush = null;
+			this.BtnCrearReiki.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCrearReiki.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCrearReiki.Border.HoverVisible = true;
+			this.BtnCrearReiki.Border.Rounding = 6;
+			this.BtnCrearReiki.Border.Thickness = 1;
+			this.BtnCrearReiki.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCrearReiki.Border.Visible = true;
+			this.BtnCrearReiki.ControlBrushCollection = null;
+			this.BtnCrearReiki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCrearReiki.ForeColor = System.Drawing.Color.Black;
+			this.BtnCrearReiki.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border12.HoverVisible = false;
+			border12.Rounding = 6;
+			border12.Thickness = 1;
+			border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border12.Visible = false;
+			this.BtnCrearReiki.Image.Border = border12;
+			this.BtnCrearReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image11")));
+			this.BtnCrearReiki.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCrearReiki.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCrearReiki.Image.Visible = false;
+			this.BtnCrearReiki.Location = new System.Drawing.Point(72, 6);
+			this.BtnCrearReiki.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnCrearReiki.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCrearReiki.Name = "BtnCrearReiki";
+			this.BtnCrearReiki.Size = new System.Drawing.Size(140, 45);
+			this.BtnCrearReiki.TabIndex = 6;
+			this.BtnCrearReiki.Text = "Crear";
+			this.BtnCrearReiki.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCrearReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// visualListBox3
+			// 
+			this.visualListBox3.AlternateColors = false;
+			this.visualListBox3.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualListBox3.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox3.BackgroundStateGradientBrush = null;
+			this.visualListBox3.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox3.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox3.Border.HoverVisible = true;
+			this.visualListBox3.Border.Rounding = 6;
+			this.visualListBox3.Border.Thickness = 1;
+			this.visualListBox3.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualListBox3.Border.Visible = true;
+			this.visualListBox3.ControlBrushCollection = null;
+			this.visualListBox3.ForeColor = System.Drawing.Color.Black;
+			this.visualListBox3.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualListBox3.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox3.ItemHeight = 18;
+			this.visualListBox3.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox3.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox3.Location = new System.Drawing.Point(6, 54);
+			this.visualListBox3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualListBox3.Name = "visualListBox3";
+			this.visualListBox3.Size = new System.Drawing.Size(596, 381);
+			this.visualListBox3.TabIndex = 5;
+			this.visualListBox3.Text = "visualListBox1";
+			this.visualListBox3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnImprimirTetra
+			// 
+			this.BtnImprimirTetra.Animation = true;
+			this.BtnImprimirTetra.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirTetra.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnImprimirTetra.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnImprimirTetra.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnImprimirTetra.BackgroundStateGradientBrush = null;
+			this.BtnImprimirTetra.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnImprimirTetra.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnImprimirTetra.Border.HoverVisible = true;
+			this.BtnImprimirTetra.Border.Rounding = 6;
+			this.BtnImprimirTetra.Border.Thickness = 1;
+			this.BtnImprimirTetra.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnImprimirTetra.Border.Visible = true;
+			this.BtnImprimirTetra.ControlBrushCollection = null;
+			this.BtnImprimirTetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnImprimirTetra.ForeColor = System.Drawing.Color.Black;
+			this.BtnImprimirTetra.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border13.HoverVisible = false;
+			border13.Rounding = 6;
+			border13.Thickness = 1;
+			border13.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border13.Visible = false;
+			this.BtnImprimirTetra.Image.Border = border13;
+			this.BtnImprimirTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image12")));
+			this.BtnImprimirTetra.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnImprimirTetra.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnImprimirTetra.Image.Visible = false;
+			this.BtnImprimirTetra.Location = new System.Drawing.Point(364, 6);
+			this.BtnImprimirTetra.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnImprimirTetra.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnImprimirTetra.Name = "BtnImprimirTetra";
+			this.BtnImprimirTetra.Size = new System.Drawing.Size(140, 45);
+			this.BtnImprimirTetra.TabIndex = 9;
+			this.BtnImprimirTetra.Text = "Imprimir";
+			this.BtnImprimirTetra.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnImprimirTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// BtnGuardarTetra
+			// 
+			this.BtnGuardarTetra.Animation = true;
+			this.BtnGuardarTetra.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarTetra.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnGuardarTetra.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnGuardarTetra.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnGuardarTetra.BackgroundStateGradientBrush = null;
+			this.BtnGuardarTetra.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnGuardarTetra.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnGuardarTetra.Border.HoverVisible = true;
+			this.BtnGuardarTetra.Border.Rounding = 6;
+			this.BtnGuardarTetra.Border.Thickness = 1;
+			this.BtnGuardarTetra.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnGuardarTetra.Border.Visible = true;
+			this.BtnGuardarTetra.ControlBrushCollection = null;
+			this.BtnGuardarTetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnGuardarTetra.ForeColor = System.Drawing.Color.Black;
+			this.BtnGuardarTetra.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border14.HoverVisible = false;
+			border14.Rounding = 6;
+			border14.Thickness = 1;
+			border14.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border14.Visible = false;
+			this.BtnGuardarTetra.Image.Border = border14;
+			this.BtnGuardarTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image13")));
+			this.BtnGuardarTetra.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnGuardarTetra.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnGuardarTetra.Image.Visible = false;
+			this.BtnGuardarTetra.Location = new System.Drawing.Point(218, 6);
+			this.BtnGuardarTetra.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnGuardarTetra.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnGuardarTetra.Name = "BtnGuardarTetra";
+			this.BtnGuardarTetra.Size = new System.Drawing.Size(140, 45);
+			this.BtnGuardarTetra.TabIndex = 8;
+			this.BtnGuardarTetra.Text = "Guardar";
+			this.BtnGuardarTetra.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnGuardarTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// richTextBoxTetra
+			// 
+			this.richTextBoxTetra.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxTetra.Name = "richTextBoxTetra";
+			this.richTextBoxTetra.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxTetra.TabIndex = 7;
+			this.richTextBoxTetra.Text = "";
+			// 
+			// BtnCrearTetra
+			// 
+			this.BtnCrearTetra.Animation = true;
+			this.BtnCrearTetra.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearTetra.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCrearTetra.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearTetra.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnCrearTetra.BackgroundStateGradientBrush = null;
+			this.BtnCrearTetra.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCrearTetra.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCrearTetra.Border.HoverVisible = true;
+			this.BtnCrearTetra.Border.Rounding = 6;
+			this.BtnCrearTetra.Border.Thickness = 1;
+			this.BtnCrearTetra.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCrearTetra.Border.Visible = true;
+			this.BtnCrearTetra.ControlBrushCollection = null;
+			this.BtnCrearTetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCrearTetra.ForeColor = System.Drawing.Color.Black;
+			this.BtnCrearTetra.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border15.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border15.HoverVisible = false;
+			border15.Rounding = 6;
+			border15.Thickness = 1;
+			border15.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border15.Visible = false;
+			this.BtnCrearTetra.Image.Border = border15;
+			this.BtnCrearTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image14")));
+			this.BtnCrearTetra.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCrearTetra.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCrearTetra.Image.Visible = false;
+			this.BtnCrearTetra.Location = new System.Drawing.Point(72, 6);
+			this.BtnCrearTetra.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnCrearTetra.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCrearTetra.Name = "BtnCrearTetra";
+			this.BtnCrearTetra.Size = new System.Drawing.Size(140, 45);
+			this.BtnCrearTetra.TabIndex = 6;
+			this.BtnCrearTetra.Text = "Crear";
+			this.BtnCrearTetra.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCrearTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			// 
+			// visualListBox4
+			// 
+			this.visualListBox4.AlternateColors = false;
+			this.visualListBox4.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.visualListBox4.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox4.BackgroundStateGradientBrush = null;
+			this.visualListBox4.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox4.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox4.Border.HoverVisible = true;
+			this.visualListBox4.Border.Rounding = 6;
+			this.visualListBox4.Border.Thickness = 1;
+			this.visualListBox4.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.visualListBox4.Border.Visible = true;
+			this.visualListBox4.ControlBrushCollection = null;
+			this.visualListBox4.ForeColor = System.Drawing.Color.Black;
+			this.visualListBox4.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			this.visualListBox4.ItemAlternate = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.visualListBox4.ItemHeight = 18;
+			this.visualListBox4.ItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.visualListBox4.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.visualListBox4.Location = new System.Drawing.Point(6, 54);
+			this.visualListBox4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.visualListBox4.Name = "visualListBox4";
+			this.visualListBox4.Size = new System.Drawing.Size(596, 381);
+			this.visualListBox4.TabIndex = 5;
+			this.visualListBox4.Text = "visualListBox1";
+			this.visualListBox4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			// 
 			// Ficha
 			// 
@@ -856,6 +1551,14 @@
 			this.visualTabControl1.ResumeLayout(false);
 			this.Hipnosis.ResumeLayout(false);
 			this.Hipnosis.PerformLayout();
+			this.Sueños.ResumeLayout(false);
+			this.Sueños.PerformLayout();
+			this.Regresion.ResumeLayout(false);
+			this.Regresion.PerformLayout();
+			this.Reiki.ResumeLayout(false);
+			this.Reiki.PerformLayout();
+			this.TetraHealing.ResumeLayout(false);
+			this.TetraHealing.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -890,5 +1593,25 @@
 		private System.Windows.Forms.RichTextBox richTextBoxHipnosis;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarHipnosis;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnImprimirHipnosis;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnImprimirInterpretar;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarInterpretar;
+		private System.Windows.Forms.RichTextBox richTextBoxInterpretar;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearInterpretar;
+		private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBox1;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnImprimirRegresion;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarRegresion;
+		private System.Windows.Forms.RichTextBox richTextBoxRegresion;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearRegresion;
+		private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBox2;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnImprimirReiki;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarReiki;
+		private System.Windows.Forms.RichTextBox richTextBoxReiki;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearReiki;
+		private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBox3;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnImprimirTetra;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnGuardarTetra;
+		private System.Windows.Forms.RichTextBox richTextBoxTetra;
+		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearTetra;
+		private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBox4;
 	}
 }
