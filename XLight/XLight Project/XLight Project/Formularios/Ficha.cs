@@ -191,6 +191,10 @@ namespace XLight_Project.Formularios
 			richTextBoxRegresion.Visible = false;
 			BtnGuardarRegresion.Visible = false;
 			BtnImprimirRegresion.Visible = false;
+
+			richTextBoxReiki.Visible = false;
+			BtnGuardarReiki.Visible = false;
+			BtnImprimirReiki.Visible = false;
 		}
 		#endregion
 
@@ -278,9 +282,38 @@ namespace XLight_Project.Formularios
 			rutaLectura = rutaClienteRegresion + "/" + value;
 		}
 		#endregion
+
+		#region Reiki
+		/// <summary>
+		/// <para>Cargar los documentos de reiki.</para>
+		/// </summary>
+		public void CargarReiki()// Cargar los documentos de reiki
+		{
+			visualListBoxReiki.Items.Clear();
+
+			DirectoryInfo d = new DirectoryInfo(rutaClienteReiki);
+			FileInfo[] Files = d.GetFiles("*.txt");
+			foreach (FileInfo file in Files)
+			{
+				visualListBoxReiki.Items.Add(file.Name);
+			}
+		}
+
+		/// <summary>
+		/// <para>Abrir el log.</para>
+		/// </summary>
+		/// <param name="value"></param>
+		public void AbrirLogReiki(string value)// Abrir el log
+		{
+			richTextBoxReiki.Visible = true;
+			richTextBoxReiki.Text = File.ReadAllText(rutaClienteReiki + "/" + value);
+			rutaLectura = rutaClienteReiki + "/" + value;
+		}
+		#endregion
 		#endregion
 
 		#region Metodos GUI
+		#region Generales
 		/// <summary>
 		/// <para>Cuando cambia</para>
 		/// </summary>
@@ -290,6 +323,7 @@ namespace XLight_Project.Formularios
 		{
 			AbrirLogHipnosis(visualListBoxHipnosis.SelectedItem.ToString());
 		}
+		#endregion
 
 		#region Hipnosis
 		/// <summary>
@@ -477,6 +511,67 @@ namespace XLight_Project.Formularios
 		}
 		#endregion
 
+		#region Reiki
+		/// <summary>
+		/// <para>Cuando hay texto</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void richTextBoxReiki_TextChanged(object sender, EventArgs e)// Cuando hay texto
+		{
+			BtnGuardarReiki.Visible = true;
+			BtnImprimirReiki.Visible = true;
+		}
+
+		/// <summary>
+		/// <para>Para crear un nuevo log</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCrearReiki_Click(object sender, EventArgs e)// Para crear un nuevo log
+		{
+			richTextBoxReiki.Visible = true;
+			isCreando = true;
+		}
+
+		/// <summary>
+		/// <para>Guarda el documento reiki</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnGuardarReiki_Click(object sender, EventArgs e)// Guarda el documento reiki
+		{
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			if (isCreando)
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteReiki + "/" + dia + ".txt", richTextBoxReiki.Text);
+				richTextBoxReiki.Clear();
+				richTextBoxReiki.Visible = false;
+				CargarReiki();
+			}
+			else
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteReiki + "/" + rutaLectura, richTextBoxReiki.Text);
+				richTextBoxReiki.Clear();
+				richTextBoxReiki.Visible = false;
+				CargarReiki();
+			}
+		}
+
+		/// <summary>
+		/// <para>Imprime el documento de reiki</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnImprimirReiki_Click(object sender, EventArgs e)// Imprime el documento de reiki
+		{
+
+		}
+		#endregion
 		#endregion
 
 

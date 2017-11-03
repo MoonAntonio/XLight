@@ -1251,6 +1251,7 @@
 			this.BtnImprimirReiki.Text = "Imprimir";
 			this.BtnImprimirReiki.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnImprimirReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnImprimirReiki.Click += new System.EventHandler(this.BtnImprimirReiki_Click);
 			// 
 			// BtnGuardarReiki
 			// 
@@ -1292,6 +1293,7 @@
 			this.BtnGuardarReiki.Text = "Guardar";
 			this.BtnGuardarReiki.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnGuardarReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnGuardarReiki.Click += new System.EventHandler(this.BtnGuardarReiki_Click);
 			// 
 			// richTextBoxReiki
 			// 
@@ -1300,6 +1302,7 @@
 			this.richTextBoxReiki.Size = new System.Drawing.Size(596, 381);
 			this.richTextBoxReiki.TabIndex = 7;
 			this.richTextBoxReiki.Text = "";
+			this.richTextBoxReiki.TextChanged += new System.EventHandler(this.richTextBoxReiki_TextChanged);
 			// 
 			// BtnCrearReiki
 			// 
@@ -1341,6 +1344,7 @@
 			this.BtnCrearReiki.Text = "Crear";
 			this.BtnCrearReiki.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnCrearReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnCrearReiki.Click += new System.EventHandler(this.BtnCrearReiki_Click);
 			// 
 			// visualListBoxReiki
 			// 
