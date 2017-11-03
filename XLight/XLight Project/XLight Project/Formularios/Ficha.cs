@@ -207,13 +207,39 @@ namespace XLight_Project.Formularios
 		/// <param name="value"></param>
 		public void AbrirLogHipnosis(string value)// Abrir el log
 		{
-			MessageBox.Show(value);
 			richTextBoxHipnosis.Visible = true;
 			richTextBoxHipnosis.Text = File.ReadAllText(rutaClienteHipnosis + "/" + value);
 			rutaLectura = rutaClienteHipnosis + "/" + value;
 		}
 		#endregion
 
+		#region Interpretar
+		/// <summary>
+		/// <para>Cargar los documentos de sueños.</para>
+		/// </summary>
+		public void CargarInterpretar()// Cargar los documentos de sueños
+		{
+			visualListBoxInterpretar.Items.Clear();
+
+			DirectoryInfo d = new DirectoryInfo(rutaClienteSueno);
+			FileInfo[] Files = d.GetFiles("*.txt");
+			foreach (FileInfo file in Files)
+			{
+				visualListBoxInterpretar.Items.Add(file.Name);
+			}
+		}
+
+		/// <summary>
+		/// <para>Abrir el log.</para>
+		/// </summary>
+		/// <param name="value"></param>
+		public void AbrirLogInterpretar(string value)// Abrir el log
+		{
+			richTextBoxInterpretar.Visible = true;
+			richTextBoxInterpretar.Text = File.ReadAllText(rutaClienteSueno + "/" + value);
+			rutaLectura = rutaClienteSueno + "/" + value;
+		}
+		#endregion
 		#endregion
 
 		#region Metodos GUI
@@ -288,6 +314,71 @@ namespace XLight_Project.Formularios
 
 		}
 		#endregion
+
+		#region Interpretar
+		/// <summary>
+		/// <para>Cuando hay texto</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void richTextBoxInterpretar_TextChanged(object sender, EventArgs e)// Cuando hay texto
+		{
+			BtnGuardarInterpretar.Visible = true;
+			BtnImprimirInterpretar.Visible = true;
+		}
+
+		/// <summary>
+		/// <para>Para crear un nuevo log.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCrearInterpretar_Click(object sender, EventArgs e)// Para crear un nuevo log
+		{
+			richTextBoxInterpretar.Visible = true;
+			isCreando = true;
+		}
+
+		/// <summary>
+		/// <para>Guarda el documento interpretar</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnGuardarInterpretar_Click(object sender, EventArgs e)// Guarda el documento interpretar
+		{
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			if (isCreando)
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteSueno + "/" + dia + ".txt", richTextBoxInterpretar.Text);
+				richTextBoxInterpretar.Clear();
+				richTextBoxInterpretar.Visible = false;
+				CargarInterpretar();
+			}
+			else
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteSueno + "/" + rutaLectura, richTextBoxInterpretar.Text);
+				richTextBoxInterpretar.Clear();
+				richTextBoxInterpretar.Visible = false;
+				CargarInterpretar();
+			}
+		}
+
+		/// <summary>
+		/// <para>Imprime el documento de hipnosis.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnImprimirInterpretar_Click(object sender, EventArgs e)// Imprime el documento de hipnosis
+		{
+
+		}
 		#endregion
+
+		#endregion
+
+
 	}
 }
