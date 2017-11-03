@@ -19,7 +19,7 @@ namespace XLight_Project
 			Application.SetCompatibleTextRenderingDefault(false);
 			//Application.Run(new Splash());
 
-			Application.Run(new Ficha());
+			Application.Run(new Main());
 		}
 	}
 }

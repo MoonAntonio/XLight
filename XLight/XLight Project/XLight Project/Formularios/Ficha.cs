@@ -136,10 +136,38 @@ namespace XLight_Project.Formularios
 			}
 
 			// Cargar el cliente
-			// TODO Version final
 			if (cliente == null)
 			{
-				cliente = new Cliente(0, "Antonio", "Mateo", "0000", "0000000", "jueves, 02 de febrero de 2017", "Murcia", "Noviembre 03");
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+				XmlNode inCliente;
+
+				for (int n = 0; n < listaClientes.Count; n++)
+				{
+					inCliente = listaClientes.Item(n);
+
+					string nombr = inCliente.SelectSingleNode("nombre").InnerText;
+					string apelli = inCliente.SelectSingleNode("apellidos").InnerText;
+
+					if (clienteN == nombr + " " + apelli)
+					{
+						TextNombre.Text = inCliente.SelectSingleNode("nombre").InnerText;
+						TextApellidos.Text = inCliente.SelectSingleNode("apellidos").InnerText;
+						TextDNI.Text = inCliente.SelectSingleNode("dni").InnerText;
+						TextTelefono.Text = inCliente.SelectSingleNode("telefono").InnerText;
+						DataFecha.Text = inCliente.SelectSingleNode("fecha").InnerText;
+						TextDireccion.Text = inCliente.SelectSingleNode("direccion").InnerText;
+						txtUltimaConsulta.Text = inCliente.SelectSingleNode("ultconsulta").InnerText;
+
+						cliente = new Cliente(Int32.Parse(inCliente.SelectSingleNode("id").InnerText), inCliente.SelectSingleNode("nombre").InnerText,
+												inCliente.SelectSingleNode("apellidos").InnerText, inCliente.SelectSingleNode("dni").InnerText,
+												inCliente.SelectSingleNode("telefono").InnerText, inCliente.SelectSingleNode("fecha").InnerText,
+												inCliente.SelectSingleNode("direccion").InnerText, inCliente.SelectSingleNode("ultconsulta").InnerText);
+					}
+				}
 			}
 
 			// Si la patch no existe
@@ -433,6 +461,61 @@ namespace XLight_Project.Formularios
 			if (isCreando)
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Hipnosis)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteHipnosis + "/" + dia + ".txt", richTextBoxHipnosis.Text);
 				richTextBoxHipnosis.Clear();
 				richTextBoxHipnosis.Visible = false;
@@ -441,6 +524,61 @@ namespace XLight_Project.Formularios
 			else
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Hipnosis)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteHipnosis + "/" + rutaLectura, richTextBoxHipnosis.Text);
 				richTextBoxHipnosis.Clear();
 				richTextBoxHipnosis.Visible = false;
@@ -495,6 +633,61 @@ namespace XLight_Project.Formularios
 			if (isCreando)
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Sueños)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteSueno + "/" + dia + ".txt", richTextBoxInterpretar.Text);
 				richTextBoxInterpretar.Clear();
 				richTextBoxInterpretar.Visible = false;
@@ -503,6 +696,61 @@ namespace XLight_Project.Formularios
 			else
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Sueños)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteSueno + "/" + rutaLectura, richTextBoxInterpretar.Text);
 				richTextBoxInterpretar.Clear();
 				richTextBoxInterpretar.Visible = false;
@@ -557,6 +805,61 @@ namespace XLight_Project.Formularios
 			if (isCreando)
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Regresion)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteRegresion + "/" + dia + ".txt", richTextBoxRegresion.Text);
 				richTextBoxRegresion.Clear();
 				richTextBoxRegresion.Visible = false;
@@ -565,6 +868,61 @@ namespace XLight_Project.Formularios
 			else
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Regresion)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteRegresion + "/" + rutaLectura, richTextBoxRegresion.Text);
 				richTextBoxRegresion.Clear();
 				richTextBoxRegresion.Visible = false;
@@ -619,6 +977,61 @@ namespace XLight_Project.Formularios
 			if (isCreando)
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Reiki)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteReiki + "/" + dia + ".txt", richTextBoxReiki.Text);
 				richTextBoxReiki.Clear();
 				richTextBoxReiki.Visible = false;
@@ -627,6 +1040,61 @@ namespace XLight_Project.Formularios
 			else
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Reiki)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteReiki + "/" + rutaLectura, richTextBoxReiki.Text);
 				richTextBoxReiki.Clear();
 				richTextBoxReiki.Visible = false;
@@ -681,6 +1149,61 @@ namespace XLight_Project.Formularios
 			if (isCreando)
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Tetra)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteTetra + "/" + dia + ".txt", richTextBoxTetra.Text);
 				richTextBoxTetra.Clear();
 				richTextBoxTetra.Visible = false;
@@ -689,6 +1212,61 @@ namespace XLight_Project.Formularios
 			else
 			{
 				isCreando = false;
+				txtUltimaConsulta.Text = dia + " (Tetra)";
+
+				XmlDocument doc = new XmlDocument();
+
+				doc.Load(usuarioActual.PathClientes);
+
+				XmlElement clientes = doc.DocumentElement;
+
+				XmlNodeList listaClientes = doc.SelectNodes("Clientes/Cliente");
+
+				XmlNode nuevoCliente = doc.CreateElement("Cliente");
+
+				XmlElement xid = doc.CreateElement("id");
+				xid.InnerText = cliente.ID.ToString();
+				nuevoCliente.AppendChild(xid);
+
+				XmlElement xnom = doc.CreateElement("nombre");
+				xnom.InnerText = cliente.Nombre;
+				nuevoCliente.AppendChild(xnom);
+
+				XmlElement xapell = doc.CreateElement("apellidos");
+				xapell.InnerText = cliente.Apellidos;
+				nuevoCliente.AppendChild(xapell);
+
+				XmlElement xdni = doc.CreateElement("dni");
+				xdni.InnerText = cliente.DNI;
+				nuevoCliente.AppendChild(xdni);
+
+				XmlElement xtele = doc.CreateElement("telefono");
+				xtele.InnerText = cliente.Telefono;
+				nuevoCliente.AppendChild(xtele);
+
+				XmlElement xfecha = doc.CreateElement("fecha");
+				xfecha.InnerText = cliente.Fecha;
+				nuevoCliente.AppendChild(xfecha);
+
+				XmlElement xdirecc = doc.CreateElement("direccion");
+				xdirecc.InnerText = cliente.Direccion;
+				nuevoCliente.AppendChild(xdirecc);
+
+				XmlElement xultco = doc.CreateElement("ultconsulta");
+				xultco.InnerText = txtUltimaConsulta.Text;
+				nuevoCliente.AppendChild(xultco);
+
+				foreach (XmlNode item in listaClientes)
+				{
+					if (item.FirstChild.InnerText == cliente.ID.ToString())
+					{
+						XmlNode nodo = item;
+						clientes.ReplaceChild(nuevoCliente, nodo);
+					}
+				}
+
+				doc.Save(usuarioActual.PathClientes);
+
 				File.WriteAllText(rutaClienteTetra + "/" + rutaLectura, richTextBoxTetra.Text);
 				richTextBoxTetra.Clear();
 				richTextBoxTetra.Visible = false;
