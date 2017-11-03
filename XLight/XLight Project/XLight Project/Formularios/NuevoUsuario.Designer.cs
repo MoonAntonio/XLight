@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoUsuario));
 			this.LblNombre = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.visualTextBoxNombre = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -265,19 +265,20 @@
 			this.BtnCrear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnCrear.ForeColor = System.Drawing.Color.Black;
 			this.BtnCrear.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border2.HoverVisible = false;
-			border2.Rounding = 6;
-			border2.Thickness = 1;
-			border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border2.Visible = false;
-			this.BtnCrear.Image.Border = border2;
+			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border1.HoverVisible = false;
+			border1.Rounding = 6;
+			border1.Thickness = 1;
+			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border1.Visible = false;
+			this.BtnCrear.Image.Border = border1;
 			this.BtnCrear.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
 			this.BtnCrear.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrear.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrear.Image.Visible = false;
 			this.BtnCrear.Location = new System.Drawing.Point(117, 184);
+			this.BtnCrear.Margin = new System.Windows.Forms.Padding(0);
 			this.BtnCrear.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
 			this.BtnCrear.Name = "BtnCrear";
 			this.BtnCrear.Size = new System.Drawing.Size(140, 45);
@@ -315,6 +316,7 @@
 			this.Controls.Add(this.visualLabel1);
 			this.Controls.Add(this.visualTextBoxNombre);
 			this.Controls.Add(this.LblNombre);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "NuevoUsuario";

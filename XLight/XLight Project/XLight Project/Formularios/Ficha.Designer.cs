@@ -29,6 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
 			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
@@ -44,8 +46,6 @@
 			VisualPlus.Structure.Border border14 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border15 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border16 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
 			this.DataFecha = new System.Windows.Forms.DateTimePicker();
 			this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.TextTelefono = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -63,6 +63,8 @@
 			this.txtUltimaConsulta = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.visualTabControl1 = new VisualPlus.Toolkit.Controls.Navigation.VisualTabControl();
 			this.Recordatorios = new System.Windows.Forms.TabPage();
+			this.dateTimePickerRecordatorio = new System.Windows.Forms.DateTimePicker();
+			this.BtnCrearRecordatorio = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.Hipnosis = new System.Windows.Forms.TabPage();
 			this.BtnImprimirHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnGuardarHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
@@ -70,31 +72,29 @@
 			this.BtnCrearHipnosis = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualListBoxHipnosis = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
 			this.Sueños = new System.Windows.Forms.TabPage();
-			this.Regresion = new System.Windows.Forms.TabPage();
-			this.Reiki = new System.Windows.Forms.TabPage();
-			this.TetraHealing = new System.Windows.Forms.TabPage();
 			this.BtnImprimirInterpretar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnGuardarInterpretar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
-			this.richTextBoxInterpretar = new System.Windows.Forms.RichTextBox();
 			this.BtnCrearInterpretar = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
+			this.richTextBoxInterpretar = new System.Windows.Forms.RichTextBox();
 			this.visualListBoxInterpretar = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.Regresion = new System.Windows.Forms.TabPage();
 			this.BtnImprimirRegresion = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnGuardarRegresion = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.richTextBoxRegresion = new System.Windows.Forms.RichTextBox();
 			this.BtnCrearRegresion = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualListBoxRegresion = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.Reiki = new System.Windows.Forms.TabPage();
 			this.BtnImprimirReiki = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnGuardarReiki = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.richTextBoxReiki = new System.Windows.Forms.RichTextBox();
 			this.BtnCrearReiki = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualListBoxReiki = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
+			this.TetraHealing = new System.Windows.Forms.TabPage();
 			this.BtnImprimirTetra = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.BtnGuardarTetra = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.richTextBoxTetra = new System.Windows.Forms.RichTextBox();
 			this.BtnCrearTetra = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualListBoxTetra = new VisualPlus.Toolkit.Controls.DataManagement.VisualListBox();
-			this.visualCheckedListBox1 = new VisualPlus.Toolkit.Controls.DataManagement.VisualCheckedListBox();
-			this.BtnCrearRecordatorio = new VisualPlus.Toolkit.Controls.Interactivity.VisualButton();
 			this.visualTabControl1.SuspendLayout();
 			this.Recordatorios.SuspendLayout();
 			this.Hipnosis.SuspendLayout();
@@ -643,14 +643,62 @@
 			// Recordatorios
 			// 
 			this.Recordatorios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Recordatorios.Controls.Add(this.dateTimePickerRecordatorio);
 			this.Recordatorios.Controls.Add(this.BtnCrearRecordatorio);
-			this.Recordatorios.Controls.Add(this.visualCheckedListBox1);
 			this.Recordatorios.Location = new System.Drawing.Point(4, 29);
 			this.Recordatorios.Name = "Recordatorios";
 			this.Recordatorios.Padding = new System.Windows.Forms.Padding(3);
 			this.Recordatorios.Size = new System.Drawing.Size(608, 441);
 			this.Recordatorios.TabIndex = 5;
 			this.Recordatorios.Text = "Recordatorios";
+			// 
+			// dateTimePickerRecordatorio
+			// 
+			this.dateTimePickerRecordatorio.Location = new System.Drawing.Point(299, 20);
+			this.dateTimePickerRecordatorio.Name = "dateTimePickerRecordatorio";
+			this.dateTimePickerRecordatorio.Size = new System.Drawing.Size(200, 22);
+			this.dateTimePickerRecordatorio.TabIndex = 3;
+			// 
+			// BtnCrearRecordatorio
+			// 
+			this.BtnCrearRecordatorio.Animation = true;
+			this.BtnCrearRecordatorio.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearRecordatorio.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+			this.BtnCrearRecordatorio.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.BtnCrearRecordatorio.BackColorState.Pressed = System.Drawing.Color.Silver;
+			this.BtnCrearRecordatorio.BackgroundStateGradientBrush = null;
+			this.BtnCrearRecordatorio.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			this.BtnCrearRecordatorio.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			this.BtnCrearRecordatorio.Border.HoverVisible = true;
+			this.BtnCrearRecordatorio.Border.Rounding = 6;
+			this.BtnCrearRecordatorio.Border.Thickness = 1;
+			this.BtnCrearRecordatorio.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			this.BtnCrearRecordatorio.Border.Visible = true;
+			this.BtnCrearRecordatorio.ControlBrushCollection = null;
+			this.BtnCrearRecordatorio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.BtnCrearRecordatorio.ForeColor = System.Drawing.Color.Black;
+			this.BtnCrearRecordatorio.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border1.HoverVisible = false;
+			border1.Rounding = 6;
+			border1.Thickness = 1;
+			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border1.Visible = false;
+			this.BtnCrearRecordatorio.Image.Border = border1;
+			this.BtnCrearRecordatorio.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+			this.BtnCrearRecordatorio.Image.Point = new System.Drawing.Point(58, 10);
+			this.BtnCrearRecordatorio.Image.Size = new System.Drawing.Size(24, 24);
+			this.BtnCrearRecordatorio.Image.Visible = false;
+			this.BtnCrearRecordatorio.Location = new System.Drawing.Point(137, 10);
+			this.BtnCrearRecordatorio.Margin = new System.Windows.Forms.Padding(0);
+			this.BtnCrearRecordatorio.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+			this.BtnCrearRecordatorio.Name = "BtnCrearRecordatorio";
+			this.BtnCrearRecordatorio.Size = new System.Drawing.Size(140, 45);
+			this.BtnCrearRecordatorio.TabIndex = 2;
+			this.BtnCrearRecordatorio.Text = "Crear";
+			this.BtnCrearRecordatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+			this.BtnCrearRecordatorio.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			// 
 			// Hipnosis
 			// 
@@ -846,51 +894,6 @@
 			this.Sueños.TabIndex = 1;
 			this.Sueños.Text = "Sueños";
 			// 
-			// Regresion
-			// 
-			this.Regresion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.Regresion.Controls.Add(this.BtnImprimirRegresion);
-			this.Regresion.Controls.Add(this.BtnGuardarRegresion);
-			this.Regresion.Controls.Add(this.richTextBoxRegresion);
-			this.Regresion.Controls.Add(this.BtnCrearRegresion);
-			this.Regresion.Controls.Add(this.visualListBoxRegresion);
-			this.Regresion.Location = new System.Drawing.Point(4, 29);
-			this.Regresion.Name = "Regresion";
-			this.Regresion.Padding = new System.Windows.Forms.Padding(3);
-			this.Regresion.Size = new System.Drawing.Size(608, 441);
-			this.Regresion.TabIndex = 2;
-			this.Regresion.Text = "Regresion";
-			// 
-			// Reiki
-			// 
-			this.Reiki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.Reiki.Controls.Add(this.BtnImprimirReiki);
-			this.Reiki.Controls.Add(this.BtnGuardarReiki);
-			this.Reiki.Controls.Add(this.richTextBoxReiki);
-			this.Reiki.Controls.Add(this.BtnCrearReiki);
-			this.Reiki.Controls.Add(this.visualListBoxReiki);
-			this.Reiki.Location = new System.Drawing.Point(4, 29);
-			this.Reiki.Name = "Reiki";
-			this.Reiki.Padding = new System.Windows.Forms.Padding(3);
-			this.Reiki.Size = new System.Drawing.Size(608, 441);
-			this.Reiki.TabIndex = 3;
-			this.Reiki.Text = "Reiki";
-			// 
-			// TetraHealing
-			// 
-			this.TetraHealing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.TetraHealing.Controls.Add(this.BtnImprimirTetra);
-			this.TetraHealing.Controls.Add(this.BtnGuardarTetra);
-			this.TetraHealing.Controls.Add(this.richTextBoxTetra);
-			this.TetraHealing.Controls.Add(this.BtnCrearTetra);
-			this.TetraHealing.Controls.Add(this.visualListBoxTetra);
-			this.TetraHealing.Location = new System.Drawing.Point(4, 29);
-			this.TetraHealing.Name = "TetraHealing";
-			this.TetraHealing.Padding = new System.Windows.Forms.Padding(3);
-			this.TetraHealing.Size = new System.Drawing.Size(608, 441);
-			this.TetraHealing.TabIndex = 4;
-			this.TetraHealing.Text = "TetraHealing";
-			// 
 			// BtnImprimirInterpretar
 			// 
 			this.BtnImprimirInterpretar.Animation = true;
@@ -975,15 +978,6 @@
 			this.BtnGuardarInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.BtnGuardarInterpretar.Click += new System.EventHandler(this.BtnGuardarInterpretar_Click);
 			// 
-			// richTextBoxInterpretar
-			// 
-			this.richTextBoxInterpretar.Location = new System.Drawing.Point(6, 54);
-			this.richTextBoxInterpretar.Name = "richTextBoxInterpretar";
-			this.richTextBoxInterpretar.Size = new System.Drawing.Size(596, 381);
-			this.richTextBoxInterpretar.TabIndex = 7;
-			this.richTextBoxInterpretar.Text = "";
-			this.richTextBoxInterpretar.TextChanged += new System.EventHandler(this.richTextBoxInterpretar_TextChanged);
-			// 
 			// BtnCrearInterpretar
 			// 
 			this.BtnCrearInterpretar.Animation = true;
@@ -1026,6 +1020,15 @@
 			this.BtnCrearInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.BtnCrearInterpretar.Click += new System.EventHandler(this.BtnCrearInterpretar_Click);
 			// 
+			// richTextBoxInterpretar
+			// 
+			this.richTextBoxInterpretar.Location = new System.Drawing.Point(6, 54);
+			this.richTextBoxInterpretar.Name = "richTextBoxInterpretar";
+			this.richTextBoxInterpretar.Size = new System.Drawing.Size(596, 381);
+			this.richTextBoxInterpretar.TabIndex = 7;
+			this.richTextBoxInterpretar.Text = "";
+			this.richTextBoxInterpretar.TextChanged += new System.EventHandler(this.richTextBoxInterpretar_TextChanged);
+			// 
 			// visualListBoxInterpretar
 			// 
 			this.visualListBoxInterpretar.AlternateColors = false;
@@ -1054,6 +1057,21 @@
 			this.visualListBoxInterpretar.Text = "visualListBox1";
 			this.visualListBoxInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.visualListBoxInterpretar.SelectedIndexChanged += new System.EventHandler(this.visualListBoxInterpretar_SelectedIndexChanged);
+			// 
+			// Regresion
+			// 
+			this.Regresion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Regresion.Controls.Add(this.BtnImprimirRegresion);
+			this.Regresion.Controls.Add(this.BtnGuardarRegresion);
+			this.Regresion.Controls.Add(this.richTextBoxRegresion);
+			this.Regresion.Controls.Add(this.BtnCrearRegresion);
+			this.Regresion.Controls.Add(this.visualListBoxRegresion);
+			this.Regresion.Location = new System.Drawing.Point(4, 29);
+			this.Regresion.Name = "Regresion";
+			this.Regresion.Padding = new System.Windows.Forms.Padding(3);
+			this.Regresion.Size = new System.Drawing.Size(608, 441);
+			this.Regresion.TabIndex = 2;
+			this.Regresion.Text = "Regresion";
 			// 
 			// BtnImprimirRegresion
 			// 
@@ -1219,6 +1237,21 @@
 			this.visualListBoxRegresion.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.visualListBoxRegresion.SelectedIndexChanged += new System.EventHandler(this.visualListBoxRegresion_SelectedIndexChanged);
 			// 
+			// Reiki
+			// 
+			this.Reiki.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.Reiki.Controls.Add(this.BtnImprimirReiki);
+			this.Reiki.Controls.Add(this.BtnGuardarReiki);
+			this.Reiki.Controls.Add(this.richTextBoxReiki);
+			this.Reiki.Controls.Add(this.BtnCrearReiki);
+			this.Reiki.Controls.Add(this.visualListBoxReiki);
+			this.Reiki.Location = new System.Drawing.Point(4, 29);
+			this.Reiki.Name = "Reiki";
+			this.Reiki.Padding = new System.Windows.Forms.Padding(3);
+			this.Reiki.Size = new System.Drawing.Size(608, 441);
+			this.Reiki.TabIndex = 3;
+			this.Reiki.Text = "Reiki";
+			// 
 			// BtnImprimirReiki
 			// 
 			this.BtnImprimirReiki.Animation = true;
@@ -1382,6 +1415,21 @@
 			this.visualListBoxReiki.Text = "visualListBox1";
 			this.visualListBoxReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.visualListBoxReiki.SelectedIndexChanged += new System.EventHandler(this.visualListBoxReiki_SelectedIndexChanged);
+			// 
+			// TetraHealing
+			// 
+			this.TetraHealing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+			this.TetraHealing.Controls.Add(this.BtnImprimirTetra);
+			this.TetraHealing.Controls.Add(this.BtnGuardarTetra);
+			this.TetraHealing.Controls.Add(this.richTextBoxTetra);
+			this.TetraHealing.Controls.Add(this.BtnCrearTetra);
+			this.TetraHealing.Controls.Add(this.visualListBoxTetra);
+			this.TetraHealing.Location = new System.Drawing.Point(4, 29);
+			this.TetraHealing.Name = "TetraHealing";
+			this.TetraHealing.Padding = new System.Windows.Forms.Padding(3);
+			this.TetraHealing.Size = new System.Drawing.Size(608, 441);
+			this.TetraHealing.TabIndex = 4;
+			this.TetraHealing.Text = "TetraHealing";
 			// 
 			// BtnImprimirTetra
 			// 
@@ -1547,82 +1595,6 @@
 			this.visualListBoxTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
 			this.visualListBoxTetra.SelectedIndexChanged += new System.EventHandler(this.visualListBoxTetra_SelectedIndexChanged);
 			// 
-			// visualCheckedListBox1
-			// 
-			this.visualCheckedListBox1.AlternateColors = true;
-			this.visualCheckedListBox1.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.visualCheckedListBox1.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-			this.visualCheckedListBox1.BackgroundStateGradientBrush = null;
-			this.visualCheckedListBox1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.visualCheckedListBox1.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.visualCheckedListBox1.Border.HoverVisible = true;
-			this.visualCheckedListBox1.Border.Rounding = 6;
-			this.visualCheckedListBox1.Border.Thickness = 1;
-			this.visualCheckedListBox1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.visualCheckedListBox1.Border.Visible = true;
-			this.visualCheckedListBox1.ControlBrushCollection = null;
-			this.visualCheckedListBox1.ForeColor = System.Drawing.Color.Black;
-			this.visualCheckedListBox1.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			this.visualCheckedListBox1.FormatString = "";
-			this.visualCheckedListBox1.HorizontalExtent = 0;
-			this.visualCheckedListBox1.HorizontalScrollbar = false;
-			this.visualCheckedListBox1.ItemNormal = System.Drawing.Color.White;
-			this.visualCheckedListBox1.Items.AddRange(new object[] {
-            "a",
-            "a",
-            "a",
-            "a"});
-			this.visualCheckedListBox1.ItemSelected = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.visualCheckedListBox1.Location = new System.Drawing.Point(6, 58);
-			this.visualCheckedListBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.visualCheckedListBox1.Name = "visualCheckedListBox1";
-			this.visualCheckedListBox1.SelectionMode = System.Windows.Forms.SelectionMode.One;
-			this.visualCheckedListBox1.Size = new System.Drawing.Size(596, 377);
-			this.visualCheckedListBox1.TabIndex = 0;
-			this.visualCheckedListBox1.Text = "visualCheckedListBox1";
-			this.visualCheckedListBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			// 
-			// BtnCrearRecordatorio
-			// 
-			this.BtnCrearRecordatorio.Animation = true;
-			this.BtnCrearRecordatorio.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnCrearRecordatorio.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-			this.BtnCrearRecordatorio.BackColorState.Hover = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.BtnCrearRecordatorio.BackColorState.Pressed = System.Drawing.Color.Silver;
-			this.BtnCrearRecordatorio.BackgroundStateGradientBrush = null;
-			this.BtnCrearRecordatorio.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			this.BtnCrearRecordatorio.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			this.BtnCrearRecordatorio.Border.HoverVisible = true;
-			this.BtnCrearRecordatorio.Border.Rounding = 6;
-			this.BtnCrearRecordatorio.Border.Thickness = 1;
-			this.BtnCrearRecordatorio.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			this.BtnCrearRecordatorio.Border.Visible = true;
-			this.BtnCrearRecordatorio.ControlBrushCollection = null;
-			this.BtnCrearRecordatorio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BtnCrearRecordatorio.ForeColor = System.Drawing.Color.Black;
-			this.BtnCrearRecordatorio.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border1.HoverVisible = false;
-			border1.Rounding = 6;
-			border1.Thickness = 1;
-			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border1.Visible = false;
-			this.BtnCrearRecordatorio.Image.Border = border1;
-			this.BtnCrearRecordatorio.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
-			this.BtnCrearRecordatorio.Image.Point = new System.Drawing.Point(58, 10);
-			this.BtnCrearRecordatorio.Image.Size = new System.Drawing.Size(24, 24);
-			this.BtnCrearRecordatorio.Image.Visible = false;
-			this.BtnCrearRecordatorio.Location = new System.Drawing.Point(208, 10);
-			this.BtnCrearRecordatorio.Margin = new System.Windows.Forms.Padding(0);
-			this.BtnCrearRecordatorio.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-			this.BtnCrearRecordatorio.Name = "BtnCrearRecordatorio";
-			this.BtnCrearRecordatorio.Size = new System.Drawing.Size(140, 45);
-			this.BtnCrearRecordatorio.TabIndex = 2;
-			this.BtnCrearRecordatorio.Text = "Crear";
-			this.BtnCrearRecordatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-			this.BtnCrearRecordatorio.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-			// 
 			// Ficha
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1644,6 +1616,7 @@
 			this.Controls.Add(this.visualLabel2);
 			this.Controls.Add(this.visualLabel1);
 			this.Controls.Add(this.TextNombre);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Ficha";
@@ -1717,6 +1690,6 @@
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearTetra;
 		private VisualPlus.Toolkit.Controls.DataManagement.VisualListBox visualListBoxTetra;
 		private VisualPlus.Toolkit.Controls.Interactivity.VisualButton BtnCrearRecordatorio;
-		private VisualPlus.Toolkit.Controls.DataManagement.VisualCheckedListBox visualCheckedListBox1;
+		private System.Windows.Forms.DateTimePicker dateTimePickerRecordatorio;
 	}
 }

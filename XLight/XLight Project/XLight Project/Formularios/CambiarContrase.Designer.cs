@@ -236,6 +236,7 @@
 			this.Controls.Add(this.visualTextBox2);
 			this.Controls.Add(this.visualTextBox1);
 			this.Controls.Add(this.BtnCambiar);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "CambiarContrase";
