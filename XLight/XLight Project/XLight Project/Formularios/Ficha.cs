@@ -139,7 +139,7 @@ namespace XLight_Project.Formularios
 			// TODO Version final
 			if (cliente == null)
 			{
-				cliente = new Cliente(0, "Antonio", "Mateo", "0000", "0000000", "jueves, 02 de febrero de 2017", "Murcia");
+				cliente = new Cliente(0, "Antonio", "Mateo", "0000", "0000000", "jueves, 02 de febrero de 2017", "Murcia", "Noviembre 03");
 			}
 
 			// Si la patch no existe

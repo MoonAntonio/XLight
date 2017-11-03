@@ -113,7 +113,7 @@ namespace XLight_Project.Formularios
 					cliente = new Cliente(Int32.Parse(inCliente.SelectSingleNode("id").InnerText), inCliente.SelectSingleNode("nombre").InnerText,
 											inCliente.SelectSingleNode("apellidos").InnerText, inCliente.SelectSingleNode("dni").InnerText,
 											inCliente.SelectSingleNode("telefono").InnerText, inCliente.SelectSingleNode("fecha").InnerText,
-											inCliente.SelectSingleNode("direccion").InnerText);
+											inCliente.SelectSingleNode("direccion").InnerText,"Nunca");
 				}
 			}
 
