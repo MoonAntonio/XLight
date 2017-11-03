@@ -29,22 +29,22 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
-			VisualPlus.Structure.Border border2 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border5 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border8 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border9 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border11 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border12 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border13 = new VisualPlus.Structure.Border();
-			VisualPlus.Structure.Border border14 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border10 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border8 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border16 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border1 = new VisualPlus.Structure.Border();
 			VisualPlus.Structure.Border border15 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border3 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border14 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border5 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border13 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border7 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border6 = new VisualPlus.Structure.Border();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ficha));
+			VisualPlus.Structure.Border border9 = new VisualPlus.Structure.Border();
+			VisualPlus.Structure.Border border4 = new VisualPlus.Structure.Border();
 			this.DataFecha = new System.Windows.Forms.DateTimePicker();
 			this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
 			this.TextTelefono = new VisualPlus.Toolkit.Controls.Editors.VisualTextBox();
@@ -680,15 +680,15 @@
 			this.BtnImprimirHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnImprimirHipnosis.ForeColor = System.Drawing.Color.Black;
 			this.BtnImprimirHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border1.HoverVisible = false;
-			border1.Rounding = 6;
-			border1.Thickness = 1;
-			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border1.Visible = false;
-			this.BtnImprimirHipnosis.Image.Border = border1;
-			this.BtnImprimirHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
+			border11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border11.HoverVisible = false;
+			border11.Rounding = 6;
+			border11.Thickness = 1;
+			border11.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border11.Visible = false;
+			this.BtnImprimirHipnosis.Image.Border = border11;
+			this.BtnImprimirHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
 			this.BtnImprimirHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnImprimirHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnImprimirHipnosis.Image.Visible = false;
@@ -722,15 +722,15 @@
 			this.BtnGuardarHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardarHipnosis.ForeColor = System.Drawing.Color.Black;
 			this.BtnGuardarHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border2.HoverVisible = false;
-			border2.Rounding = 6;
-			border2.Thickness = 1;
-			border2.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border2.Visible = false;
-			this.BtnGuardarHipnosis.Image.Border = border2;
-			this.BtnGuardarHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
+			border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border12.HoverVisible = false;
+			border12.Rounding = 6;
+			border12.Thickness = 1;
+			border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border12.Visible = false;
+			this.BtnGuardarHipnosis.Image.Border = border12;
+			this.BtnGuardarHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
 			this.BtnGuardarHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarHipnosis.Image.Visible = false;
@@ -773,15 +773,15 @@
 			this.BtnCrearHipnosis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnCrearHipnosis.ForeColor = System.Drawing.Color.Black;
 			this.BtnCrearHipnosis.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border3.HoverVisible = false;
-			border3.Rounding = 6;
-			border3.Thickness = 1;
-			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border3.Visible = false;
-			this.BtnCrearHipnosis.Image.Border = border3;
-			this.BtnCrearHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
+			border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border10.HoverVisible = false;
+			border10.Rounding = 6;
+			border10.Thickness = 1;
+			border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border10.Visible = false;
+			this.BtnCrearHipnosis.Image.Border = border10;
+			this.BtnCrearHipnosis.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
 			this.BtnCrearHipnosis.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrearHipnosis.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrearHipnosis.Image.Visible = false;
@@ -904,15 +904,15 @@
 			this.BtnImprimirInterpretar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnImprimirInterpretar.ForeColor = System.Drawing.Color.Black;
 			this.BtnImprimirInterpretar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border4.HoverVisible = false;
-			border4.Rounding = 6;
-			border4.Thickness = 1;
-			border4.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border4.Visible = false;
-			this.BtnImprimirInterpretar.Image.Border = border4;
-			this.BtnImprimirInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image3")));
+			border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border8.HoverVisible = false;
+			border8.Rounding = 6;
+			border8.Thickness = 1;
+			border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border8.Visible = false;
+			this.BtnImprimirInterpretar.Image.Border = border8;
+			this.BtnImprimirInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
 			this.BtnImprimirInterpretar.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnImprimirInterpretar.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnImprimirInterpretar.Image.Visible = false;
@@ -946,15 +946,15 @@
 			this.BtnGuardarInterpretar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardarInterpretar.ForeColor = System.Drawing.Color.Black;
 			this.BtnGuardarInterpretar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border5.HoverVisible = false;
-			border5.Rounding = 6;
-			border5.Thickness = 1;
-			border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border5.Visible = false;
-			this.BtnGuardarInterpretar.Image.Border = border5;
-			this.BtnGuardarInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image4")));
+			border16.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border16.HoverVisible = false;
+			border16.Rounding = 6;
+			border16.Thickness = 1;
+			border16.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border16.Visible = false;
+			this.BtnGuardarInterpretar.Image.Border = border16;
+			this.BtnGuardarInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image7")));
 			this.BtnGuardarInterpretar.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarInterpretar.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarInterpretar.Image.Visible = false;
@@ -997,15 +997,15 @@
 			this.BtnCrearInterpretar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnCrearInterpretar.ForeColor = System.Drawing.Color.Black;
 			this.BtnCrearInterpretar.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border6.HoverVisible = false;
-			border6.Rounding = 6;
-			border6.Thickness = 1;
-			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border6.Visible = false;
-			this.BtnCrearInterpretar.Image.Border = border6;
-			this.BtnCrearInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image5")));
+			border1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border1.HoverVisible = false;
+			border1.Rounding = 6;
+			border1.Thickness = 1;
+			border1.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border1.Visible = false;
+			this.BtnCrearInterpretar.Image.Border = border1;
+			this.BtnCrearInterpretar.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image8")));
 			this.BtnCrearInterpretar.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrearInterpretar.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrearInterpretar.Image.Visible = false;
@@ -1047,6 +1047,7 @@
 			this.visualListBoxInterpretar.TabIndex = 5;
 			this.visualListBoxInterpretar.Text = "visualListBox1";
 			this.visualListBoxInterpretar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualListBoxInterpretar.SelectedIndexChanged += new System.EventHandler(this.visualListBoxInterpretar_SelectedIndexChanged);
 			// 
 			// BtnImprimirRegresion
 			// 
@@ -1067,15 +1068,15 @@
 			this.BtnImprimirRegresion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnImprimirRegresion.ForeColor = System.Drawing.Color.Black;
 			this.BtnImprimirRegresion.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border7.HoverVisible = false;
-			border7.Rounding = 6;
-			border7.Thickness = 1;
-			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border7.Visible = false;
-			this.BtnImprimirRegresion.Image.Border = border7;
-			this.BtnImprimirRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image6")));
+			border15.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border15.HoverVisible = false;
+			border15.Rounding = 6;
+			border15.Thickness = 1;
+			border15.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border15.Visible = false;
+			this.BtnImprimirRegresion.Image.Border = border15;
+			this.BtnImprimirRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image9")));
 			this.BtnImprimirRegresion.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnImprimirRegresion.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnImprimirRegresion.Image.Visible = false;
@@ -1109,15 +1110,15 @@
 			this.BtnGuardarRegresion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardarRegresion.ForeColor = System.Drawing.Color.Black;
 			this.BtnGuardarRegresion.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border8.HoverVisible = false;
-			border8.Rounding = 6;
-			border8.Thickness = 1;
-			border8.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border8.Visible = false;
-			this.BtnGuardarRegresion.Image.Border = border8;
-			this.BtnGuardarRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image7")));
+			border3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border3.HoverVisible = false;
+			border3.Rounding = 6;
+			border3.Thickness = 1;
+			border3.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border3.Visible = false;
+			this.BtnGuardarRegresion.Image.Border = border3;
+			this.BtnGuardarRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
 			this.BtnGuardarRegresion.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarRegresion.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarRegresion.Image.Visible = false;
@@ -1160,15 +1161,15 @@
 			this.BtnCrearRegresion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnCrearRegresion.ForeColor = System.Drawing.Color.Black;
 			this.BtnCrearRegresion.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border9.HoverVisible = false;
-			border9.Rounding = 6;
-			border9.Thickness = 1;
-			border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border9.Visible = false;
-			this.BtnCrearRegresion.Image.Border = border9;
-			this.BtnCrearRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image8")));
+			border14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border14.HoverVisible = false;
+			border14.Rounding = 6;
+			border14.Thickness = 1;
+			border14.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border14.Visible = false;
+			this.BtnCrearRegresion.Image.Border = border14;
+			this.BtnCrearRegresion.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image11")));
 			this.BtnCrearRegresion.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrearRegresion.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrearRegresion.Image.Visible = false;
@@ -1210,6 +1211,7 @@
 			this.visualListBoxRegresion.TabIndex = 5;
 			this.visualListBoxRegresion.Text = "visualListBox1";
 			this.visualListBoxRegresion.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualListBoxRegresion.SelectedIndexChanged += new System.EventHandler(this.visualListBoxRegresion_SelectedIndexChanged);
 			// 
 			// BtnImprimirReiki
 			// 
@@ -1230,15 +1232,15 @@
 			this.BtnImprimirReiki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnImprimirReiki.ForeColor = System.Drawing.Color.Black;
 			this.BtnImprimirReiki.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border10.HoverVisible = false;
-			border10.Rounding = 6;
-			border10.Thickness = 1;
-			border10.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border10.Visible = false;
-			this.BtnImprimirReiki.Image.Border = border10;
-			this.BtnImprimirReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image9")));
+			border5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border5.HoverVisible = false;
+			border5.Rounding = 6;
+			border5.Thickness = 1;
+			border5.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border5.Visible = false;
+			this.BtnImprimirReiki.Image.Border = border5;
+			this.BtnImprimirReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image12")));
 			this.BtnImprimirReiki.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnImprimirReiki.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnImprimirReiki.Image.Visible = false;
@@ -1272,15 +1274,15 @@
 			this.BtnGuardarReiki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardarReiki.ForeColor = System.Drawing.Color.Black;
 			this.BtnGuardarReiki.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border11.HoverVisible = false;
-			border11.Rounding = 6;
-			border11.Thickness = 1;
-			border11.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border11.Visible = false;
-			this.BtnGuardarReiki.Image.Border = border11;
-			this.BtnGuardarReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image10")));
+			border13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border13.HoverVisible = false;
+			border13.Rounding = 6;
+			border13.Thickness = 1;
+			border13.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border13.Visible = false;
+			this.BtnGuardarReiki.Image.Border = border13;
+			this.BtnGuardarReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image13")));
 			this.BtnGuardarReiki.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarReiki.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarReiki.Image.Visible = false;
@@ -1323,15 +1325,15 @@
 			this.BtnCrearReiki.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnCrearReiki.ForeColor = System.Drawing.Color.Black;
 			this.BtnCrearReiki.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border12.HoverVisible = false;
-			border12.Rounding = 6;
-			border12.Thickness = 1;
-			border12.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border12.Visible = false;
-			this.BtnCrearReiki.Image.Border = border12;
-			this.BtnCrearReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image11")));
+			border7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border7.HoverVisible = false;
+			border7.Rounding = 6;
+			border7.Thickness = 1;
+			border7.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border7.Visible = false;
+			this.BtnCrearReiki.Image.Border = border7;
+			this.BtnCrearReiki.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image14")));
 			this.BtnCrearReiki.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrearReiki.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrearReiki.Image.Visible = false;
@@ -1373,6 +1375,7 @@
 			this.visualListBoxReiki.TabIndex = 5;
 			this.visualListBoxReiki.Text = "visualListBox1";
 			this.visualListBoxReiki.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualListBoxReiki.SelectedIndexChanged += new System.EventHandler(this.visualListBoxReiki_SelectedIndexChanged);
 			// 
 			// BtnImprimirTetra
 			// 
@@ -1393,15 +1396,15 @@
 			this.BtnImprimirTetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnImprimirTetra.ForeColor = System.Drawing.Color.Black;
 			this.BtnImprimirTetra.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border13.HoverVisible = false;
-			border13.Rounding = 6;
-			border13.Thickness = 1;
-			border13.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border13.Visible = false;
-			this.BtnImprimirTetra.Image.Border = border13;
-			this.BtnImprimirTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image12")));
+			border6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border6.HoverVisible = false;
+			border6.Rounding = 6;
+			border6.Thickness = 1;
+			border6.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border6.Visible = false;
+			this.BtnImprimirTetra.Image.Border = border6;
+			this.BtnImprimirTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image")));
 			this.BtnImprimirTetra.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnImprimirTetra.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnImprimirTetra.Image.Visible = false;
@@ -1414,6 +1417,7 @@
 			this.BtnImprimirTetra.Text = "Imprimir";
 			this.BtnImprimirTetra.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnImprimirTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnImprimirTetra.Click += new System.EventHandler(this.BtnImprimirTetra_Click);
 			// 
 			// BtnGuardarTetra
 			// 
@@ -1434,15 +1438,15 @@
 			this.BtnGuardarTetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnGuardarTetra.ForeColor = System.Drawing.Color.Black;
 			this.BtnGuardarTetra.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border14.HoverVisible = false;
-			border14.Rounding = 6;
-			border14.Thickness = 1;
-			border14.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border14.Visible = false;
-			this.BtnGuardarTetra.Image.Border = border14;
-			this.BtnGuardarTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image13")));
+			border9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border9.HoverVisible = false;
+			border9.Rounding = 6;
+			border9.Thickness = 1;
+			border9.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border9.Visible = false;
+			this.BtnGuardarTetra.Image.Border = border9;
+			this.BtnGuardarTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image1")));
 			this.BtnGuardarTetra.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnGuardarTetra.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnGuardarTetra.Image.Visible = false;
@@ -1455,6 +1459,7 @@
 			this.BtnGuardarTetra.Text = "Guardar";
 			this.BtnGuardarTetra.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnGuardarTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnGuardarTetra.Click += new System.EventHandler(this.BtnGuardarTetra_Click);
 			// 
 			// richTextBoxTetra
 			// 
@@ -1463,6 +1468,7 @@
 			this.richTextBoxTetra.Size = new System.Drawing.Size(596, 381);
 			this.richTextBoxTetra.TabIndex = 7;
 			this.richTextBoxTetra.Text = "";
+			this.richTextBoxTetra.TextChanged += new System.EventHandler(this.richTextBoxTetra_TextChanged);
 			// 
 			// BtnCrearTetra
 			// 
@@ -1483,15 +1489,15 @@
 			this.BtnCrearTetra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BtnCrearTetra.ForeColor = System.Drawing.Color.Black;
 			this.BtnCrearTetra.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-			border15.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-			border15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-			border15.HoverVisible = false;
-			border15.Rounding = 6;
-			border15.Thickness = 1;
-			border15.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-			border15.Visible = false;
-			this.BtnCrearTetra.Image.Border = border15;
-			this.BtnCrearTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image14")));
+			border4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+			border4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+			border4.HoverVisible = false;
+			border4.Rounding = 6;
+			border4.Thickness = 1;
+			border4.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+			border4.Visible = false;
+			this.BtnCrearTetra.Image.Border = border4;
+			this.BtnCrearTetra.Image.Image = ((System.Drawing.Bitmap)(resources.GetObject("resource.Image2")));
 			this.BtnCrearTetra.Image.Point = new System.Drawing.Point(58, 10);
 			this.BtnCrearTetra.Image.Size = new System.Drawing.Size(24, 24);
 			this.BtnCrearTetra.Image.Visible = false;
@@ -1504,6 +1510,7 @@
 			this.BtnCrearTetra.Text = "Crear";
 			this.BtnCrearTetra.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnCrearTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnCrearTetra.Click += new System.EventHandler(this.BtnCrearTetra_Click);
 			// 
 			// visualListBoxTetra
 			// 
@@ -1532,6 +1539,7 @@
 			this.visualListBoxTetra.TabIndex = 5;
 			this.visualListBoxTetra.Text = "visualListBox1";
 			this.visualListBoxTetra.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.visualListBoxTetra.SelectedIndexChanged += new System.EventHandler(this.visualListBoxTetra_SelectedIndexChanged);
 			// 
 			// Ficha
 			// 

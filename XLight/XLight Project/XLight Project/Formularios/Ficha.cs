@@ -195,6 +195,10 @@ namespace XLight_Project.Formularios
 			richTextBoxReiki.Visible = false;
 			BtnGuardarReiki.Visible = false;
 			BtnImprimirReiki.Visible = false;
+
+			richTextBoxTetra.Visible = false;
+			BtnGuardarTetra.Visible = false;
+			BtnImprimirTetra.Visible = false;
 		}
 		#endregion
 
@@ -310,6 +314,34 @@ namespace XLight_Project.Formularios
 			rutaLectura = rutaClienteReiki + "/" + value;
 		}
 		#endregion
+
+		#region Tetra
+		/// <summary>
+		/// <para>Cargar los documentos de tetra.</para>
+		/// </summary>
+		public void CargarTetra()// Cargar los documentos de tetra
+		{
+			visualListBoxTetra.Items.Clear();
+
+			DirectoryInfo d = new DirectoryInfo(rutaClienteTetra);
+			FileInfo[] Files = d.GetFiles("*.txt");
+			foreach (FileInfo file in Files)
+			{
+				visualListBoxTetra.Items.Add(file.Name);
+			}
+		}
+
+		/// <summary>
+		/// <para>Abrir el log.</para>
+		/// </summary>
+		/// <param name="value"></param>
+		public void AbrirLogTetra(string value)// Abrir el log
+		{
+			richTextBoxTetra.Visible = true;
+			richTextBoxTetra.Text = File.ReadAllText(rutaClienteTetra + "/" + value);
+			rutaLectura = rutaClienteTetra + "/" + value;
+		}
+		#endregion
 		#endregion
 
 		#region Metodos GUI
@@ -322,6 +354,46 @@ namespace XLight_Project.Formularios
 		private void visualListBoxHipnosis_SelectedIndexChanged(object sender, EventArgs e)// Cuando cambia
 		{
 			AbrirLogHipnosis(visualListBoxHipnosis.SelectedItem.ToString());
+		}
+
+		/// <summary>
+		/// <para>Cuando cambia</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void visualListBoxInterpretar_SelectedIndexChanged(object sender, EventArgs e)// Cuando cambia
+		{
+			AbrirLogInterpretar(visualListBoxInterpretar.SelectedItem.ToString());
+		}
+
+		/// <summary>
+		/// <para>Cuando cambia</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void visualListBoxRegresion_SelectedIndexChanged(object sender, EventArgs e)// Cuando cambia
+		{
+			AbrirLogRegresion(visualListBoxRegresion.SelectedItem.ToString());
+		}
+
+		/// <summary>
+		/// <para>Cuando cambia</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void visualListBoxReiki_SelectedIndexChanged(object sender, EventArgs e)// Cuando cambia
+		{
+			AbrirLogReiki(visualListBoxReiki.SelectedItem.ToString());
+		}
+
+		/// <summary>
+		/// <para>Cuando cambia</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void visualListBoxTetra_SelectedIndexChanged(object sender, EventArgs e)// Cuando cambia
+		{
+			AbrirLogTetra(visualListBoxTetra.SelectedItem.ToString());
 		}
 		#endregion
 
@@ -572,8 +644,68 @@ namespace XLight_Project.Formularios
 
 		}
 		#endregion
+
+		#region Tetra
+		/// <summary>
+		/// <para>Cuando hay texto</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void richTextBoxTetra_TextChanged(object sender, EventArgs e)// Cuando hay texto
+		{
+			BtnGuardarTetra.Visible = true;
+			BtnImprimirTetra.Visible = true;
+		}
+
+		/// <summary>
+		/// <para>Para crear un nuevo log</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCrearTetra_Click(object sender, EventArgs e)// Para crear un nuevo log
+		{
+			richTextBoxTetra.Visible = true;
+			isCreando = true;
+		}
+
+		/// <summary>
+		/// <para>Guarda el documento tetra</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnGuardarTetra_Click(object sender, EventArgs e)// Guarda el documento tetra
+		{
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			if (isCreando)
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteTetra + "/" + dia + ".txt", richTextBoxTetra.Text);
+				richTextBoxTetra.Clear();
+				richTextBoxTetra.Visible = false;
+				CargarTetra();
+			}
+			else
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteTetra + "/" + rutaLectura, richTextBoxTetra.Text);
+				richTextBoxTetra.Clear();
+				richTextBoxTetra.Visible = false;
+				CargarTetra();
+			}
+		}
+
+		/// <summary>
+		/// <para>Imprime el documento de tetra</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnImprimirTetra_Click(object sender, EventArgs e)// Imprime el documento de tetra
+		{
+
+		}
 		#endregion
-
-
+		#endregion
 	}
 }
