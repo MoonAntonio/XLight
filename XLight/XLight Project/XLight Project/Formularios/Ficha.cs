@@ -181,6 +181,10 @@ namespace XLight_Project.Formularios
 			richTextBoxHipnosis.Visible = false;
 			BtnGuardarHipnosis.Visible = false;
 			BtnImprimirHipnosis.Visible = false;
+
+			richTextBoxInterpretar.Visible = false;
+			BtnGuardarInterpretar.Visible = false;
+			BtnImprimirInterpretar.Visible = false;
 		}
 		#endregion
 
