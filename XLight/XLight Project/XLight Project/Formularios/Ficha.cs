@@ -42,15 +42,45 @@ namespace XLight_Project.Formularios
 		/// <para>Cliente</para>
 		/// </summary>
 		public Cliente cliente;                                                 // Cliente
-		public string rutaCliente;
-		public string rutaClienteRecordatorio;
-		public string rutaClienteHipnosis;
-		public string rutaClienteSueno;
-		public string rutaClienteRegresion;
-		public string rutaClienteReiki;
-		public string rutaClienteTetra;
+		/// <summary>
+		/// <para>Ruta del cliente.</para>
+		/// </summary>
+		public string rutaCliente;												// Ruta del cliente
+		/// <summary>
+		/// <para>Ruta de los recordatorios.</para>
+		/// </summary>
+		public string rutaClienteRecordatorio;									// Ruta de los recordatorios
+		/// <summary>
+		/// <para>Ruta de hipnosis.</para>
+		/// </summary>
+		public string rutaClienteHipnosis;										// Ruta de hipnosis
+		/// <summary>
+		/// <para>Ruta de interpretar.</para>
+		/// </summary>
+		public string rutaClienteSueno;											// Ruta de interpretar
+		/// <summary>
+		/// <para>Ruta de regresion.</para>
+		/// </summary>
+		public string rutaClienteRegresion;										// Ruta de regresion
+		/// <summary>
+		/// <para>Ruta de reiki.</para>
+		/// </summary>
+		public string rutaClienteReiki;											// Ruta de reiki
+		/// <summary>
+		/// <para>Ruta de tetra.</para>
+		/// </summary>
+		public string rutaClienteTetra;											// Ruta de tetra
+		#endregion
 
-		public List<string> archivosHipnosis = new List<string>();
+		#region Variables Privadas
+		/// <summary>
+		/// <para>Determina si se esta creando actualmente el archivo.</para>
+		/// </summary>
+		private bool isCreando = false;											// Determina si se esta creando actualmente el archivo
+		/// <summary>
+		/// <para>Ruta de lectura del archivo.</para>
+		/// </summary>
+		private string rutaLectura;												// Ruta de lectura del archivo
 		#endregion
 
 		#region Constructores
@@ -105,11 +135,14 @@ namespace XLight_Project.Formularios
 				usuarioActual = new Usuario("Admin", "Admin", 0, pH, pC, 0, 0);
 			}
 
+			// Cargar el cliente
+			// TODO Version final
 			if (cliente == null)
 			{
 				cliente = new Cliente(0, "Antonio", "Mateo", "0000", "0000000", "jueves, 02 de febrero de 2017", "Murcia");
 			}
 
+			// Si la patch no existe
 			if (!File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + cliente.Nombre + " " + cliente.Apellidos))
 			{
 
@@ -140,24 +173,30 @@ namespace XLight_Project.Formularios
 				rutaClienteTetra = rutaCliente + "Tetra";
 			}
 
-			// Cargar el cliente
+			
 
 			CargarHipnosis();
 
 
 			richTextBoxHipnosis.Visible = false;
 			BtnGuardarHipnosis.Visible = false;
+			BtnImprimirHipnosis.Visible = false;
 		}
 		#endregion
 
 		#region Metodos Publicos
-		public void CargarHipnosis()
+		#region Hipnosis
+		/// <summary>
+		/// <para>Cargar los documentos de hipnosis.</para>
+		/// </summary>
+		public void CargarHipnosis()// Cargar los documentos de hipnosis
 		{
+			visualListBoxHipnosis.Items.Clear();
+
 			DirectoryInfo d = new DirectoryInfo(rutaClienteHipnosis);
 			FileInfo[] Files = d.GetFiles("*.txt");
 			foreach (FileInfo file in Files)
 			{
-				archivosHipnosis.Add(file.Name);
 				visualListBoxHipnosis.Items.Add(file.Name);
 			}
 		}
@@ -169,34 +208,86 @@ namespace XLight_Project.Formularios
 		public void AbrirLogHipnosis(string value)// Abrir el log
 		{
 			MessageBox.Show(value);
+			richTextBoxHipnosis.Visible = true;
+			richTextBoxHipnosis.Text = File.ReadAllText(rutaClienteHipnosis + "/" + value);
+			rutaLectura = rutaClienteHipnosis + "/" + value;
 		}
+		#endregion
+
 		#endregion
 
 		#region Metodos GUI
-		private void visualListBoxHipnosis_SelectedIndexChanged(object sender, EventArgs e)
+		/// <summary>
+		/// <para>Cuando cambia</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void visualListBoxHipnosis_SelectedIndexChanged(object sender, EventArgs e)// Cuando cambia
 		{
 			AbrirLogHipnosis(visualListBoxHipnosis.SelectedItem.ToString());
 		}
-		#endregion
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			Process.Start(usuarioActual.PathClientes);
-		}
-
-		private void BtnGuardarHipnosis_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void BtnCrearHipnosis_Click(object sender, EventArgs e)
-		{
-			richTextBoxHipnosis.Visible = true;
-		}
-
-		private void richTextBoxHipnosis_TextChanged(object sender, EventArgs e)
+		#region Hipnosis
+		/// <summary>
+		/// <para>Cuando hay texto</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void richTextBoxHipnosis_TextChanged(object sender, EventArgs e)// Cuando hay texto
 		{
 			BtnGuardarHipnosis.Visible = true;
+			BtnImprimirHipnosis.Visible = true;
 		}
+
+		/// <summary>
+		/// <para>Para crear un nuevo log.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnCrearHipnosis_Click(object sender, EventArgs e)// Para crear un nuevo log
+		{
+			richTextBoxHipnosis.Visible = true;
+			isCreando = true;
+		}
+
+		/// <summary>
+		/// <para>Guarda el documento hipnosis.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnGuardarHipnosis_Click(object sender, EventArgs e)// Guarda el documento hipnosis
+		{
+			DateTime diahora = DateTime.Now;
+			string dia = diahora.ToString("dddd dd MMMM");
+
+			if (isCreando)
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteHipnosis + "/" + dia + ".txt", richTextBoxHipnosis.Text);
+				richTextBoxHipnosis.Clear();
+				richTextBoxHipnosis.Visible = false;
+				CargarHipnosis();
+			}
+			else
+			{
+				isCreando = false;
+				File.WriteAllText(rutaClienteHipnosis + "/" + rutaLectura, richTextBoxHipnosis.Text);
+				richTextBoxHipnosis.Clear();
+				richTextBoxHipnosis.Visible = false;
+				CargarHipnosis();
+			}
+		}
+
+		/// <summary>
+		/// <para>Imprime el documento de hipnosis.</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BtnImprimirHipnosis_Click(object sender, EventArgs e)// Imprime el documento de hipnosis
+		{
+
+		}
+		#endregion
+		#endregion
 	}
 }
