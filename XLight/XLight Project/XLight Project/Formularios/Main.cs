@@ -128,7 +128,7 @@ namespace XLight_Project.Formularios
 		/// <param name="fecha"></param>
 		/// <param name="precio"></param>
 		/// <param name="resultado"></param>
-		public void AgregarCliente(string id, string nom, string apell, string dni, string telefon, string fecha, string direccion)// Agrega un elemento
+		public void AgregarCliente(string id, string nom, string apell, string dni, string telefon, string fecha, string direccion, string ultima)// Agrega un elemento
 		{
 			InitProgressBar();
 
@@ -165,13 +165,17 @@ namespace XLight_Project.Formularios
 			xdirecc.InnerText = direccion;
 			cliente.AppendChild(xdirecc);
 
+			XmlElement xult = doc.CreateElement("ultconsulta");
+			xult.InnerText = ultima;
+			cliente.AppendChild(xult);
+
 			doc.DocumentElement.AppendChild(cliente);
 			doc.Save(usuarioActual.PathClientes);
 
 			usuarioActual.IdActual = usuarioActual.IdActual + 1;
 			idActual = usuarioActual.IdActual;
 
-			GuardarCliente(idActual.ToString(), nom, apell, dni, telefon, fecha, direccion);
+			GuardarCliente(idActual.ToString(), nom, apell, dni, telefon, fecha, direccion, ultima);
 
 			StopProgressBar();
 		}
@@ -186,7 +190,7 @@ namespace XLight_Project.Formularios
 		/// <param name="telefon"></param>
 		/// <param name="fecha"></param>
 		/// <param name="direccion"></param>
-		public void GuardarCliente(string id, string nom, string apell, string dni, string telefon, string fecha, string direccion)// Guarda los datos de un cliente
+		public void GuardarCliente(string id, string nom, string apell, string dni, string telefon, string fecha, string direccion, string ult)// Guarda los datos de un cliente
 		{
 			InitProgressBar();
 
@@ -227,6 +231,10 @@ namespace XLight_Project.Formularios
 			XmlElement xdirecc = doc.CreateElement("direccion");
 			xdirecc.InnerText = direccion;
 			nuevoCliente.AppendChild(xdirecc);
+
+			XmlElement xultco = doc.CreateElement("ultconsulta");
+			xultco.InnerText = ult;
+			nuevoCliente.AppendChild(xultco);
 
 			foreach (XmlNode item in listaClientes)
 			{
@@ -738,7 +746,7 @@ namespace XLight_Project.Formularios
 				string dia = diahora.ToString("dddd dd MMMM");
 
 				// Agregar cliente
-				AgregarCliente(idActual.ToString(), TextNombre.Text, TextApellidos.Text, TextDNI.Text, TextTelefono.Text, DataFecha.Text, TextDireccion.Text);
+				AgregarCliente(idActual.ToString(), TextNombre.Text, TextApellidos.Text, TextDNI.Text, TextTelefono.Text, DataFecha.Text, TextDireccion.Text, "Nunca");
 
 				// Agregar entrada
 				CrearEntradaHistoria(TextNombre.Text, TextApellidos.Text, "Nuevo cliente", dia);

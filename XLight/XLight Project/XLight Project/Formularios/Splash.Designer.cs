@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
 			this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
 			this.ProgressBarFill = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
 			this.ProgressBarBorde = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -121,6 +122,7 @@
 			this.Controls.Add(this.lblTitulo);
 			this.Controls.Add(this.shapeContainer1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Splash";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";

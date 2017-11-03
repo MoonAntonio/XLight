@@ -9,6 +9,7 @@
 
 #region Librerias
 using System;
+using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 using XLight_Project.Clases;
@@ -41,7 +42,12 @@ namespace XLight_Project.Formularios
 		/// <summary>
 		/// <para>Formulario main actual.</para>
 		/// </summary>
-		public Main mainForm;													// Formulario main actual
+		public Main mainForm;                                                   // Formulario main actual
+		#endregion
+
+		#region Variables Privadas
+		private string nombreAntiguo;
+		private string apellidosAntiguo;
 		#endregion
 
 		#region Constructores
@@ -92,6 +98,9 @@ namespace XLight_Project.Formularios
 				string nombr = inCliente.SelectSingleNode("nombre").InnerText;
 				string apelli = inCliente.SelectSingleNode("apellidos").InnerText;
 
+				nombreAntiguo = nombr;
+				apellidosAntiguo = apelli;
+
 				if (nombre == nombr + " " + apelli)
 				{
 					TextNombre.Text = inCliente.SelectSingleNode("nombre").InnerText;
@@ -104,7 +113,7 @@ namespace XLight_Project.Formularios
 					cliente = new Cliente(Int32.Parse(inCliente.SelectSingleNode("id").InnerText), inCliente.SelectSingleNode("nombre").InnerText,
 											inCliente.SelectSingleNode("apellidos").InnerText, inCliente.SelectSingleNode("dni").InnerText,
 											inCliente.SelectSingleNode("telefono").InnerText, inCliente.SelectSingleNode("fecha").InnerText,
-											inCliente.SelectSingleNode("direccion").InnerText);
+											inCliente.SelectSingleNode("direccion").InnerText,"Nunca");
 				}
 			}
 
@@ -177,6 +186,20 @@ namespace XLight_Project.Formularios
 			}
 
 			doc.Save(usuarioActual.PathClientes);
+
+			if (nombreAntiguo != subNom)
+			{
+				if (apellidosAntiguo != subApell)
+				{
+					if (File.Exists(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + nombreAntiguo + " " + apellidosAntiguo))
+					{
+						Directory.Move(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + nombreAntiguo + " " + apellidosAntiguo,
+										configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + subNom + " " + subApell);
+
+						Directory.Delete(configuracionActual.PathUsuarios + "/" + usuarioActual.Nombre + "/" + nombreAntiguo + " " + apellidosAntiguo);
+					}
+				}
+			}
 
 			mainForm.ActualizarLista();
 

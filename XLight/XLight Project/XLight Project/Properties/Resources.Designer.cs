@@ -73,9 +73,9 @@ namespace XLight_Project.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap avatar_circle_259 {
+        internal static System.Drawing.Bitmap host {
             get {
-                object obj = ResourceManager.GetObject("avatar-circle_259", resourceCulture);
+                object obj = ResourceManager.GetObject("host", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,19 +83,9 @@ namespace XLight_Project.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dance_by_layerth_xna_d9ntehg {
+        internal static System.Drawing.Bitmap Icono {
             get {
-                object obj = ResourceManager.GetObject("dance_by_layerth_xna-d9ntehg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Icon {
-            get {
-                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Icono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

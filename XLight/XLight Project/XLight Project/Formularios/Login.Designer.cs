@@ -122,7 +122,9 @@
 			// 
 			// Logo
 			// 
-			this.Logo.Image = global::XLight_Project.Properties.Resources.Icon;
+			this.Logo.ErrorImage = global::XLight_Project.Properties.Resources.avatar;
+			this.Logo.Image = global::XLight_Project.Properties.Resources.Icono;
+			this.Logo.InitialImage = global::XLight_Project.Properties.Resources.Icono;
 			this.Logo.Location = new System.Drawing.Point(62, 52);
 			this.Logo.Name = "Logo";
 			this.Logo.Size = new System.Drawing.Size(236, 218);
@@ -198,6 +200,7 @@
 			this.Controls.Add(this.BtnLogin);
 			this.Controls.Add(this.visualPanel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Login";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login";
