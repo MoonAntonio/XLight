@@ -25,7 +25,8 @@ namespace XLight_Project.Clases
 		/// <param name="t">Telefono del cliente.</param>
 		/// <param name="f">Fecha del cliente.</param>
 		/// <param name="di">Direccion del cliente.</param>
-		public Cliente(int i, string n, string a, string d, string t, string f, string di)// Constructor de la clase Cliente
+		/// <param name="ul">Ultima consulta.</param>
+		public Cliente(int i, string n, string a, string d, string t, string f, string di, string ul)// Constructor de la clase Cliente
 		{
 			id = i;
 			nombre = n;
@@ -34,6 +35,7 @@ namespace XLight_Project.Clases
 			telefono = t;
 			fecha = f;
 			direccion = di;
+			ultimaConsulta = ul;
 		}
 		#endregion
 
@@ -66,6 +68,10 @@ namespace XLight_Project.Clases
 		/// <para>Direccion del cliente</para>
 		/// </summary>
 		private string direccion;                       // Direccion del cliente
+		/// <summary>
+		/// <para>Ultima consulta.</para>
+		/// </summary>
+		private string ultimaConsulta;					// Ultima consulta
 		#endregion
 
 		#region Propiedades
@@ -130,6 +136,15 @@ namespace XLight_Project.Clases
 		{
 			get { return direccion; }
 			set { direccion = value; }
+		}
+
+		/// <summary>
+		/// <para>Ultima consulta.</para>
+		/// </summary>
+		public string UltimaConsulta
+		{
+			get { return ultimaConsulta; }
+			set { ultimaConsulta = value; }
 		}
 		#endregion
 	}
