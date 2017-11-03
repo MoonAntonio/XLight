@@ -174,10 +174,11 @@ namespace XLight_Project.Formularios
 			}
 
 			
-
+			// Cargar los documentos
 			CargarHipnosis();
+			CargarInterpretar();
 
-
+			// Resetear GUI
 			richTextBoxHipnosis.Visible = false;
 			BtnGuardarHipnosis.Visible = false;
 			BtnImprimirHipnosis.Visible = false;
