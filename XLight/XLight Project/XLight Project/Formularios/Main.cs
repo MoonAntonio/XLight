@@ -280,52 +280,52 @@ namespace XLight_Project.Formularios
 
 			XmlDocument doc = new XmlDocument();
 
-			doc.Load(usuarioActual.PathClientes);
+			doc.Load(configuracionActual.PathUsuarios + "/usuarios.xml");
 
-			XmlElement clientes = doc.DocumentElement;
+			XmlElement usuarios = doc.DocumentElement;
 
-			XmlNodeList listaClientes = doc.SelectNodes("Usuarios/Usuario");
+			XmlNodeList listaUsuarios = doc.SelectNodes("Usuarios/Usuario");
 
-			XmlNode nuevoCliente = doc.CreateElement("Usuario");
+			XmlNode nuevoUsuario = doc.CreateElement("Usuario");
 
 			XmlElement xnom = doc.CreateElement("nombre");
 			xnom.InnerText = usuarioActual.Nombre;
-			nuevoCliente.AppendChild(xnom);
+			nuevoUsuario.AppendChild(xnom);
 
 			XmlElement xpass = doc.CreateElement("password");
 			xpass.InnerText = usuarioActual.Password;
-			nuevoCliente.AppendChild(xpass);
+			nuevoUsuario.AppendChild(xpass);
 
 			XmlElement xniv = doc.CreateElement("nivel");
 			xniv.InnerText = usuarioActual.NivelPrivilegios.ToString();
-			nuevoCliente.AppendChild(xniv);
+			nuevoUsuario.AppendChild(xniv);
 
 			XmlElement xruHi = doc.CreateElement("rutahistorial");
 			xruHi.InnerText = usuarioActual.PathHistorial;
-			nuevoCliente.AppendChild(xruHi);
+			nuevoUsuario.AppendChild(xruHi);
 
 			XmlElement xruCli = doc.CreateElement("rutaclientes");
 			xruCli.InnerText = usuarioActual.PathClientes;
-			nuevoCliente.AppendChild(xruCli);
+			nuevoUsuario.AppendChild(xruCli);
 
 			XmlElement xidac = doc.CreateElement("idactual");
 			xidac.InnerText = usuarioActual.IdActual.ToString();
-			nuevoCliente.AppendChild(xidac);
+			nuevoUsuario.AppendChild(xidac);
 
 			XmlElement xinia = doc.CreateElement("inicioautomatico");
 			xinia.InnerText = usuarioActual.InicioAutomatico.ToString();
-			nuevoCliente.AppendChild(xinia);
+			nuevoUsuario.AppendChild(xinia);
 
-			foreach (XmlNode item in listaClientes)
+			foreach (XmlNode item in listaUsuarios)
 			{
 				if (item.FirstChild.InnerText == usuarioActual.Nombre)
 				{
 					XmlNode nodo = item;
-					clientes.ReplaceChild(nuevoCliente, nodo);
+					usuarios.ReplaceChild(nuevoUsuario, nodo);
 				}
 			}
 
-			doc.Save(usuarioActual.PathClientes);
+			doc.Save(configuracionActual.PathUsuarios + "/usuarios.xml");
 
 		}
 
@@ -736,6 +736,8 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnAbrirFicha_Click(object sender, EventArgs e)// Abre la ficha del usuario
 		{
+			dataGridView1.ClearSelection();
+
 			if (txtBoxBuscadorRegistro.Text != string.Empty)
 			{
 				string nombreFicha = txtBoxBuscadorRegistro.Text;
@@ -926,12 +928,10 @@ namespace XLight_Project.Formularios
 			if (checkBoxAuto.CheckState == CheckState.Checked)
 			{
 				usuarioActual.InicioAutomatico = 1;
-				MessageBox.Show("1");
 			}
 			else
 			{
 				usuarioActual.InicioAutomatico = 0;
-				MessageBox.Show("0");
 			}
 
 			GuardarUsuario();

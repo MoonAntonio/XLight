@@ -579,7 +579,7 @@ namespace XLight_Project.Formularios
 
 				doc.Save(usuarioActual.PathClientes);
 
-				File.WriteAllText(rutaClienteHipnosis + "/" + rutaLectura, richTextBoxHipnosis.Text);
+				File.WriteAllText(rutaLectura, richTextBoxHipnosis.Text);
 				richTextBoxHipnosis.Clear();
 				richTextBoxHipnosis.Visible = false;
 				CargarHipnosis();
@@ -751,7 +751,7 @@ namespace XLight_Project.Formularios
 
 				doc.Save(usuarioActual.PathClientes);
 
-				File.WriteAllText(rutaClienteSueno + "/" + rutaLectura, richTextBoxInterpretar.Text);
+				File.WriteAllText(rutaLectura, richTextBoxInterpretar.Text);
 				richTextBoxInterpretar.Clear();
 				richTextBoxInterpretar.Visible = false;
 				CargarInterpretar();
@@ -923,7 +923,7 @@ namespace XLight_Project.Formularios
 
 				doc.Save(usuarioActual.PathClientes);
 
-				File.WriteAllText(rutaClienteRegresion + "/" + rutaLectura, richTextBoxRegresion.Text);
+				File.WriteAllText(rutaLectura, richTextBoxRegresion.Text);
 				richTextBoxRegresion.Clear();
 				richTextBoxRegresion.Visible = false;
 				CargarRegresion();
@@ -1095,7 +1095,7 @@ namespace XLight_Project.Formularios
 
 				doc.Save(usuarioActual.PathClientes);
 
-				File.WriteAllText(rutaClienteReiki + "/" + rutaLectura, richTextBoxReiki.Text);
+				File.WriteAllText(rutaLectura, richTextBoxReiki.Text);
 				richTextBoxReiki.Clear();
 				richTextBoxReiki.Visible = false;
 				CargarReiki();
@@ -1267,7 +1267,7 @@ namespace XLight_Project.Formularios
 
 				doc.Save(usuarioActual.PathClientes);
 
-				File.WriteAllText(rutaClienteTetra + "/" + rutaLectura, richTextBoxTetra.Text);
+				File.WriteAllText(rutaLectura, richTextBoxTetra.Text);
 				richTextBoxTetra.Clear();
 				richTextBoxTetra.Visible = false;
 				CargarTetra();
