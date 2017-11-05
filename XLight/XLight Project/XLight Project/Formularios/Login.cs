@@ -284,6 +284,46 @@ namespace XLight_Project.Formularios
 		{
 			Logear(InputName.text, InputPassword.text);
 		}
+
+		/// <summary>
+		/// <para>Click en usuario</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void InputName_Click(object sender, EventArgs e)// Click en usuario
+		{
+			InputName.text = "";
+		}
+
+		/// <summary>
+		/// <para>Click en password</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void InputPassword_Click(object sender, EventArgs e)// Click en password
+		{
+			InputPassword.text = "";
+		}
+
+		/// <summary>
+		/// <para>Entra en el input name</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void InputName_Enter(object sender, EventArgs e)// Entra en el input name
+		{
+			InputName.text = "";
+		}
+
+		/// <summary>
+		/// <para>Entra en el input password</para>
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void InputPassword_Enter(object sender, EventArgs e)// Entra en el input password
+		{
+			InputPassword.text = "";
+		}
 		#endregion
 
 		#region Funcionalidad
