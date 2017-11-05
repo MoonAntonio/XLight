@@ -542,6 +542,7 @@
 			this.BtnBalance.Text = "Balance";
 			this.BtnBalance.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
 			this.BtnBalance.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+			this.BtnBalance.Visible = false;
 			this.BtnBalance.Click += new System.EventHandler(this.BtnBalance_Click);
 			// 
 			// BtnClientes
