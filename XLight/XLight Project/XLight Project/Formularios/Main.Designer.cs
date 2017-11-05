@@ -1404,12 +1404,6 @@
 			this.BarProgress.Value = 0;
 			this.BarProgress.ValueAlignment = System.Drawing.StringAlignment.Center;
 			// 
-			// timerProgress
-			// 
-			this.timerProgress.Enabled = true;
-			this.timerProgress.Interval = 1000;
-			this.timerProgress.Tick += new System.EventHandler(this.timerProgress_Tick);
-			// 
 			// printDocument1
 			// 
 			this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);

@@ -46,10 +46,6 @@ namespace XLight_Project.Formularios
 		/// <para>Id actual</para>
 		/// </summary>
 		private int idActual;                                                   // Id actual
-		/// <summary>
-		/// <para>Temporizador del progress bar.</para>
-		/// </summary>
-		private bool isTemporizador = false;									// Temporizador del progress bar
 		#endregion
 
 		#region Constructores
@@ -130,8 +126,6 @@ namespace XLight_Project.Formularios
 		/// <param name="resultado"></param>
 		public void AgregarCliente(string id, string nom, string apell, string dni, string telefon, string fecha, string direccion, string ultima)// Agrega un elemento
 		{
-			InitProgressBar();
-
 			XmlDocument doc = new XmlDocument();
 
 			doc.Load(usuarioActual.PathClientes);
@@ -176,8 +170,6 @@ namespace XLight_Project.Formularios
 			idActual = usuarioActual.IdActual;
 
 			GuardarCliente(idActual.ToString(), nom, apell, dni, telefon, fecha, direccion, ultima);
-
-			StopProgressBar();
 		}
 
 		/// <summary>
@@ -192,8 +184,6 @@ namespace XLight_Project.Formularios
 		/// <param name="direccion"></param>
 		public void GuardarCliente(string id, string nom, string apell, string dni, string telefon, string fecha, string direccion, string ult)// Guarda los datos de un cliente
 		{
-			InitProgressBar();
-
 			XmlDocument doc = new XmlDocument();
 
 			doc.Load(usuarioActual.PathClientes);
@@ -246,8 +236,6 @@ namespace XLight_Project.Formularios
 			}
 
 			doc.Save(usuarioActual.PathClientes);
-
-			StopProgressBar();
 		}
 
 		/// <summary>
@@ -289,7 +277,6 @@ namespace XLight_Project.Formularios
 		/// </summary>
 		public void GuardarUsuario()// Guarda el user
 		{
-			InitProgressBar();
 
 			XmlDocument doc = new XmlDocument();
 
@@ -340,7 +327,6 @@ namespace XLight_Project.Formularios
 
 			doc.Save(usuarioActual.PathClientes);
 
-			StopProgressBar();
 		}
 
 		/// <summary>
@@ -457,27 +443,6 @@ namespace XLight_Project.Formularios
 			}
 
 			txtBoxBuscadorRegistro.AutoCompleteCustomSource = coll;
-		}
-
-		/// <summary>
-		/// <para>Inicia el progreso.</para>
-		/// </summary>
-		public void InitProgressBar()// Inicia el progreso
-		{
-			if (BarProgress.Value > 0)
-			{
-				BarProgress.Value = 100;
-
-				isTemporizador = true;
-			}
-		}
-
-		/// <summary>
-		/// <para>Detiene el progreso.</para>
-		/// </summary>
-		public void StopProgressBar()// Detiene el progreso
-		{
-			isTemporizador = false;
 		}
 
 		/// <summary>
@@ -771,8 +736,6 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnAbrirFicha_Click(object sender, EventArgs e)// Abre la ficha del usuario
 		{
-			InitProgressBar();
-
 			if (txtBoxBuscadorRegistro.Text != string.Empty)
 			{
 				string nombreFicha = txtBoxBuscadorRegistro.Text;
@@ -786,8 +749,6 @@ namespace XLight_Project.Formularios
 			{
 				MessageBox.Show("Tienes que buscar algun cliente.");
 			}
-
-			StopProgressBar();
 		}
 
 		/// <summary>
@@ -797,8 +758,6 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnBorrar_Click(object sender, EventArgs e)// Borrar un cliente
 		{
-			InitProgressBar();
-
 			XmlDocument doc = new XmlDocument();
 			DateTime diahora = DateTime.Now;
 			string dia = diahora.ToString("dddd dd MMMM");
@@ -849,8 +808,6 @@ namespace XLight_Project.Formularios
 			{
 				MessageBox.Show("Primero busca un usuario");
 			}
-
-			StopProgressBar();
 		}
 
 		/// <summary>
@@ -860,8 +817,6 @@ namespace XLight_Project.Formularios
 		/// <param name="e"></param>
 		private void BtnEditar_Click(object sender, EventArgs e)// Editar un usuario
 		{
-			InitProgressBar();
-
 			if (txtBoxBuscadorRegistro.Text != string.Empty)
 			{
 				string nombreFicha = txtBoxBuscadorRegistro.Text;
@@ -875,39 +830,6 @@ namespace XLight_Project.Formularios
 			{
 				MessageBox.Show("Tienes que buscar algun cliente.");
 			}
-
-			StopProgressBar();
-		}
-
-		/// <summary>
-		/// <para>Temporizador</para>
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void timerProgress_Tick(object sender, EventArgs e)// Temporizador
-		{
-			if (isTemporizador == true)
-			{
-				try
-				{
-					BarProgress.Value = BarProgress.Value + 25;
-
-					if (BarProgress.Value >= 100)
-					{
-						isTemporizador = false;
-						timerProgress.Stop();
-					}
-				}
-				catch (Exception)
-				{
-					return;
-				}
-			}
-			else
-			{
-				BarProgress.Value = 0;
-			}
-			
 		}
 
 		/// <summary>
@@ -1004,10 +926,12 @@ namespace XLight_Project.Formularios
 			if (checkBoxAuto.CheckState == CheckState.Checked)
 			{
 				usuarioActual.InicioAutomatico = 1;
+				MessageBox.Show("1");
 			}
 			else
 			{
 				usuarioActual.InicioAutomatico = 0;
+				MessageBox.Show("0");
 			}
 
 			GuardarUsuario();
