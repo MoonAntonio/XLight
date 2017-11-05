@@ -90,7 +90,7 @@
 			this.BtnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.BtnCerrar.Name = "BtnCerrar";
 			this.BtnCerrar.Size = new System.Drawing.Size(30, 37);
-			this.BtnCerrar.TabIndex = 1;
+			this.BtnCerrar.TabIndex = 4;
 			this.BtnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
 			// 
@@ -144,8 +144,10 @@
 			this.InputName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.InputName.Name = "InputName";
 			this.InputName.Size = new System.Drawing.Size(286, 52);
-			this.InputName.TabIndex = 3;
+			this.InputName.TabIndex = 1;
 			this.InputName.text = "Nombre";
+			this.InputName.Click += new System.EventHandler(this.InputName_Click);
+			this.InputName.Enter += new System.EventHandler(this.InputName_Enter);
 			// 
 			// InputPassword
 			// 
@@ -161,6 +163,8 @@
 			this.InputPassword.Size = new System.Drawing.Size(286, 52);
 			this.InputPassword.TabIndex = 2;
 			this.InputPassword.text = "Password";
+			this.InputPassword.Click += new System.EventHandler(this.InputPassword_Click);
+			this.InputPassword.Enter += new System.EventHandler(this.InputPassword_Enter);
 			// 
 			// BtnLogin
 			// 
@@ -184,7 +188,7 @@
 			this.BtnLogin.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
 			this.BtnLogin.Name = "BtnLogin";
 			this.BtnLogin.Size = new System.Drawing.Size(236, 57);
-			this.BtnLogin.TabIndex = 1;
+			this.BtnLogin.TabIndex = 3;
 			this.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
 			// 
